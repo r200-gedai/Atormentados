@@ -1,0 +1,13 @@
+.botão{
+	background: black;
+	color: white;
+	border-radius: 10px;
+	
+}
+body{
+	background-image: url("BackgroundMain.PNG");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100%;
+	background-color: black;
+}

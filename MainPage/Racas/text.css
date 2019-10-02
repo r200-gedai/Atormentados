@@ -1,0 +1,31 @@
+ <style media="screen">
+        .modal-fundo{
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5);
+          position: fixed;
+          top: 0px;
+          left: 0px;
+          z-index: 2000;
+          display: none;
+          justify-content: ;
+          align-items: center;
+        }
+        .modal-fundo.aberto{
+          display: flex;
+        }
+        .modal-mais {
+          background: white;
+          width: 60%;
+          padding: 10px;
+          border: 5px solid black;
+          position: relative;
+        }
+        .close{
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          background-color: white;
+          cursor: pointer;
+        }
+      </style>

@@ -1,0 +1,243 @@
+.modal-fundo{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+}
+.modal-fundo.aberto{
+  display: flex;
+}
+.modal-mais {
+  background: black;
+  background-image: url(Barbaro.JPG);
+  background-repeat: no-repeat;
+  background-position: top right;
+  width: 60%;
+  height: 80%;
+  padding: 10px;
+  border: 5px solid white;
+  position: relative;
+  overflow: scroll;
+  color: white;
+}
+.modal-mais2 {
+  background: black;
+  background-image: url(Bardo.JPG);
+  background-repeat: no-repeat;
+  background-position: top right;
+  width: 60%;
+  height: 80%;
+  padding: 10px;
+  border: 5px solid white;
+  position: relative;
+  overflow: scroll;
+  color: white;
+}
+.modal-mais3 {
+  background: black;
+  background-image: url(Clerigo.JPG);
+  background-repeat: no-repeat;
+  background-position: top right;
+  width: 60%;
+  height: 80%;
+  padding: 10px;
+  border: 5px solid white;
+  position: relative;
+  overflow: scroll;
+  color: white;
+}
+.modal-mais4 {
+  background: black;
+  background-image: url(Druida.JPG);
+  background-repeat: no-repeat;
+  background-position: top right;
+  width: 60%;
+  height: 80%;
+  padding: 10px;
+  border: 5px solid white;
+  position: relative;
+  overflow: scroll;
+  color: white;
+}
+.modal-mais5 {
+  background: black;
+  background-image: url(Feiticeiro.JPG);
+  background-repeat: no-repeat;
+  background-position: top right;
+  width: 60%;
+  height: 80%;
+  padding: 10px;
+  border: 5px solid white;
+  position: relative;
+  overflow: scroll;
+  color: white;
+}
+.modal-mais6 {
+  background: black;
+  background-image: url(Guerreiro.JPG);
+  background-repeat: no-repeat;
+  background-position: top right;
+  width: 60%;
+  height: 80%;
+  padding: 10px;
+  border: 5px solid white;
+  position: relative;
+  overflow: scroll;
+  color: white;
+}
+.modal-mais7 {
+  background: black;
+  background-image: url(Ladino.JPG);
+  background-repeat: no-repeat;
+  background-position: top right;
+  width: 60%;
+  height: 80%;
+  padding: 10px;
+  border: 5px solid white;
+  position: relative;
+  overflow: scroll;
+  color: white;
+}
+.modal-mais8 {
+  background: black;
+  background-image: url(Mago.JPG);
+  background-repeat: no-repeat;
+  background-position: top right;
+  width: 60%;
+  height: 80%;
+  padding: 10px;
+  border: 5px solid white;
+  position: relative;
+  overflow: scroll;
+  color: white;
+}
+.modal-mais9 {
+  background: black;
+  background-image: url(Monge.JPG);
+  background-repeat: no-repeat;
+  background-position: top right;
+  width: 60%;
+  height: 80%;
+  padding: 10px;
+  border: 5px solid white;
+  position: relative;
+  overflow: scroll;
+  color: white;
+}
+.modal-mais10 {
+  background: black;
+  background-image: url(Paladino.JPG);
+  background-repeat: no-repeat;
+  background-position: top right;
+  width: 60%;
+  height: 80%;
+  padding: 10px;
+  border: 5px solid white;
+  position: relative;
+  overflow: scroll;
+  color: white;
+}
+.modal-mais11 {
+  background: black;
+  background-image: url(Ranger.JPG);
+  background-repeat: no-repeat;
+  background-position: top right;
+  width: 60%;
+  height: 80%;
+  padding: 10px;
+  border: 5px solid white;
+  position: relative;
+  overflow: scroll;
+  color: white;
+}
+.modal-mais12 {
+  background: black;
+  background-image: url(Samurai.JPG);
+  background-repeat: no-repeat;
+  background-position: top right;
+  width: 60%;
+  height: 80%;
+  padding: 10px;
+  border: 5px solid white;
+  position: relative;
+  overflow: scroll;
+  color: white;
+}
+.modal-mais13 {
+  background: black;
+  background-image: url(Swashbucklers.JPG);
+  background-repeat: no-repeat;
+  background-position: top right;
+  width: 60%;
+  height: 80%;
+  padding: 10px;
+  border: 5px solid white;
+  position: relative;
+  overflow: scroll;
+  color: white;
+}
+.close{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+.barbaro{
+  cursor: pointer;
+}
+
+}
+.bardo{
+  cursor: pointer;
+}
+.clerigo{
+  cursor: pointer;
+}
+.druida{
+  cursor: pointer;
+}
+.feiticeiro{
+  cursor: pointer;
+}
+.guerreiro{
+  cursor: pointer;
+}
+.corintiano{
+  cursor: pointer;
+}
+.mago{
+  cursor: pointer;
+}
+.monge{
+  cursor: pointer;
+}
+.paladino{
+  cursor: pointer;
+}
+.caçador{
+  cursor: pointer;
+}
+.samurai{
+  cursor: pointer;
+}
+.swashbuckler{
+  cursor: pointer;
+}
+body{
+  background-image: url("BackgroundMain.PNG");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+  background-color: black;
+}
+.fieldtexte{
+  color: white;
+}

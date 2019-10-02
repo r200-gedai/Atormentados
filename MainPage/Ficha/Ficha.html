@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ficha de Personagem</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="ficha.css">
+    </head>
+    <body>
+        <form>
+            <label>Nível</label> <input type="" name="nivel" id="nivel">
+            <fieldset class="tamanho" >
+                <legend>FICHA</legend>
+                <table border="1">
+                    <tr>
+                        <td><label>Nome do personagem</label></td>
+                        <td><label>Nome do jogador</label></td>
+                        <td><label>Raça</label></td>
+                        <td><label>Classe</label></td>
+                        <td><label>Tendêcia</label></td>
+
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="nomep" id="nomep"></td>
+                        <td><input type="text" name="nomej" id="nomej"></td>
+                        <td><div type="box">
+                                <select type="text" name="raca" id="raca" lang="cu">
+                                    <option>Anão</option>
+                                    <option>Elfo</option>
+                                    <option>Goblin</option>
+                                    <option>Halfling</option>
+                                    <option>Humano</option>
+                                    <option>Lefou</option>
+                                    <option>Minotauro</option>
+                                    <option>Qareen</option>
+                                    <option>Gnomo</option>
+                                    <option>Meio-Elfo</option>
+                                    <option>Meio-Orc</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </td>
+                        <td><select type="text" name="classe" id="classe">
+                                <option>Bárbaro</option>
+                                <option>Bardo</option>
+                                <option>Clérigo</option>
+                                <option>Druida</option>
+                                <option>Feiticeiro</option>
+                                <option>Guerreiro</option>
+                                <option>Ladino</option>
+                                <option>Mago</option>
+                                <option>Monge</option>
+                                <option>Paladino</option>
+                                <option>Ranger</option>
+                                <option>Samurai</option>
+                                <option>Swashbuckler</option>
+                            </select>
+                        </td>
+                        <td><div type="box">
+                                <select type="text" name="tendencia" id="tendencia">
+                                    <option>Leal e Bondoso (LB)</option>
+                                    <option>Neutro e Bondoso (NB)</option>
+                                    <option>Caótico e Bondoso (CB)</option>
+                                    <option>Leal e Neutro (LN)</option>
+                                    <option>Neutro (N)</option>
+                                    <option>Caótico e Neutro (CN)</option>
+                                    <option>Leal e Maligno (LM)</option>
+                                    <option>Neutro e Maligno (NM)</option>
+                                    <option>Caótico e Maligno (CM)</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Sexo</label></td>
+                        <td><label>Idade</label></td>
+                        <td><label>Divindade</label></td>
+                        <td><label>tamanho</label></td>
+                        <td><label>Deslocamento</label></td>
+                    </tr>
+                    <tr>
+                        <td><div type="box">
+                                <select type="text" name="sexo" id="sexo">
+                                    <option>Masculino</option>
+                                    <option>Feminino</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td><input type="text" name="idade" id="idade"></td>
+                        <td ><div type="box">
+                                <select type="text" name="divindade" id="divindade">
+                                    <option>Allihanna</option>
+                                    <option>Azgher</option>
+                                    <option>Hyninn</option>
+                                    <option>Kallyadranoch</option>
+                                    <option>Keenn</option>
+                                    <option>Khalmyr</option>
+                                    <option>Lena</option>
+                                    <option>Lin-Wu</option>
+                                    <option>Marah</option>
+                                    <option>Megalokk</option>
+                                    <option>Nimb</option>
+                                    <option>Oceano</option>
+                                    <option>Ragnar</option>
+                                    <option>Sszzaas</option>
+                                    <option>Tanna-Toh</option>
+                                    <option>Tauron</option>
+                                    <option>Thyatis</option>
+                                    <option>Wynna</option>
+                                    <option>Valkaria</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td><div type="box">
+                                <select type="text" name="altura" id="altura">
+                                    <option>Mínimo</option>
+                                    <option>Pequeno</option>
+                                    <option>Médio</option>
+                                    <option>Grande</option>
+                                    <option>Enorme</option>
+                                    <option>Descomunal</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td><input type="text" name="deslocamento" id="deslocamento"></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4"><h1>VIDA</h1></td>
+                        <td align="center" >Pontos totais: <input type="number" name="pvt" id="pvt"></td>
+                        <td rowspan="3">10+<p></p><h1>CA <input type="number" name="CA" id="CA"></h1></td>
+                        <td colspan="2" align="center"><h3>Equipamentos</h3></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><DIV type = box>
+                                <select type = text name="Armas" id="Armas">
+                                    <optgroup label="Armas Simples">
+                                    <optgroup label="Corpo-a-Corpo | Leve">
+                                        <option>Adaga</option>
+                                        <option>Ataque Desarmado</option>
+                                        <option>Espada Curta</option>	
+                                        <option>Manopla</option>
+                                    </optgroup>
+                                    <optgroup label="Corpo-a-Corpo | Uma Mão">
+                                        <option>Clava</option>
+                                        <option>Lança</option>
+                                        <option>Maça</option>
+                                    </optgroup>
+                                    <optgroup label="Corpo-a-Corpo | Duas Mãos">
+                                        <option>Bordão</option>
+                                        <option>Pique</option>	
+                                        <option>Tacape</option>
+                                    </optgroup>
+                                    <optgroup label="Ataque á Distância">
+                                        <option>Àcido</option>
+                                        <option>Àgua Benta</option>
+                                        <option>Arco Curto</option>
+                                        <option>Azagaia</option>
+                                        <option>Besta Leve</option>	
+                                        <option>Fogo Alquímico</option>
+                                        <option>Funda</option>
+                                        <option>Granada</option>
+                                    </optgroup>
+                                    <optgroup label="Projéteis" disabled>
+                                        <option>Flechas</option>
+                                        <option>Virotes</option>
+                                        <option>Balas</option>	
+                                    </optgroup>
+                                    </optgroup>
+                                    <optgroup label="Armas Marciais">
+                                    <optgroup label="Corpo-a-Corpo | Leve">
+                                        <option>Escudo Leve</option>
+                                        <option>Machadinha</option>
+                                        <option>Martelo</option>
+                                    </optgroup>
+                                    <optgroup label="Corpo-a-Corpo | Uma Mão">
+                                        <option>Cimitarra</option>
+                                        <option>Escudo Pesado</option>
+                                        <option>Espada Longa</option>
+                                        <option>Florete</option>
+                                        <option>Machado de Batalha</option>
+                                        <option>Mangual</option>
+                                        <option>Martelo de Guerra</option>
+                                        <option>Picareta</option>
+                                        <option>Tridente</option>				
+                                    </optgroup>
+                                    <optgroup label="Corpo-a-Corpo | Duas Mãos">
+                                        <option>Alabarda</option>
+                                        <option>Alfange</option>
+                                        <option>Espada Grande</option>
+                                        <option>Foice</option>
+                                        <option>Lança Montada</option>
+                                        <option>Machado Grande</option>
+                                    </optgroup>
+                                    <optgroup label="Ataque á Distância">
+                                        <option>Arco Composto</option>
+                                        <option>Arco Longo</option>
+                                        <option>Besta Pesada</option>
+
+                                    </optgroup>
+                                    <optgroup label="Projéteis" disabled>
+                                        <option>Flechas (Arco Composto)</option>
+                                        <option>Flechas (Arco Longo)</option>
+                                        <option>Virotes</option>	
+                                    </optgroup>
+                                    </optgroup>
+                                    <optgroup label="Armas Exóticas">
+                                    <optgroup label="Corpo-a-Corpo | Leve">
+                                    <optgroup id="Nunchaku" name="Nunchaku" disabled><option>Nunchaku</option>
+                                    <optgroup id="Sai" name="Sai" disabled><option>Sai</option>
+                                    <optgroup id="Wakizashi" name="Wakizashi" disabled><option>Wakizashi</option>
+                                    </optgroup>
+                                    <optgroup label="Corpo-a-Corpo | Uma Mão">
+                                    <optgroup id="Chicote" name="Chicote" disabled><option>Chicote</option></optgroup>
+                                    <optgroup id="EspadaBastarda" name="EspadaBastarda" disabled><option>Espada Bastarda</option></optgroup>
+                                    <optgroup id="Katana" name="Katana" disabled><option>Katana</option></optgroup>
+                                    <optgroup id="MachadoAnão" name="MachadoAnão" disabled><option>Machado Anão</option></optgroup>
+                                    <optgroup id="SabreSerrilhado" name="SabreSerrilhado" disabled><option>Sabre Serrilhado</option></optgroup>			
+                                    </optgroup>
+                                    <optgroup label="Corpo-a-Corpo | Duas Mãos">
+                                    <optgroup id="CorrentecomCravos" name="CorrentecomCravos" disabled><option>Corrente com Cravos</option></optgroup>
+                                    <optgroup id="EspadadeDuasLâminas" name="EspadadeDuasLâminas" disabled><option>Espada de Duas Lâminas</option></optgroup>
+                                    <optgroup id="EspadaTáurica" name="EspadaTáurica" disabled><option>Espada Táurica</option></optgroup>
+                                    <optgroup id="MarretaEstilhaçadora" name="MarretaEstilhaçadora" disabled><option>Marreta Estilhaçadora</option></optgroup>
+                                    </optgroup>
+                                    <optgroup label="Ataque á Distância">
+                                    <optgroup id="Mosquete" name="Mosquete" disabled><option>Mosquete</option></optgroup>
+                                    <optgroup id="Pistola" name="Pistola" disabled><option>Pistola</option></optgroup>
+                                    <optgroup id="Rede" name="Rede" disabled><option>Rede</option></optgroup>
+                                    <optgroup id="Shuriken" name="Shuriken" disabled><option>Shuriken</option></optgroup>
+                                    <optgroup id="Tai-Tai" name="Tai-Tai" disabled><option>Tai-Tai</option></optgroup>
+                                    </optgroup>
+                                    <optgroup label="Projéteis" disabled>
+                                    <optgroup id="Projéteis" name="Projéteis" disabled><option>Munição (Mosquete)</option></optgroup>
+                                    <optgroup id="Projéteis" name="Projéteis" disabled><option>Munição (Pistola)</option></optgroup>
+                                    </optgroup>
+                                    </optgroup>
+                                </select>	
+                            </DIV></td>
+                    </tr>
+                    <tr>
+                        <td align="center">Pontos atuais: <input type="number" name="pva" id="pva"></td>
+                        <td><DIV type = box>
+                                <select type = text name="Armas" id="Armas">
+                                    <optgroup label="Armas Simples">
+                                    <optgroup label="Corpo-a-Corpo | Leve">
+                                        <option>Adaga</option>
+                                        <option>Ataque Desarmado</option>
+                                        <option>Espada Curta</option>	
+                                        <option>Manopla</option>
+                                    </optgroup>
+                                    <optgroup label="Corpo-a-Corpo | Uma Mão">
+                                        <option>Clava</option>
+                                        <option>Lança</option>
+                                        <option>Maça</option>
+                                    </optgroup>
+                                    <optgroup label="Corpo-a-Corpo | Duas Mãos">
+                                        <option>Bordão</option>
+                                        <option>Pique</option>	
+                                        <option>Tacape</option>
+                                    </optgroup>
+                                    <optgroup label="Ataque á Distância">
+                                        <option>Àcido</option>
+                                        <option>Àgua Benta</option>
+                                        <option>Arco Curto</option>
+                                        <option>Azagaia</option>
+                                        <option>Besta Leve</option>	
+                                        <option>Fogo Alquímico</option>
+                                        <option>Funda</option>
+                                        <option>Granada</option>
+                                    </optgroup>
+                                    <optgroup label="Projéteis" disabled>
+                                        <option>Flechas</option>
+                                        <option>Virotes</option>
+                                        <option>Balas</option>	
+                                    </optgroup>
+                                    </optgroup>
+                                    <optgroup label="Armas Marciais">
+                                    <optgroup label="Corpo-a-Corpo | Leve">
+                                        <option>Escudo Leve</option>
+                                        <option>Machadinha</option>
+                                        <option>Martelo</option>
+                                    </optgroup>
+                                    <optgroup label="Corpo-a-Corpo | Uma Mão">
+                                        <option>Cimitarra</option>
+                                        <option>Escudo Pesado</option>
+                                        <option>Espada Longa</option>
+                                        <option>Florete</option>
+                                        <option>Machado de Batalha</option>
+                                        <option>Mangual</option>
+                                        <option>Martelo de Guerra</option>
+                                        <option>Picareta</option>
+                                        <option>Tridente</option>				
+                                    </optgroup>
+                                    <optgroup label="Corpo-a-Corpo | Duas Mãos">
+                                        <option>Alabarda</option>
+                                        <option>Alfange</option>
+                                        <option>Espada Grande</option>
+                                        <option>Foice</option>
+                                        <option>Lança Montada</option>
+                                        <option>Machado Grande</option>
+                                    </optgroup>
+                                    <optgroup label="Ataque á Distância">
+                                        <option>Arco Composto</option>
+                                        <option>Arco Longo</option>
+                                        <option>Besta Pesada</option>
+
+                                    </optgroup>
+                                    <optgroup label="Projéteis" disabled>
+                                        <option>Flechas (Arco Composto)</option>
+                                        <option>Flechas (Arco Longo)</option>
+                                        <option>Virotes</option>	
+                                    </optgroup>
+                                    </optgroup>
+                                    <optgroup label="Armas Exóticas">
+                                    <optgroup label="Corpo-a-Corpo | Leve">
+                                    <optgroup id="Nunchaku" name="Nunchaku" disabled><option>Nunchaku</option>
+                                    <optgroup id="Sai" name="Sai" disabled><option>Sai</option>
+                                    <optgroup id="Wakizashi" name="Wakizashi" disabled><option>Wakizashi</option>
+                                    </optgroup>
+                                    <optgroup label="Corpo-a-Corpo | Uma Mão">
+                                    <optgroup id="Chicote" name="Chicote" disabled><option>Chicote</option></optgroup>
+                                    <optgroup id="EspadaBastarda" name="EspadaBastarda" disabled><option>Espada Bastarda</option></optgroup>
+                                    <optgroup id="Katana" name="Katana" disabled><option>Katana</option></optgroup>
+                                    <optgroup id="MachadoAnão" name="MachadoAnão" disabled><option>Machado Anão</option></optgroup>
+                                    <optgroup id="SabreSerrilhado" name="SabreSerrilhado" disabled><option>Sabre Serrilhado</option></optgroup>			
+                                    </optgroup>
+                                    <optgroup label="Corpo-a-Corpo | Duas Mãos">
+                                    <optgroup id="CorrentecomCravos" name="CorrentecomCravos" disabled><option>Corrente com Cravos</option></optgroup>
+                                    <optgroup id="EspadadeDuasLâminas" name="EspadadeDuasLâminas" disabled><option>Espada de Duas Lâminas</option></optgroup>
+                                    <optgroup id="EspadaTáurica" name="EspadaTáurica" disabled><option>Espada Táurica</option></optgroup>
+                                    <optgroup id="MarretaEstilhaçadora" name="MarretaEstilhaçadora" disabled><option>Marreta Estilhaçadora</option></optgroup>
+                                    </optgroup>
+                                    <optgroup label="Ataque á Distância">
+                                    <optgroup id="Mosquete" name="Mosquete" disabled><option>Mosquete</option></optgroup>
+                                    <optgroup id="Pistola" name="Pistola" disabled><option>Pistola</option></optgroup>
+                                    <optgroup id="Rede" name="Rede" disabled><option>Rede</option></optgroup>
+                                    <optgroup id="Shuriken" name="Shuriken" disabled><option>Shuriken</option></optgroup>
+                                    <optgroup id="Tai-Tai" name="Tai-Tai" disabled><option>Tai-Tai</option></optgroup>
+                                    </optgroup>
+                                    <optgroup label="Projéteis" disabled>
+                                    <optgroup id="Projéteis" name="Projéteis" disabled><option>Munição (Mosquete)</option></optgroup>
+                                    <optgroup id="Projéteis" name="Projéteis" disabled><option>Munição (Pistola)</option></optgroup>
+                                    </optgroup>
+                                    </optgroup>
+                                </select>	
+
+
+                            </DIV></td>
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                        <td rowspan="3"><h1>MANA</h1></td>
+                        <td align="center" >Pontos totais: <input type="number" name="pmt" id="pmt"></td>	
+                        <td>DES		Arm. 	Esc. 	Out.</td>
+                        <td><DIV type = box>
+                                <select type = text name="Armas" id="Armas">
+                                    <optgroup label="Armas Simples">
+                                    <optgroup label="Corpo-a-Corpo | Leve">
+                                        <option>Adaga</option>
+                                        <option>Ataque Desarmado</option>
+                                        <option>Espada Curta</option>	
+                                        <option>Manopla</option>
+                                    </optgroup>
+                                    <optgroup label="Corpo-a-Corpo | Uma Mão">
+                                        <option>Clava</option>
+                                        <option>Lança</option>
+                                        <option>Maça</option>
+                                    </optgroup>
+                                    <optgroup label="Corpo-a-Corpo | Duas Mãos">
+                                        <option>Bordão</option>
+                                        <option>Pique</option>	
+                                        <option>Tacape</option>
+                                    </optgroup>
+                                    <optgroup label="Ataque á Distância">
+                                        <option>Àcido</option>
+                                        <option>Àgua Benta</option>
+                                        <option>Arco Curto</option>
+                                        <option>Azagaia</option>
+                                        <option>Besta Leve</option>	
+                                        <option>Fogo Alquímico</option>
+                                        <option>Funda</option>
+                                        <option>Granada</option>
+                                    </optgroup>
+                                    <optgroup label="Projéteis" disabled>
+                                        <option>Flechas</option>
+                                        <option>Virotes</option>
+                                        <option>Balas</option>	
+                                    </optgroup>
+                                    </optgroup>
+                                    <optgroup label="Armas Marciais">
+                                    <optgroup label="Corpo-a-Corpo | Leve">
+                                        <option>Escudo Leve</option>
+                                        <option>Machadinha</option>
+                                        <option>Martelo</option>
+                                    </optgroup>
+                                    <optgroup label="Corpo-a-Corpo | Uma Mão">
+                                        <option>Cimitarra</option>
+                                        <option>Escudo Pesado</option>
+                                        <option>Espada Longa</option>
+                                        <option>Florete</option>
+                                        <option>Machado de Batalha</option>
+                                        <option>Mangual</option>
+                                        <option>Martelo de Guerra</option>
+                                        <option>Picareta</option>
+                                        <option>Tridente</option>				
+                                    </optgroup>
+                                    <optgroup label="Corpo-a-Corpo | Duas Mãos">
+                                        <option>Alabarda</option>
+                                        <option>Alfange</option>
+                                        <option>Espada Grande</option>
+                                        <option>Foice</option>
+                                        <option>Lança Montada</option>
+                                        <option>Machado Grande</option>
+                                    </optgroup>
+                                    <optgroup label="Ataque á Distância">
+                                        <option>Arco Composto</option>
+                                        <option>Arco Longo</option>
+                                        <option>Besta Pesada</option>
+
+                                    </optgroup>
+                                    <optgroup label="Projéteis" disabled>
+                                        <option>Flechas (Arco Composto)</option>
+                                        <option>Flechas (Arco Longo)</option>
+                                        <option>Virotes</option>	
+                                    </optgroup>
+                                    </optgroup>
+                                    <optgroup label="Armas Exóticas">
+                                    <optgroup label="Corpo-a-Corpo | Leve">
+                                    <optgroup id="Nunchaku" name="Nunchaku" disabled><option>Nunchaku</option>
+                                    <optgroup id="Sai" name="Sai" disabled><option>Sai</option>
+                                    <optgroup id="Wakizashi" name="Wakizashi" disabled><option>Wakizashi</option>
+                                    </optgroup>
+                                    <optgroup label="Corpo-a-Corpo | Uma Mão">
+                                    <optgroup id="Chicote" name="Chicote" disabled><option>Chicote</option></optgroup>
+                                    <optgroup id="EspadaBastarda" name="EspadaBastarda" disabled><option>Espada Bastarda</option></optgroup>
+                                    <optgroup id="Katana" name="Katana" disabled><option>Katana</option></optgroup>
+                                    <optgroup id="MachadoAnão" name="MachadoAnão" disabled><option>Machado Anão</option></optgroup>
+                                    <optgroup id="SabreSerrilhado" name="SabreSerrilhado" disabled><option>Sabre Serrilhado</option></optgroup>			
+                                    </optgroup>
+                                    <optgroup label="Corpo-a-Corpo | Duas Mãos">
+                                    <optgroup id="CorrentecomCravos" name="CorrentecomCravos" disabled><option>Corrente com Cravos</option></optgroup>
+                                    <optgroup id="EspadadeDuasLâminas" name="EspadadeDuasLâminas" disabled><option>Espada de Duas Lâminas</option></optgroup>
+                                    <optgroup id="EspadaTáurica" name="EspadaTáurica" disabled><option>Espada Táurica</option></optgroup>
+                                    <optgroup id="MarretaEstilhaçadora" name="MarretaEstilhaçadora" disabled><option>Marreta Estilhaçadora</option></optgroup>
+                                    </optgroup>
+                                    <optgroup label="Ataque á Distância">
+                                    <optgroup id="Mosquete" name="Mosquete" disabled><option>Mosquete</option></optgroup>
+                                    <optgroup id="Pistola" name="Pistola" disabled><option>Pistola</option></optgroup>
+                                    <optgroup id="Rede" name="Rede" disabled><option>Rede</option></optgroup>
+                                    <optgroup id="Shuriken" name="Shuriken" disabled><option>Shuriken</option></optgroup>
+                                    <optgroup id="Tai-Tai" name="Tai-Tai" disabled><option>Tai-Tai</option></optgroup>
+                                    </optgroup>
+                                    <optgroup label="Projéteis" disabled>
+                                    <optgroup id="Projéteis" name="Projéteis" disabled><option>Munição (Mosquete)</option></optgroup>
+                                    <optgroup id="Projéteis" name="Projéteis" disabled><option>Munição (Pistola)</option></optgroup>
+                                    </optgroup>
+                                    </optgroup>
+                                </select>	
+
+
+                            </DIV></td>					
+                    </tr>	
+                    <tr>
+                        <td></td>
+                        <td><input type="number" name="DES" id="DES"><input type="number" name="pva" id="pva"><input type="number" name="pva" id="pva"><input type="number" name="pva" id="pva"></td>
+                        <td><DIV type = box>
+                                <select type = text name="Armas" id="Armas">
+                                    <optgroup label="Armas Simples">
+                                    <optgroup label="Corpo-a-Corpo | Leve">
+                                        <option>Adaga</option>
+                                        <option>Ataque Desarmado</option>
+                                        <option>Espada Curta</option>	
+                                        <option>Manopla</option>
+                                    </optgroup>
+                                    <optgroup label="Corpo-a-Corpo | Uma Mão">
+                                        <option>Clava</option>
+                                        <option>Lança</option>
+                                        <option>Maça</option>
+                                    </optgroup>
+                                    <optgroup label="Corpo-a-Corpo | Duas Mãos">
+                                        <option>Bordão</option>
+                                        <option>Pique</option>	
+                                        <option>Tacape</option>
+                                    </optgroup>
+                                    <optgroup label="Ataque á Distância">
+                                        <option>Àcido</option>
+                                        <option>Àgua Benta</option>
+                                        <option>Arco Curto</option>
+                                        <option>Azagaia</option>
+                                        <option>Besta Leve</option>	
+                                        <option>Fogo Alquímico</option>
+                                        <option>Funda</option>
+                                        <option>Granada</option>
+                                    </optgroup>
+                                    <optgroup label="Projéteis" disabled>
+                                        <option>Flechas</option>
+                                        <option>Virotes</option>
+                                        <option>Balas</option>	
+                                    </optgroup>
+                                    <optgroup label="Armas Marciais">
+                                    <optgroup label="Corpo-a-Corpo | Leve">
+                                        <option>Escudo Leve</option>
+                                        <option>Machadinha</option>
+                                        <option>Martelo</option>
+                                    </optgroup>
+                                    <optgroup label="Corpo-a-Corpo | Uma Mão">
+                                        <option>Cimitarra</option>
+                                        <option>Escudo Pesado</option>
+                                        <option>Espada Longa</option>
+                                        <option>Florete</option>
+                                        <option>Machado de Batalha</option>
+                                        <option>Mangual</option>
+                                        <option>Martelo de Guerra</option>
+                                        <option>Picareta</option>
+                                        <option>Tridente</option>				
+                                    </optgroup>
+                                    <optgroup label="Corpo-a-Corpo | Duas Mãos">
+                                        <option>Alabarda</option>
+                                        <option>Alfange</option>
+                                        <option>Espada Grande</option>
+                                        <option>Foice</option>
+                                        <option>Lança Montada</option>
+                                        <option>Machado Grande</option>
+                                    </optgroup>
+                                    <optgroup label="Ataque á Distância">
+                                        <option>Arco Composto</option>
+                                        <option>Arco Longo</option>
+                                        <option>Besta Pesada</option>
+
+                                    </optgroup>
+                                    <optgroup label="Projéteis" disabled>
+                                        <option>Flechas (Arco Composto)</option>
+                                        <option>Flechas (Arco Longo)</option>
+                                        <option>Virotes</option>	
+                                    </optgroup>
+                                    <optgroup label="Armas Exóticas">
+                                    <optgroup label="Corpo-a-Corpo | Leve">
+                                    <optgroup id="Nunchaku" name="Nunchaku" disabled><option>Nunchaku</option>
+                                    <optgroup id="Sai" name="Sai" disabled><option>Sai</option>
+                                    <optgroup id="Wakizashi" name="Wakizashi" disabled><option>Wakizashi</option></optgroup>
+                                    <optgroup label="Corpo-a-Corpo | Uma Mão">
+                                    <optgroup id="Chicote" name="Chicote" disabled><option>Chicote</option></optgroup>
+                                    <optgroup id="EspadaBastarda" name="EspadaBastarda" disabled><option>Espada Bastarda</option></optgroup>
+                                    <optgroup id="Katana" name="Katana" disabled><option>Katana</option></optgroup>
+                                    <optgroup id="MachadoAnão" name="MachadoAnão" disabled><option>Machado Anão</option></optgroup>
+                                    <optgroup id="SabreSerrilhado" name="SabreSerrilhado" disabled><option>Sabre Serrilhado</option></optgroup>			
+                                    <optgroup label="Corpo-a-Corpo | Duas Mãos">
+                                    <optgroup id="CorrentecomCravos" name="CorrentecomCravos" disabled><option>Corrente com Cravos</option></optgroup>
+                                    <optgroup id="EspadadeDuasLâminas" name="EspadadeDuasLâminas" disabled><option>Espada de Duas Lâminas</option></optgroup>
+                                    <optgroup id="EspadaTáurica" name="EspadaTáurica" disabled><option>Espada Táurica</option></optgroup>
+                                    <optgroup id="MarretaEstilhaçadora" name="MarretaEstilhaçadora" disabled><option>Marreta Estilhaçadora</option></optgroup>
+                                    <optgroup label="Ataque á Distância">
+                                    <optgroup id="Mosquete" name="Mosquete" disabled><option>Mosquete</option></optgroup>
+                                    <optgroup id="Pistola" name="Pistola" disabled><option>Pistola</option></optgroup>
+                                    <optgroup id="Rede" name="Rede" disabled><option>Rede</option></optgroup>
+                                    <optgroup id="Shuriken" name="Shuriken" disabled><option>Shuriken</option></optgroup>
+                                    <optgroup id="Tai-Tai" name="Tai-Tai" disabled><option>Tai-Tai</option></optgroup>
+                                    <optgroup label="Projéteis" disabled>
+                                    <optgroup id="Projéteis" name="Projéteis" disabled><option>Munição (Mosquete)</option></optgroup>
+                                    <optgroup id="Projéteis" name="Projéteis" disabled><option>Munição (Pistola)</option></optgroup>
+                                </select>	
+                            </DIV></td>
+                    </tr>
+                    <tr>
+                        <td align="center">Pontos atuais: <input type="number" name="pma" id="pma"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" align="center"><h1>ATRIBUTOS</h2></td>
+                    <tr>
+                        <td align="center"><h3>Habilidades</h3></td>
+                        <td align="center"><h3>Valor</h3></td>
+                        <td align="center"><h3>Modificador</h3></td>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td align="center"><h3>FOR</h3><p>Força</p></td>
+                        <td align="center"><input type="number" name="valorforça" id="CA"></td>
+                        <td align="center"><input type="number" name="modforça" id="CA"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"><h3>DES</h3><p>Destreza</p></td>
+                        <td align="center"><input type="number" name="valordestreza" id="CA"></td>
+                        <td align="center"><input type="number" name="moddestreza" id="CA"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"><h3>CON</h3><p>Constituição</p></td>
+                        <td align="center"><input type="number" name="valorconstituição" id="CA"></td>
+                        <td align="center"><input type="number" name="modconstituição" id="CA"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"><h3>INT</h3><p>Inteligência</p></td>
+                        <td align="center"><input type="number" name="valorinteligência" id="CA"></td>
+                        <td align="center"><input type="number" name="modforça" id="CA"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"><h3>SAB</h3><p>Sabedoria</p></td>
+                        <td align="center"><input type="number" name="valorsabedoria" id="CA"></td>
+                        <td align="center"><input type="number" name="modsabedoria" id="CA"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"><h3>CAR</h3><p>Carisma</p></td>
+                        <td align="center"><input type="number" name="valorcarisma" id="CA"></td>
+                        <td align="center"><input type="number" name="modcarisma" id="CA"></td>
+                    </tr>
+            </fieldset>
+        </form>
+        <script type="text/javascript" src="ficha.js"></script>
+    </body>
+</html>	
