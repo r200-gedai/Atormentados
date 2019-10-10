@@ -20,11 +20,11 @@
                         <td><b>PERÍCIAS</b></td>
                         <td><b>Total</b></td>
                         <td></td>
-                        <td><b>Grad.</b></td>
+                        <td align="center"><b>Grad.</b></td>
                         <td></td>
-                        <td><b>Mod. de Habilidade</b></td>
+                        <td align="center"><b>Mod. de Habilidade</b></td>
                         <td></td>
-                        <td><b>Outros</b></td>
+                        <td align="center"><b>Outros</b></td>
                     </tr>
                     <tr>
                         <td><input type="text" name="nomep" id="nomep"></td>
@@ -89,7 +89,7 @@
                         <td><label>Sexo</label></td>
                         <td><label>Idade</label></td>
                         <td><label>Divindade</label></td>
-                        <td><label>tamanho</label></td>
+                        <td><label>Tamanho</label></td>
                         <td><label>Deslocamento</label></td>
                     	<td>Adestrar Animais*</td>
                     	<td align="center"><input type="number" name="AcrobaciaTotal" id="AcrobaciaTotal"></td>
@@ -159,7 +159,7 @@
                         <td align="center" >Pontos totais: <input type="number" name="pvt" id="pvt"></td>
                         <td rowspan="3">10+<p></p><h1>CA <input type="number" name="CA" id="CA"></h1></td>
                         <td colspan="2" align="center" rowspan="2"><h3>HABILIDADES DE CLASSE</h3></td>
-                        <td align="center">Atuação(_____________)</td>
+                        <td align="center">Atuação<input type="text" name="tipoAtuação1" id="tipoAtuação1"></td>
                         <td align="center"><input type="number" name="AcrobaciaTotal" id="AcrobaciaTotal"></td>
                         <td align="center"><b>=</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="AcrobaciaTotal"></td> 
@@ -171,7 +171,7 @@
                     </tr>
                     <tr>
                         <td></td>
-                        <td align="center">Atuação(_____________)</td>
+                        <td align="center">Atuação<input type="text" name="tipoAtuação2" id="tipoAtuação2"></td>
                         <td align="center"><input type="number" name="AcrobaciaTotal" id="AcrobaciaTotal"></td>
                         <td align="center"><b>=</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="AcrobaciaTotal"></td> 
@@ -197,7 +197,7 @@
                         <td rowspan="3"><h1>MANA</h1></td>
                         <td align="center" >Pontos totais: <input type="number" name="pmt" id="pmt"></td>	
                         <td>DES		Arm. 	Esc. 	Out.</td>
-                        <td align="center">Conhecimento(________)*</td>	
+                        <td>Conhecimento<input type="text" name="tipoConhecimento1" id="tipoConhecimento1"></td>	
                         <td align="center"><input type="number" name="AcrobaciaTotal" id="AcrobaciaTotal"></td>
                         <td align="center"><b>=</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="AcrobaciaTotal"></td> 
@@ -209,7 +209,7 @@
                     <tr>
                         <td></td>
                         <td><input type="number" name="DES" id="DES"><input type="number" name="pva" id="pva"><input type="number" name="pva" id="pva"><input type="number" name="pva" id="pva"></td>
-                        <td align="center">Conhecimento(________)*</td>
+                        <td>Conhecimento<input type="text" name="tipoConhecimento2" id="tipoConhecimento2"></td>
                         <td align="center"><input type="number" name="AcrobaciaTotal" id="AcrobaciaTotal"></td>
                         <td align="center"><b>=</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="AcrobaciaTotal"></td> 
@@ -335,7 +335,7 @@
                         <td align="center" rowspan="5"><input type="number" name="valorforça" id="CA"></td>
                         <td align="center" rowspan="5"><input type="number" name="modforça" id="CA"></td>
                         <td colspan="2" rowspan="17"></td>
-                        <td>Ofícil(_______________)</td>
+                        <td>Ofício<input type="text" name="tipoOfício1" id="tipoOfício1"></td>
                         <td align="center"><input type="number" name="AcrobaciaTotal" id="AcrobaciaTotal"></td>
                         <td align="center"><b>=</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="AcrobaciaTotal"></td> 
@@ -345,7 +345,7 @@
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="AcrobaciaTotal"></td>
                     </tr>
                     <tr>
-                    	<td>Ofícil(_______________)</td>
+                    	<td>Ofício<input type="text" name="tipoOfício2" id="tipoOfício2"></td>
                     	<td align="center"><input type="number" name="AcrobaciaTotal" id="AcrobaciaTotal"></td>
                         <td align="center"><b>=</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="AcrobaciaTotal"></td> 
@@ -375,7 +375,7 @@
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="AcrobaciaTotal"></td>
                     </tr>
                     <tr>
-                    	<td><input type="text" name="nomep" id="nomep"></td>
+                    	<td><input type="text" name="periciaextra" id="periciaextra"></td>
                     	<td align="center"><input type="number" name="AcrobaciaTotal" id="AcrobaciaTotal"></td>
                         <td align="center"><b>=</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="AcrobaciaTotal"></td> 
@@ -383,16 +383,66 @@
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="AcrobaciaTotal"></td>
                        	<td align="center"><b>+</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="AcrobaciaTotal"></td>
+                       	<td></td>
+                       	<td></td>
                     </tr>
                     <tr></tr>
                     <tr>
-                        <td align="center"rowspan="5"><h3>DES</h3><p>Destreza</p></td>
+                        <td align="center" rowspan="5"><h3>DES</h3><p>Destreza</p></td>
                         <td align="center" rowspan="5"><input type="number" name="valordestreza" id="CA"></td>
                         <td align="center" rowspan="5"><input type="number" name="moddestreza" id="CA"></td>
                     </tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
+                    <tr colspan="10" rowspan="30">
+                    	<td align="center"><b>Ataques</b></td>
+                    	<td align="center"><b>Total</b></td>
+                    	<td>=</td>
+                    	<td align="center"><b>BBA</b></td>
+                    	<td>+</td>
+                    	<td align="center"><b>Mod. de habilidade</b></td>
+                    	<td>+</td>
+                    	<td align="center"><b>Mod de Tamanho</b></td>
+                    	<td>+</td>
+                    	<td align="center"><b>Outros</b></td>
+                    	<td></td>
+                    	<td></td>
+                    	<td></td>
+                    	<td></td>
+                    	<td></td>
+                    	<td></td>
+                    	<td></td>
+                    	<td></td>
+                    	<td></td>
+                    	<td></td>
+                    	<td></td>
+                    	<td></td>
+                    	<td></td>
+                    	<td></td>
+
+                    </tr>
+                    <tr colspan="10" rowspan="30">
+                    	<td align="center"><b>CORPO-A-CORPO</b></td>
+                    	<td align="center"><input type="number" name="ataqueCorpoaCorpo" id="ataqueCorpoaCorpo"></td>
+                    	<td>=</td>
+                    	<td align="center"><input type="number" name="BBA" id="BBA"></td>
+                    	<td>+</td>
+                    	<td align="center"><input type="number" name="modHabilida" id="modHabilida"></td>
+                    	<td>+</td>
+                    	<td align="center"><input type="number" name="modTamanho" id="modTamanho"></td>
+                    	<td>+</td>
+                    	<td align="center"><input type="number" name="outrosDistância" id="outrosDistância"></b></td>
+                    </tr>
+                    <tr colspan="10" rowspan="30">
+                    	<td align="center"><b>DISTÂNCIA</b></td>
+                    	<td align="center"><input type="number" name="ataqueCorpoaCorpo" id="ataqueCorpoaCorpo"></td>
+                    	<td>=</td>
+                    	<td align="center"><input type="number" name="BBA" id="BBA"></td>
+                    	<td>+</td>
+                    	<td align="center"><input type="number" name="modHabilida" id="modHabilida"></td>
+                    	<td>+</td>
+                    	<td align="center"><input type="number" name="modTamanho" id="modTamanho"></td>
+                    	<td>+</td>
+                    	<td align="center"><input type="number" name="outrosDistância" id="outrosDistância"></b></td>
+                    </tr>
                     <tr></tr>
                     <tr></tr>
                     <tr>
@@ -400,22 +450,68 @@
                         <td align="center" rowspan="5"><input type="number" name="valorconstituição" id="CA"></td>
                         <td align="center" rowspan="5"><input type="number" name="modconstituição" id="CA"></td>
                     </tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
+                    <tr>
+                    	<td align="center"><b>ARMAS</b></td>
+                    	<td align="center" colspan="2"><b>BBA</b></td>
+                    	<td align="center" colspan="2"><b>Dano</b></td>
+                    	<td align="center" colspan="2"><b>Crítico</b></td>
+                    	<td align="center" colspan="2"><b>Distância</b></td>
+                    	<td align="center" colspan="17"><b>Tipo</b></td>
+                    </tr>
+                    <tr>
+                    	<td align="center"><b><input type="text" name="arma1" id="Arma"></b></td>
+                    	<td align="center" colspan="2"><b><input type="number" name="BBA" id="BBA"></b></td>
+                    	<td align="center" colspan="2"><b><input type="number" name="danoArma1" id="danoArma1"></b></td>
+                    	<td align="center" colspan="2"><b><input type="number" name="críticoArma1" id="críticoArma1"></b></td>
+                    	<td align="center" colspan="2"><b><input type="number" name="distânciaArma" id="distânciaArma"></b></td>
+                    	<td colspan="17"><b><input type="text" name="arma1" id="Arma"></b></td>
+                    </tr>
+                    <tr>
+                    	<td align="center"><b><input type="text" name="arma2" id="Arma"></b></td>
+                    	<td align="center" colspan="2"><b><input type="number" name="BBA" id="BBA"></b></td>
+                    	<td align="center" colspan="2"><b><input type="number" name="danoArma2" id="danoArma2"></b></td>
+                    	<td align="center" colspan="2"><b><input type="number" name="críticoArma2" id="críticoArma2"></b></td>
+                    	<td align="center" colspan="2"><b><input type="number" name="distânciaArma" id="distânciaArma"></b></td>
+                    	<td colspan="17"><b><input type="text" name="arma1" id="Arma"></b></td>
+                    </tr>
+                    <tr>
+                    	<td align="center"><b><input type="text" name="arma3" id="Arma"></b></td>
+                    	<td align="center" colspan="2"><b><input type="number" name="BBA" id="BBA"></b></td>
+                    	<td align="center" colspan="2"><b><input type="number" name="danoArma3" id="danoArma3"></b></td>
+                    	<td align="center" colspan="2"><b><input type="number" name="críticoArma1" id="críticoArma3"></b></td>
+                    	<td align="center" colspan="2"><b><input type="number" name="distânciaArma" id="distânciaArma"></b></td>
+                    	<td colspan="17"><b><input type="text" name="arma1" id="Arma"></b></td>
+                    </tr>
                     <tr></tr>
                     <tr>
                         <td align="center" rowspan="5"><h3>INT</h3><p>Inteligência</p></td>
                         <td align="center" rowspan="5"><input type="number" name="valorinteligência" id="CA"></td>
                         <td align="center" rowspan="5"><input type="number" name="modinteligência" id="CA"></td>
                         <td colspan="2" align="center"><b><h3>HABILIDADES DE RAÇA</h3></b></td>
+                        <td align="center" colspan="4"><b>ARMADURA/ESCUDO</b></td>
+                    	<td align="center" colspan="3"><b>Bônus na CA</b></td>
+                    	<td align="center" colspan="3"><b>Bônus Máximo de Destreza</b></td>
+                    	<td align="center" colspan="14"><b>Penalidade da Armadura</b></td>
                     </tr>
                     <tr>
                     	<td colspan="2" rowspan="18"></td>
+                    	<td align="center" colspan="4"><b><input type="text" name="armadura1" id="Armadura"></b></td>
+                    	<td align="center" colspan="3"><b><input type="number" name="BônusnaCA1" id="BônusnaCA"></b></td>
+                    	<td align="center" colspan="3"><b><input type="number" name="BMD1" id="BMD"></b></td>
+                    	<td align="center" colspan="14"><b><input type="number" name="Penalidade1" id="Penalidade"></b></td>
                     </tr>
-                    <tr></tr>
-                    <tr></tr>
+                    <tr>
+                    	<td align="center" colspan="4"><b><input type="text" name="armadura1" id="Armadura"></b></td>
+                    	<td align="center" colspan="3"><b><input type="number" name="BônusnaCA1" id="BônusnaCA"></b></td>
+                    	<td align="center" colspan="3"><b><input type="number" name="BMD1" id="BMD"></b></td>
+                    	<td align="center" colspan="14"><b><input type="number" name="Penalidade1" id="Penalidade"></b></td>
+                    </tr>
+                    <tr>
+                    	<td align="center" colspan="4"><b><input type="text" name="armadura1" id="Armadura"></b></td>
+                    	<td align="center" colspan="3"><b><input type="number" name="BônusnaCA1" id="BônusnaCA"></b></td>
+                    	<td align="center" colspan="3"><b><input type="number" name="BMD1" id="BMD"></b></td>
+                    	<td align="center" colspan="14"><b><input type="number" name="Penalidade1" id="Penalidade"></b></td>
+                    </tr>
                     <tr></tr>
                     <tr></tr>
                     <tr>
