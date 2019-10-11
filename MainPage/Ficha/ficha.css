@@ -20,7 +20,7 @@ input[type=button], input[type=reset],legend, select, optgroup{
 }
 .tamanho{
 	width: 150px;
-	background: 	#C0C0C0;
+	background: white;
 	border-radius: 8px;
 }
 input[type=number]{
