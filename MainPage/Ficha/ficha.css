@@ -37,3 +37,7 @@ input[id="FOR"],input[id="MFOR"],input[id="DES"],input[id="MDES"],input[id="CON"
 	color: white;
 	font-size: 40px; 
 }
+body{ 
+	zoom: 90%;
+
+}
