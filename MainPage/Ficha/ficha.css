@@ -41,3 +41,6 @@ body{
 	zoom: 90%;
 
 }
+textarea {
+  resize: none;
+}
