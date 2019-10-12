@@ -4,13 +4,14 @@
         <title>Ficha de Personagem</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="ficha.css">
+        <link rel="shortcut icon" href="logo.PNG" type="image/x-fast"/>
     </head>
     <body>
         <form>
             <label>Nível</label> <input type="" name="nivel" id="nivel">
             <fieldset class="tamanho" >
                 <legend>FICHA</legend>
-                <table border="0">
+                <table border="01">
                     <tr>
                         <td><label>Nome do personagem</label></td>
                         <td><label>Nome do jogador</label></td>
@@ -25,6 +26,7 @@
                         <td align="center"><b>Mod. de Habilidade</b></td>
                         <td></td>
                         <td align="center"><b>Outros</b></td>
+                        <td colspan="25" rowspan="27"></td>
                     </tr>
                     <tr>
                         <td><input type="text" name="nomep" id="nomep"></td>
@@ -155,9 +157,9 @@
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="AcrobaciaTotal"></td>	
                     </tr>
                     <tr>
-                        <td rowspan="4" bgcolor="black"><h1><font color="white">VIDA</h1></td>
-                        <td align="center" >Pontos totais: <input type="number" name="pvt" id="pvt"></td>
-                        <td rowspan="3">10+<p></p><h1>CA <input type="number" name="CA" id="CA"></h1></td>
+                        <td align="center" rowspan="4" bgcolor="black"><h1><font color="white">PV</h1></td>
+                        <td align="center" rowspan="3">Pontos totais: <p><input type="number" name="PVtotal" id="CA"></td>
+                        <td align="center" rowspan="3">Pontos atuais: <p><input type="number" name="PVatual" id="CA"></td>
                         <td colspan="2" align="center" rowspan="2" bgcolor="black"><h3><font color="white">HABILIDADES DE CLASSE</h3></td>
                         <td><input type="checkbox">Atuação<input type="text" name="tipoAtuação1" id="tipoAtuação1"></td>
                         <td align="center"><input type="number" name="AcrobaciaTotal" id="AcrobaciaTotal"></td>
@@ -170,7 +172,7 @@
 
                     </tr>
                     <tr>
-                        <td></td>
+
                         <td><input type="checkbox">Atuação<input type="text" name="tipoAtuação2" id="tipoAtuação2"></td>
                         <td align="center"><input type="number" name="AcrobaciaTotal" id="AcrobaciaTotal"></td>
                         <td align="center"><b>=</b></td>
@@ -180,8 +182,7 @@
                        	<td align="center"><b>+</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="AcrobaciaTotal"></td>
                     </tr>
-                    <tr>
-                        <td align="center">Pontos atuais: <input type="number" name="pva" id="pva"></td>   
+                    <tr>  
                         <td colspan="2" rowspan="9	">!!!</td>                     
                         <td><input type="checkbox">Cavalgar</td>
                         <td align="center"><input type="number" name="AcrobaciaTotal" id="AcrobaciaTotal"></td>
@@ -194,9 +195,13 @@
                     </tr>
                     <tr></tr>
                     <tr>
-                        <td rowspan="3"><h1>MANA</h1></td>
-                        <td align="center" >Pontos totais: <input type="number" name="pmt" id="pmt"></td>	
-                        <td>DES		Arm. 	Esc. 	Out.</td>
+                        <td align="center" rowspan="3" bgcolor="black"><font color="white"><h1>CA</h1></td>
+                        <td align="center" rowspan="3">Total: <input type="number" name="CAtotal" id="CA"></td>	
+                        <td rowspan="3">Armadura <input type="number" name="CAarmadura" id="CAarmadura">
+                          <p>Destreza <input type="number" name="AcrobaciaTotal" id="CAdestreza"></p>
+                          <p>Escudo <input type="number" name="AcrobaciaTotal" id="CAescudo"></p>
+                          <p>Outros <input type="number" name="CAoutros" id="CAoutros"></p>
+                        </td>
                         <td><input type="checkbox">Conhecimento<input type="text" name="tipoConhecimento1" id="tipoConhecimento1"></td>	
                         <td align="center"><input type="number" name="AcrobaciaTotal" id="AcrobaciaTotal"></td>
                         <td align="center"><b>=</b></td>
@@ -207,8 +212,6 @@
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="AcrobaciaTotal"></td>				
                     </tr>	
                     <tr>
-                        <td></td>
-                        <td><input type="number" name="DES" id="DES"><input type="number" name="pva" id="pva"><input type="number" name="pva" id="pva"><input type="number" name="pva" id="pva"></td>
                         <td><input type="checkbox">Conhecimento<input type="text" name="tipoConhecimento2" id="tipoConhecimento2"></td>
                         <td align="center"><input type="number" name="AcrobaciaTotal" id="AcrobaciaTotal"></td>
                         <td align="center"><b>=</b></td>
@@ -219,8 +222,6 @@
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="AcrobaciaTotal"></td>	
                     </tr>
                     <tr>
-                        <td align="center">Pontos atuais: <input type="number" name="pma" id="pma"></td>
-                        <td></td>
                         <td><input type="checkbox">Cura</td>
                         <td align="center"><input type="number" name="AcrobaciaTotal" id="AcrobaciaTotal"></td>
                         <td align="center"><b>=</b></td>
@@ -382,8 +383,6 @@
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="AcrobaciaTotal"></td>
                        	<td align="center"><b>+</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="AcrobaciaTotal"></td>
-                       	<td></td>
-                       	<td></td>
                     </tr>
                     <tr></tr>
                     <tr>
@@ -419,7 +418,7 @@
 
                     </tr>
                     <tr colspan="10" rowspan="30">
-                    	<td align="center"><b>CORPO-A-CORPO</b></td>
+                    	<td align="center" bgcolor="black"><b><font color="white">CORPO-A-CORPO</b></td>
                     	<td align="center"><input type="number" name="ataqueCorpoaCorpo" id="ataqueCorpoaCorpo"></td>
                     	<td>=</td>
                     	<td align="center"><input type="number" name="BBA" id="BBA"></td>
@@ -431,7 +430,7 @@
                     	<td align="center"><input type="number" name="outrosDistância" id="outrosDistância"></b></td>
                     </tr>
                     <tr colspan="10" rowspan="30">
-                    	<td align="center"><b>DISTÂNCIA</b></td>
+                    	<td align="center" bgcolor="black"><b><font color="white">DISTÂNCIA</b></td>
                     	<td align="center"><input type="number" name="ataqueCorpoaCorpo" id="ataqueCorpoaCorpo"></td>
                     	<td>=</td>
                     	<td align="center"><input type="number" name="BBA" id="BBA"></td>
@@ -518,7 +517,15 @@
                         <td align="center" rowspan="5"><input type="number" name="valorsabedoria" id="CA"></td>
                         <td align="center"rowspan="5"><input type="number" name="modsabedoria" id="CA"></td>
                     </tr>
-                    <tr></tr>
+                    <tr>
+                      <td align="center"><b>Resistências</b></td>
+                      <td align="center"></td>
+                      <td align="center" colspan="2">1/2 do Nível</td>
+                      <td align="center"></td>
+                      <td align="center"></td>
+                      <td align="center"></td>
+                      <td align="center"></td>
+                    </tr>
                     <tr></tr>
                     <tr></tr>
                     <tr></tr>
