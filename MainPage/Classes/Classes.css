@@ -237,7 +237,8 @@ body{
   background-attachment: fixed;
   background-size: 100%;
   background-color: black;
+  font-style: italic color#C0C0C0;
 }
 .fieldtexte{
-  color: white;
+  color: #C0C0C0;
 }
