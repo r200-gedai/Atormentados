@@ -15,8 +15,6 @@
                     <tr>
                         <td><label>Nome do personagem</label></td>
                         <td><label>Nome do jogador</label></td>
-                        <td><label>Raça <input type="button" value="Aplicar" onclick="f1()"></label></td>
-                        <td><label>Classe <input type="button" value="Aplicar" onclick="f2()"></label></td>
                         <td><label>Tendêcia</label></td>
                         <td align="center" bgcolor="black"><b><font color="white">PERÍCIAS</b></td>
                         <td><b>Total</b></td>
@@ -32,7 +30,7 @@
                         <td><input type="text" name="nomep" id="nomep"></td>
                         <td><input type="text" name="nomej" id="nomej"></td>
                         <td><div type="box">
-                                <select type="text" name="raca" id="raca" lang="cu">
+                                <select type="text" name="raca" id="raca" lang="cu" onchange="f1()">
                                     <option>Anão</option>
                                     <option>Elfo</option>
                                     <option>Goblin</option>
@@ -48,7 +46,7 @@
                                 </select>
                             </div>
                         </td>
-                        <td><select type="text" name="classe" id="classe">
+                        <td><select type="text" name="classe" id="classe" onchange="f2()">
                                 <option>Bárbaro</option>
                                 <option>Bardo</option>
                                 <option>Clérigo</option>
