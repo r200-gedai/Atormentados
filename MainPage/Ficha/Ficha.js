@@ -1,60 +1,48 @@
 function f1(){
 				var racas =document.getElementById('raca').value;
+                var forca =document.getElementById('FOR').value;
+                var destreza =document.getElementById('DES').value;
+                var constituicao =document.getElementById('CON').value;
+                var inteligencia =document.getElementById('INT').value;
+                var sabedoria =document.getElementById('SAB').value;
+                var carisma =document.getElementById('CAR').value;
                 if(racas=="Anão"){
-                    document.getElementById('CON').value=14
-                    document.getElementById('SAB').value=12
-                    document.getElementById('DES').value=8
-                    document.getElementById('FOR').value=10
-                    document.getElementById('INT').value=10
-                    document.getElementById('CAR').value=10
+                    document.getElementById('CON').value=constituicao+4
+                    document.getElementById('SAB').value=sabedoria+2
+                    document.getElementById('DES').value=destreza-2
                     document.getElementById('deslocamento').value=" 6 Metros"
                     document.getElementById('altura').value="Médio"
-                    document.getElementById('HabRaca').value="Deslocamento 6m &#10;Visão no Escuro &#10;+4 em testes de resistência a venenos e magias Classe de armadura +4 contra adversários de tamanho Grande ou maior Para anões, todos os tipos de machados e martelos são armas simples +2 em testes de perícias para assuntos relacionados a pedra e metal"                   
+                    document.getElementById('HabRaca').value="Deslocamento 6m Visão no Escuro +4 em testes de resistência a venenos e magias Classe de armadura +4 contra adversários de tamanho Grande ou maior Para anões, todos os tipos de machados e martelos são armas simples +2 em testes de perícias para assuntos relacionados a pedra e metal"                   
                     return; 
                 }
                 if(racas=="Elfo"){
-                    document.getElementById('DES').value=14
-                    document.getElementById('INT').value=12
-                    document.getElementById('CON').value=8
-                    document.getElementById('FOR').value=10
-                    document.getElementById('SAB').value=10
-                    document.getElementById('CAR').value=10
+                    document.getElementById('DES').value=destreza+4
+                    document.getElementById('INT').value=inteligencia+2
+                    document.getElementById('CON').value=constituicao-2
                     document.getElementById('deslocamento').value=" 9 Metros"
                     document.getElementById('altura').value="Médio"
                     document.getElementById('HabRaca').value=" Visão na Penumbra. Um elfo ignora camuflagem (mas não camuflagem total) por escuridão.Elfos podem ver duas vezes mais longe que os humanos em condições de pouca iluminação, como luz das estrelas e tochas. +4 em testes de Vontade contra encantamentos. Elfos também são imunes à magia sono. +4 em testes de Identificar Magia e Percepção. Elfos têm familiaridade com magia e sentidos apurados. A difi culdade do teste de resistência contra magias arcanas lançadas por um elfo aumenta em CD +2. Elfos sabem usar espadas curtas, espadas longas, floretes e arcos (curtos, longos e compostos). Elfos também recebem Foco em Arma para uma destas armas (à escolha do jogador) como um talento adicional."
                     return;
                 }
                 if(racas=="Goblin"){
-                    document.getElementById('DES').value=14
-                    document.getElementById('CAR').value=8
-                    document.getElementById('CON').value=12
-                    document.getElementById('FOR').value=10
-                    document.getElementById('SAB').value=10
-                    document.getElementById('INT').value=10
+                    document.getElementById('DES').value=destreza+4
+                    document.getElementById('CAR').value=carisma-2
+                    document.getElementById('CON').value=constituicao+2
                     document.getElementById('deslocamento').value=" 6 Metros"
                     document.getElementById('altura').value="Pequeno"
                     document.getElementById('HabRaca').value="Deslocamento 9m Visão no Escuro +4 em testes de Fortitude contra doenças e venenos Goblins não precisam fazer testes de Fortitude por ingerir comida estragada. +4 em testes de Ladinagem e Oficio (um à escolha do jogador)"
                     return;
                 }
                 if(racas=="Halfling"){
-                    document.getElementById('DES').value=14
-                    document.getElementById('CAR').value=12
-                    document.getElementById('FOR').value=8
-                    document.getElementById('CON').value=10
-                    document.getElementById('SAB').value=10
-                    document.getElementById('INT').value=10
+                    document.getElementById('DES').value=destreza+4
+                    document.getElementById('CAR').value=carisma+2
+                    document.getElementById('FOR').value=forca-2
                     document.getElementById('deslocamento').value=" 6 Metros"
                     document.getElementById('altura').value="Pequeno"
                     document.getElementById('HabRaca').value="+2 em todos os testes de resistência, por sua sorte incrível +1 em jogadas de ataque com armas de arremesso e fundas Para halflings a perícia Atletismo é baseada em Destreza, não em Força +4 em testes de Enganação"
                     return;
                 }
                 if(racas=="Humano"){
-                    document.getElementById('CON').value=10
-                    document.getElementById('SAB').value=10
-                    document.getElementById('DES').value=10
-                    document.getElementById('FOR').value=10
-                    document.getElementById('INT').value=10
-                    document.getElementById('CAR').value=10
                     document.getElementById('deslocamento').value=" 9 Metros"
                     document.getElementById('altura').value="Médio"
                     document.getElementById('HabRaca').value="+2 em duas habilidades à escolha do jogador 2 perícias treinadas extras, que não precisam ser escolhidas entre suas perícias de classe 2 talentos adicionais à escolha do jogador"
@@ -62,72 +50,47 @@ function f1(){
                     return;
                 }
                 if(racas=="Lefou"){
-                    document.getElementById('CON').value=10
-                    document.getElementById('SAB').value=10
-                    document.getElementById('DES').value=10
-                    document.getElementById('FOR').value=10
-                    document.getElementById('INT').value=10
-                    document.getElementById('CAR').value=10
                     document.getElementById('deslocamento').value=" 9 Metros"
                     document.getElementById('altura').value="Médio"
                     document.getElementById('HabRaca').value="•Monstro. Um lefou não é considerado humano ou humanoide. •Visão no escuro. •2 talentos da Tormenta adicionais. • Deformidade.O jogador deve escolher uma entre as seguintes. -Articulações flexíveis: +4 em testes de Acrobacia. -Dedos rígidos: deslocamento de escalada 4,5m. -Dentes afiados: +4 em testes de Intimidação. -Mãos membranosas: deslocamento de natação 4,5m. -Olhos vermelhos: +4 em testes de Percepção. -Pele rígida: classe de armadura +1. • Afinidade com a Tormenta."
                     return;
                 }
                 if(racas=="Minotauro"){
-                    document.getElementById('FOR').value=14
-                    document.getElementById('CON').value=12
-                    document.getElementById('CAR').value=8
-                    document.getElementById('INT').value=10
-                    document.getElementById('SAB').value=10
-                    document.getElementById('DES').value=10
+                    document.getElementById('FOR').value=forca+4
+                    document.getElementById('CON').value=constituicao+2
+                    document.getElementById('CAR').value=carisma-2
                     document.getElementById('deslocamento').value=" 9 Metros"
                     document.getElementById('altura').value="Médio"
                     document.getElementById('HabRaca').value="• Classe de armadura +1. • Minotauros possuem um ataque natural de chifres (1d6, crítico x2, perfuração). Um minotauro pode realizar um ataque adicional por rodada com os chifres, mas provoca uma penalidade de –4 em todos os ataques (incluindo este). • Faro. Minotauros recebem +4 em testes de Sobrevivência para rastrear, e também detectam automaticamente a presença de criaturas a até 9m. • Lógica labiríntica. Minotauros têm excelente senso de direção, e recebem +8 em testes de Sobrevivência para não se perder. • Medo de altura. Caso tenha que subir qualquer altura superior a 3m (ou se estiver a até 3m de uma queda desta altura), um minotauro sofre penalidade de –4 em suas jogadas e testes. Ele também não pode realizar nenhuma ação que dependa de concentração, como conjurar magias."
                     return;
                 }
                 if(racas=="Qareen"){
-                    document.getElementById('CAR').value=14
-                    document.getElementById('INT').value=12
-                    document.getElementById('SAB').value=8
-                    document.getElementById('CON').value=10
-                    document.getElementById('FOR').value=10
-                    document.getElementById('DES').value=10
+                    document.getElementById('CAR').value=carisma+4
+                    document.getElementById('INT').value=inteligencia+2
+                    document.getElementById('SAB').value=sabedoria-2
                     document.getElementById('deslocamento').value=" 9 Metros"
                     document.getElementById('altura').value="Médio"
                     document.getElementById('HabRaca').value="• +4 em testes de Identificar Magia. • Desejos. Uma vez por dia, o qareen pode lançar uma magia sem pagar PM (ou sem esquecê-la), mas apenas se fizer isso na mesma rodada em que alguém tiver lhe pedido. • Pequenos desejos. Mesmo que não pertença a uma classe conjuradora, um qareen pode lançar todos os truques. No entanto, ele só pode lançar estes truques quando outra pessoa pede. • Um qareen pode lançar a magia voo uma vez por dia. • Conforme sua descendência, um qareen tem resistência especial contra as seguintes formas de ataque: -Água: resistência a ácido e frio 5. -Ar: resistência a eletricidade e sônico 5. -Fogo: resistência a fogo 5. -Terra: redução de dano 3/cortante ou per furante. -Luz: resistência a eletricidade 10. -Trevas: resistência a ácido e energia negativa 5. “Energia negativa” é provocada por efeitos e magias necromânticos (como infligir ferimentos)."
                     return;
                 }
                 if(racas=="Gnomo"){
-                    document.getElementById('INT').value=14
-                    document.getElementById('CON').value=12
-                    document.getElementById('FOR').value=8
-                    document.getElementById('CAR').value=10
-                    document.getElementById('SAB').value=10
-                    document.getElementById('DES').value=10
+                    document.getElementById('INT').value=inteligencia+4
+                    document.getElementById('CON').value=constituicao+2
+                    document.getElementById('FOR').value=forca-2
                     document.getElementById('deslocamento').value=" 6 Metros"
                     document.getElementById('altura').value="Pequeno"
                     document.getElementById('HabRaca').value="• Visão na Penumbra. Um gnomo ignora camuflagem (mas não camufl agem total) por escuridão. Gnomos podem ver duas vezes mais longe que os humanos em condições de pouca iluminação, como luz das estrelas e tochas. • +4 em testes de Intuição e Ofícios (alquimia). Gnomos são perspicazes e familiarizados com ilusões e poções. • Classe de armadura +4 contra adversários de tamanho Grande ou maior. • Gnomos podem se comunicar com animais livremente. Veja a descrição da magia falar com animais. • Um gnomo com Carisma 10 ou mais pode lançar as seguintes magias livremente: globos de luz, som fantasma, prestidigitação."
                     return;
                 }
                 if(racas=="Meio-Elfo"){
-                    document.getElementById('DES').value=12
-                    document.getElementById('CON').value=10
-                    document.getElementById('SAB').value=10
-                    document.getElementById('INT').value=10
-                    document.getElementById('FOR').value=10
-                    document.getElementById('CAR').value=10
+                    document.getElementById('DES').value=destreza+2
                     document.getElementById('deslocamento').value=" 9 Metros"
                     document.getElementById('altura').value="Médio"
                     document.getElementById('HabRaca').value="• Visão na Penumbra. Um meio-elfo ignora camufl agem (mas não camufl agem total) por escuridão. Meio-elfos podem ver duas vezes mais longe que os humanos em condições de pouca iluminação, como luz das estrelas e tochas. • 1 talento bônus à escolha do jogador. • 1 perícia treinada extra, que não precisa ser escolhida entre suas perícias de classe. • +2 em testes de Vontade contra encantamentos. • +2 em testes de Identifi car Magia e Percepção"
                     return;
                 }
                 if(racas=="Meio-Orc"){
-                    document.getElementById('FOR').value=12
-                    document.getElementById('CON').value=10
-                    document.getElementById('SAB').value=10
-                    document.getElementById('DES').value=10
-                    document.getElementById('INT').value=10
-                    document.getElementById('CAR').value=10
+                    document.getElementById('FOR').value=forca+2
                     document.getElementById('deslocamento').value=" 9 Metros"
                     document.getElementById('altura').value="Médio"
                     document.getElementById('HabRaca').value="• Visão no Escuro. Meio-orcs podem enxergar no escuro a até 18 metros, apenas em preto e branco. Um meio-orc ignora camufl agem (incluindo camufl agem total) por escuridão. • Meio-orcs recebem Duro de Matar como um talento adicional. • +4 em testes de Intimidação. Meio-orcs são ameaçadores."
@@ -201,59 +164,59 @@ function f2(){
         //=====Talentos=====
         document.getElementById('Talentos').value=" Usar Armaduras (leves e médias), Usar Armas (simples e marciais), Usar Escudos, Fortitude Maior"        
         
-        if (lv==1) {
+        if (lv>=1) {
             document.getElementById('HabClasse').value=" Anafalbetismo, fúria 1/dia, movimento rápido"
         }
-        if (lv==2) {
-            document.getElementById('HabClasse').value=", Esquiva Sobrenatural"
+        if (lv>=2) {
+            document.getElementById('HabClasse').value+=", Esquiva Sobrenatural"
         }
-        if (lv==3) {
-            document.getElementById('HabClasse').value=", Instinto selvagem +1"
+        if (lv>=3) {
+            document.getElementById('HabClasse').value+=", Instinto selvagem +1"
         }
-        if (lv==4) {
-            document.getElementById('HabClasse').value=", Fúria 2/dia "
+        if (lv>=4) {
+            document.getElementById('HabClasse').value+=", Fúria 2/dia "
         }
-        if (lv==5) {
-            document.getElementById('HabClasse').value=", Esquiva sobrenatural aprimorada"
+        if (lv>=5) {
+            document.getElementById('HabClasse').value+=", Esquiva sobrenatural aprimorada"
         }
-        if (lv==7) {
-            document.getElementById('HabClasse').value=", Redução de dano 1"
+        if (lv>=7) {
+            document.getElementById('HabClasse').value+=", Redução de dano 1"
         }
-        if (lv==8) {
-            document.getElementById('HabClasse').value=", Fúria 3/dia "
+        if (lv>=8) {
+            document.getElementById('HabClasse').value+=", Fúria 3/dia "
         }
-        if (lv==9) {
-            document.getElementById('HabClasse').value=", Instinto selvagem +2"
+        if (lv>=9) {
+            document.getElementById('HabClasse').value+=", Instinto selvagem +2"
         }
-        if (lv==10) {
-            document.getElementById('HabClasse').value=", Redução de dano 2"
+        if (lv>=10) {
+            document.getElementById('HabClasse').value+=", Redução de dano 2"
         }
-        if (lv==11) {
-            document.getElementById('HabClasse').value=", Fúria maior"
+        if (lv>=11) {
+            document.getElementById('HabClasse').value+=", Fúria maior"
         }
-        if (lv==12) {
-            document.getElementById('HabClasse').value=", Fúria 4/dia "
+        if (lv>=12) {
+            document.getElementById('HabClasse').value+=", Fúria 4/dia "
         }
-        if (lv==13) {
-            document.getElementById('HabClasse').value=", Redução de dano 3 "
+        if (lv>=13) {
+            document.getElementById('HabClasse').value+=", Redução de dano 3 "
         }
-        if (lv==14) {
-            document.getElementById('HabClasse').value=", Vontade inabalável"
+        if (lv>=14) {
+            document.getElementById('HabClasse').value+=", Vontade inabalável"
         }
-        if (lv==15) {
-            document.getElementById('HabClasse').value=", Instinto selvagem +3"
+        if (lv>=15) {
+            document.getElementById('HabClasse').value+=", Instinto selvagem +3"
         }
-        if (lv==16) {
-            document.getElementById('HabClasse').value=", Fúria 5/dia, redução de dano 4"
+        if (lv>=16) {
+            document.getElementById('HabClasse').value+=", Fúria 5/dia, redução de dano 4"
         }
-        if (lv==17) {
-            document.getElementById('HabClasse').value=", Fúria incansável"
+        if (lv>=17) {
+            document.getElementById('HabClasse').value+=", Fúria incansável"
         }
-        if (lv==19) {
-            document.getElementById('HabClasse').value=", Redução de dano 5"
+        if (lv>=19) {
+            document.getElementById('HabClasse').value+=", Redução de dano 5"
         }
-        if (lv==20) {
-            document.getElementById('HabClasse').value=", Fúria 6/dia, fúria poderosa"
+        if (lv>=20) {
+            document.getElementById('HabClasse').value+=", Fúria 6/dia, fúria poderosa"
         }
 
     }
@@ -329,38 +292,38 @@ function f2(){
         //=====Talentos=====
         document.getElementById('Talentos').value="Usar Armaduras (leves), Usar Armas (simples e marciais), Usar Escudos, Refl exos Rápidos, Vontade de Ferro"
         
-        if (lv==1) {
+        if (lv>=1) {
             document.getElementById('HabClasse').value=" Conhecimento de bardo, música de bardo"
         }
-        if (lv==2) {
-            document.getElementById('HabClasse').value=", Música de bardo"
+        if (lv>=2) {
+            document.getElementById('HabClasse').value+=", Música de bardo"
         }
-        if (lv==4) {
-            document.getElementById('HabClasse').value=", Música de bardo"
+        if (lv>=4) {
+            document.getElementById('HabClasse').value+=", Música de bardo"
         }
-        if (lv==6) {
-            document.getElementById('HabClasse').value=", Música de bardo"
+        if (lv>=6) {
+            document.getElementById('HabClasse').value+=", Música de bardo"
         }
-        if (lv==8) {
-            document.getElementById('HabClasse').value=", Música de bardo"
+        if (lv>=8) {
+            document.getElementById('HabClasse').value+=", Música de bardo"
         }
-        if (lv==10) {
-            document.getElementById('HabClasse').value=", Música de bardo"
+        if (lv>=10) {
+            document.getElementById('HabClasse').value+=", Música de bardo"
         }
-        if (lv==12) {
-            document.getElementById('HabClasse').value=", Música de bardo"
+        if (lv>=12) {
+            document.getElementById('HabClasse').value+=", Música de bardo"
         }
-        if (lv==14) {
-            document.getElementById('HabClasse').value=", Música de bardo"
+        if (lv>=14) {
+            document.getElementById('HabClasse').value+=", Música de bardo"
         }
-        if (lv==16) {
-            document.getElementById('HabClasse').value=", Música de bardo"
+        if (lv>=16) {
+            document.getElementById('HabClasse').value+=", Música de bardo"
         }
-        if (lv==18) {
-            document.getElementById('HabClasse').value=", Música de bardo"
+        if (lv>=18) {
+            document.getElementById('HabClasse').value+=", Música de bardo"
         }
-        if (lv==20) {
-            document.getElementById('HabClasse').value=", Música de bardo"
+        if (lv>=20) {
+            document.getElementById('HabClasse').value+=", Música de bardo"
         }
     }
     if (classe=="Clérigo"){
@@ -430,41 +393,41 @@ function f2(){
         //=====Talentos=====
         document.getElementById('Talentos').value=" Usar Armaduras (leves, médias e pesadas), Usar Armas Simples, Usar Escudos, Fortitude Maior, Vontade de Ferro"
     
-        if (lv==1) {
+        if (lv>=1) {
             document.getElementById('HabClasse').value=" Devoto, canalizar energia 1d6, poder divino"
         }
-        if (lv==3) {
-            document.getElementById('HabClasse').value=", Canalizar energia 2d6"
+        if (lv>=3) {
+            document.getElementById('HabClasse').value+=", Canalizar energia 2d6"
         }
-        if (lv==5) {
-            document.getElementById('HabClasse').value=", Canalizar energia 3d6, poder divino"
+        if (lv>=5) {
+            document.getElementById('HabClasse').value+=", Canalizar energia 3d6, poder divino"
         }
-        if (lv==7) {
-            document.getElementById('HabClasse').value=", Canalizar energia 5d6"
+        if (lv>=7) {
+            document.getElementById('HabClasse').value+=", Canalizar energia 5d6"
         }
-        if (lv==9) {
-            document.getElementById('HabClasse').value=", Canalizar energia 5d6"
+        if (lv>=9) {
+            document.getElementById('HabClasse').value+=", Canalizar energia 5d6"
         }
-        if (lv==10) {
-            document.getElementById('HabClasse').value=", Poder divino"
+        if (lv>=10) {
+            document.getElementById('HabClasse').value+=", Poder divino"
         }
-        if (lv==11) {
-            document.getElementById('HabClasse').value=", Canalizar energia 6d6"
+        if (lv>=11) {
+            document.getElementById('HabClasse').value+=", Canalizar energia 6d6"
         }
-        if (lv==13) {
-            document.getElementById('HabClasse').value=", Canalizar energia 7d6"
+        if (lv>=13) {
+            document.getElementById('HabClasse').value+=", Canalizar energia 7d6"
         }
-        if (lv==15) {
-            document.getElementById('HabClasse').value=", Canalizar energia 8d6, poder divino"
+        if (lv>=15) {
+            document.getElementById('HabClasse').value+=", Canalizar energia 8d6, poder divino"
         }
-        if (lv==17) {
-            document.getElementById('HabClasse').value=", Canalizar energia 9d6"
+        if (lv>=17) {
+            document.getElementById('HabClasse').value+=", Canalizar energia 9d6"
         }
-        if (lv==19) {
-            document.getElementById('HabClasse').value=", Canalizar energia 10d6"
+        if (lv>=19) {
+            document.getElementById('HabClasse').value+=", Canalizar energia 10d6"
         }
-        if (lv==20) {
-            document.getElementById('HabClasse').value=", Poder divino"
+        if (lv>=20) {
+            document.getElementById('HabClasse').value+=", Poder divino"
         }
     }
     if (classe=="Druida"){
@@ -538,41 +501,41 @@ function f2(){
         //=====Talentos=====
         document.getElementById('Talentos').value=" Usar Armaduras (leves e médias), Usar Armas Simples, Usar Escudos, Fortitude Maior, Vontade de Ferro, Senso da Natureza"
         
-        if (lv==1) {
+        if (lv>=1) {
             document.getElementById('HabClasse').value=" Código de conduta, devoto, empatia selvagem, vínculo natural"
         }
-        if (lv==2) {
-            document.getElementById('HabClasse').value=", Caminho da floresta "
+        if (lv>=2) {
+            document.getElementById('HabClasse').value+=", Caminho da floresta "
         }
-        if (lv==3) {
-            document.getElementById('HabClasse').value=", Rastro invisível"
+        if (lv>=3) {
+            document.getElementById('HabClasse').value+=", Rastro invisível"
         }
-        if (lv==5) {
-            document.getElementById('HabClasse').value=", Forma selvagem"
+        if (lv>=5) {
+            document.getElementById('HabClasse').value+=", Forma selvagem"
         }
-        if (lv==8) {
-            document.getElementById('HabClasse').value=", Forma selvagem (2 habilidades)"
+        if (lv>=8) {
+            document.getElementById('HabClasse').value+=", Forma selvagem (2 habilidades)"
         }
-        if (lv==9) {
-            document.getElementById('HabClasse').value=", Imunidade a venenos"
+        if (lv>=9) {
+            document.getElementById('HabClasse').value+=", Imunidade a venenos"
         }
-        if (lv==11) {
-            document.getElementById('HabClasse').value=", Forma selvagem aprimorada"
+        if (lv>=11) {
+            document.getElementById('HabClasse').value+=", Forma selvagem aprimorada"
         }
-        if (lv==13) {
-            document.getElementById('HabClasse').value=", Mil faces"
+        if (lv>=13) {
+            document.getElementById('HabClasse').value+=", Mil faces"
         }
-        if (lv==14) {
-            document.getElementById('HabClasse').value=", Forma selvagem (3 habilidades)"
+        if (lv>=14) {
+            document.getElementById('HabClasse').value+=", Forma selvagem (3 habilidades)"
         }
-        if (lv==15) {
-            document.getElementById('HabClasse').value=", Corpo atemporal"
+        if (lv>=15) {
+            document.getElementById('HabClasse').value+=", Corpo atemporal"
         }
-        if (lv==17) {
-            document.getElementById('HabClasse').value=", Forma selvagem maior"
+        if (lv>=17) {
+            document.getElementById('HabClasse').value+=", Forma selvagem maior"
         }
-        if (lv==20) {
-            document.getElementById('HabClasse').value=", Forma selvagem (4 habilidades)"
+        if (lv>=20) {
+            document.getElementById('HabClasse').value+=", Forma selvagem (4 habilidades)"
         }
     }
     if (classe=="Feiticeiro"){
@@ -625,6 +588,21 @@ function f2(){
         document.getElementById('Oficio').style.color = "#00FF00";
         //=====Talentos=====
         document.getElementById('Talentos').value="Usar Armas Simples, Vontade de Ferro"
+        if (lv>=1) {
+            document.getElementById('HabClasse').value+=" Linhagem sobrenatural"
+        }
+        if (lv>=5) {
+            document.getElementById('HabClasse').value+=", Linhagem sobrenatural"
+        }
+        if (lv>=10) {
+            document.getElementById('HabClasse').value+=", Linhagem sobrenatural"
+        }
+        if (lv>=15) {
+            document.getElementById('HabClasse').value+=", Linhagem sobrenatural"
+        }
+        if (lv>=20) {
+            document.getElementById('HabClasse').value+=", Linhagem sobrenatural"
+        }
     }
     if (classe=="Guerreiro"){
         //=======vida=======
@@ -647,6 +625,39 @@ function f2(){
         document.getElementById('Percepcao').style.color = "#00FF00";        
         //=====Talentos=====
         document.getElementById('Talentos').value=" Usar Armaduras (leves, médias e pesadas), Usar Armas (simples e marciais), Usar Escudos, Fortitude Maior"
+        if (lv>=1) {
+            document.getElementById('HabClasse').value=" Técnica de luta"
+        }
+        if (lv>=2) {
+            document.getElementById('HabClasse').value+=", Técnica de luta"
+        }
+        if (lv>=4) {
+            document.getElementById('HabClasse').value+=", Técnica de luta"
+        }
+        if (lv>=6) {
+            document.getElementById('HabClasse').value+=", Técnica de luta"
+        }
+        if (lv>=8) {
+            document.getElementById('HabClasse').value+=", Técnica de luta"
+        }
+        if (lv>=10) {
+            document.getElementById('HabClasse').value+=", Técnica de luta"
+        }
+        if (lv>=12) {
+            document.getElementById('HabClasse').value+=", Técnica de luta"
+        }
+        if (lv>=14) {
+            document.getElementById('HabClasse').value+=", Técnica de luta"
+        }
+        if (lv>=16) {
+            document.getElementById('HabClasse').value+=", Técnica de luta"
+        }
+        if (lv>=18) {
+            document.getElementById('HabClasse').value+=", Técnica de luta"
+        }
+        if (lv>=20) {
+            document.getElementById('HabClasse').value+=", Técnica de luta"
+        }
     }
     if (classe=="Ladino"){
         //=======vida=======
@@ -723,6 +734,63 @@ function f2(){
         document.getElementById('Percepcao').style.color = "#00FF00";
         //=====Talentos=====
         document.getElementById('Talentos').value=" Usar Armaduras (leves), Usar Armas (simples e marciais), Usar Escudos, Refl exos Rápidos"
+        if (lv>=1) {
+            document.getElementById('HabClasse').value=" Ataque furtivo +1d6, encontrar armadilhas"
+        }
+        if (lv>=2) {
+            document.getElementById('HabClasse').value+=", Evasão, técnica ladina"
+        }
+        if (lv>=3) {
+            document.getElementById('HabClasse').value+=", Ataque furtivo +2d6, sentir armadilhas +1"
+        }
+        if (lv>=4) {
+            document.getElementById('HabClasse').value+=", Esquiva sobrenatural"
+        }
+        if (lv>=5) {
+            document.getElementById('HabClasse').value+=", Ataque furtivo +3d6, técnica ladina"
+        }
+        if (lv>=6) {
+            document.getElementById('HabClasse').value+=", Sentir armadilhas +2"
+        }
+        if (lv>=7) {
+            document.getElementById('HabClasse').value+=", Ataque furtivo +4d6"
+        }
+        if (lv>=8) {
+            document.getElementById('HabClasse').value+=", Esquiva sobrenatural aprimorada, técnica ladina"
+        }
+        if (lv>=9) {
+            document.getElementById('HabClasse').value+=", Ataque furtivo +5d6, sentir armadilhas +3"
+        }
+        if (lv>=10) {
+            document.getElementById('HabClasse').value+=", Evasão aprimorada"
+        }
+        if (lv>=11) {
+            document.getElementById('HabClasse').value=" Ataque furtivo +6d6, técnica ladina"
+        }
+        if (lv>=12) {
+            document.getElementById('HabClasse').value+=", Sentir armadilhas +4"
+        }
+        if (lv>=13) {
+            document.getElementById('HabClasse').value+=", Ataque furtivo +7d6"
+        }
+        if (lv>=14) {
+            document.getElementById('HabClasse').value+=", Técnica ladina"
+        }
+        if (lv>=15) {
+            document.getElementById('HabClasse').value+=", Ataque furtivo +8d6, sentir armadilhas +5"
+        }
+        if (lv>=17) {
+            document.getElementById('HabClasse').value+=", Ataque furtivo +9d6, técnica ladina"
+        }
+        if (lv>=18) {
+            document.getElementById('HabClasse').value+=", Sentir armadilhas +6"
+        }
+        if (lv>=19) {
+            document.getElementById('HabClasse').value+=", Ataque furtivo +10d6"
+        }
+        if (lv>=20) {
+            document.getElementById('HabClasse').value+=", Técnica ladina"
+        }
     }
     if (classe=="Mago"){
         //=======vida=======
@@ -773,6 +841,21 @@ function f2(){
         document.getElementById('Percepcao').style.color = "#00FF00";
         //=====Talentos=====
         document.getElementById('Talentos').value="Usar Armas (simples), Vontade de Ferro"
+        if (lv>=1) {
+            document.getElementById('HabClasse').value+=" Mistérios arcanos, vínculo arcano"
+        }
+        if (lv>=5) {
+            document.getElementById('HabClasse').value+=", Mistérios arcanos"
+        }
+        if (lv>=10) {
+            document.getElementById('HabClasse').value+=", Mistérios arcanos"
+        }
+        if (lv>=15) {
+            document.getElementById('HabClasse').value+=", Mistérios arcanos"
+        }
+        if (lv>=20) {
+            document.getElementById('HabClasse').value+=", Linhagem sobrenatural"
+        }
     }
     if (classe=="Monge"){
         //=======Vida=======
@@ -798,6 +881,66 @@ function f2(){
         document.getElementById('Percepcao').style.color = "#00FF00";
         //=====Talentos=====
         document.getElementById('Talentos').value="Usar Armas (simples), Usar Arma Exótica (nun chaku, sai, shuriken), Fortitude Maior, Reflexos Rápidos, Vontade de Ferro, Ataque Desarmado Aprimorado"
+        if (lv>=1) {
+            document.getElementById('HabClasse').value="Dano desarmado (1d6), rajada de golpes, sexto sentido, técnica de luta"
+        }
+        if (lv>=2) {
+            document.getElementById('HabClasse').value+=", Evasão, técnica de luta"
+        }
+        if (lv>=3) {
+            document.getElementById('HabClasse').value+=", Movimento rápido +3m"
+        }
+        if (lv>=4) {
+            document.getElementById('HabClasse').value+=", Ataque chi (mágico), dano desarmado (1d8), movimento ágil +5"
+        }
+        if (lv>=5) {
+            document.getElementById('HabClasse').value+=", Bônus na CA +1"
+        }
+        if (lv>=6) {
+            document.getElementById('HabClasse').value+=", Movimento rápido +6m, técnica de luta"
+        }
+        if (lv>=7) {
+            document.getElementById('HabClasse').value+=", Integridade corporal"
+        }
+        if (lv>=8) {
+            document.getElementById('HabClasse').value+=", Dano desarmado (1d10)"
+        }
+        if (lv>=9) {
+            document.getElementById('HabClasse').value+=", Evasão aprimorada, movimento rápido +9m, movimento ágil +10"
+        }
+        if (lv>=10) {
+            document.getElementById('HabClasse').value+=", Ataque chi (tendência), bônus na CA +2, técnica de luta"
+        }
+        if (lv>=11) {
+            document.getElementById('HabClasse').value=" Corpo de diamante, rajada de golpes aprimorada"
+        }
+        if (lv>=12) {
+            document.getElementById('HabClasse').value+=", Dano desarmado (2d6), movimento rápido +12m"
+        }
+        if (lv>=13) {
+            document.getElementById('HabClasse').value+=", Alma de diamante"
+        }
+        if (lv>=14) {
+            document.getElementById('HabClasse').value+=", Movimento ágil +15, técnica de luta"
+        }
+        if (lv>=15) {
+            document.getElementById('HabClasse').value+=", Bônus na CA +3, mão vibrante, movimento rápido +15m"
+        }
+        if (lv>=16) {
+            document.getElementById('HabClasse').value+=", Ataque chi (adamante), dano desarmado (2d8)"
+        }
+        if (lv>=17) {
+            document.getElementById('HabClasse').value+=", Corpo atemporal, idiomas do sol e da lua"
+        }
+        if (lv>=18) {
+            document.getElementById('HabClasse').value+=", Movimento rápido +18m, técnica de luta"
+        }
+        if (lv>=19) {
+            document.getElementById('HabClasse').value+=", Corpo vazio, movimento ágil +20"
+        }
+        if (lv>=20) {
+            document.getElementById('HabClasse').value+=", Autoperfeição, bônus na CA +4, dano desarmado (2d10)"
+        }
     }
     if (classe=="Paladino"){
         //=======Vida=======
@@ -822,6 +965,60 @@ function f2(){
         document.getElementById('Oficio').style.color = "#00FF00";
         //=====Talentos=====
         document.getElementById('Talentos').value=" Usar Armaduras (leves, médias e pesadas), Usar Armas (simples e marciais), Usar Escudos, Fortitude Maior"
+        if (lv>=1) {
+            document.getElementById('HabClasse').value=" Código de conduta, destruir o mal 1/dia, detectar o mal, devoto"
+        }
+        if (lv>=2) {
+            document.getElementById('HabClasse').value+=", Cura pelas mãos 1d8+1, graça divina"
+        }
+        if (lv>=3) {
+            document.getElementById('HabClasse').value+=", Aura de coragem, saúde divina"
+        }
+        if (lv>=4) {
+            document.getElementById('HabClasse').value+=", Canalizar energia positiva 1d6, destruir o mal 2/dia"
+        }
+        if (lv>=5) {
+            document.getElementById('HabClasse').value+=", Bênção da justiça, vínculo divino"
+        }
+        if (lv>=6) {
+            document.getElementById('HabClasse').value+=", Cura pelas mãos 2d8+2, remover condição"
+        }
+        if (lv>=7) {
+            document.getElementById('HabClasse').value+=", Destruir o mal 3/dia"
+        }
+        if (lv>=8) {
+            document.getElementById('HabClasse').value+=", Canalizar energia positiva 2d6"
+        }
+        if (lv>=9) {
+            document.getElementById('HabClasse').value+=", Remover condição"
+        }
+        if (lv>=10) {
+            document.getElementById('HabClasse').value+=", Cura pelas mãos 3d8+3, destruir o mal 4/dia"
+        }
+        if (lv>=12) {
+            document.getElementById('HabClasse').value+=", Canalizar energia positiva 3d6, remover condição"
+        }
+        if (lv>=13) {
+            document.getElementById('HabClasse').value+=", Destruir o mal 5/dia"
+        }
+        if (lv>=14) {
+            document.getElementById('HabClasse').value+=", Cura pelas mãos 4d8+4"
+        }
+        if (lv>=15) {
+            document.getElementById('HabClasse').value+=", Remover condição"
+        }
+        if (lv>=16) {
+            document.getElementById('HabClasse').value+=", Canalizar energia positiva 4d6, destruir o mal 6/dia"
+        }
+        if (lv>=18) {
+            document.getElementById('HabClasse').value+=", Cura pelas mãos 5d8+5, remover condição"
+        }
+        if (lv>=19) {
+            document.getElementById('HabClasse').value+=", Destruir o mal 7/dia"
+        }
+        if (lv>=20) {
+            document.getElementById('HabClasse').value+=", Canalizar energia positiva 5d6"
+        }
     }
     if (classe=="Ranger"){
         //=======Vida=======
@@ -847,6 +1044,57 @@ function f2(){
         document.getElementById('Sobrevivencia').style.color = "#00FF00";
         //=====Talentos=====
         document.getElementById('Talentos').value=" Usar Armaduras (leves e médias), Usar Armas (simples e marciais), Usar Escudos, Fortitude Maior, Reflexos Rápidos, Rastrear"
+        if (lv>=1) {
+            document.getElementById('HabClasse').value=" Empatia selvagem, 1º inimigo predileto"
+        }
+        if (lv>=2) {
+            document.getElementById('HabClasse').value+=", Estilo de combate"
+        }
+        if (lv>=3) {
+            document.getElementById('HabClasse').value+=", 1º terreno predileto, Tolerância"
+        }
+        if (lv>=4) {
+            document.getElementById('HabClasse').value+=", Vínculo selvagem"
+        }
+        if (lv>=5) {
+            document.getElementById('HabClasse').value+=", Bênção da natureza, 2º inimigo predileto"
+        }
+        if (lv>=6) {
+            document.getElementById('HabClasse').value+=", Estilo de combate aprimorado"
+        }
+        if (lv>=7) {
+            document.getElementById('HabClasse').value+=", Caminho da floresta"
+        }
+        if (lv>=8) {
+            document.getElementById('HabClasse').value+=", Rastreador eficaz, 2º terreno predileto"
+        }
+        if (lv>=9) {
+            document.getElementById('HabClasse').value+=", Evasão"
+        }
+        if (lv>=10) {
+            document.getElementById('HabClasse').value+=", 3º inimigo predileto"
+        }
+        if (lv>=11) {
+            document.getElementById('HabClasse').value=", Domínio do estilo de combate"
+        }
+        if (lv>=12) {
+            document.getElementById('HabClasse').value+=", Rastro invisível"
+        }
+        if (lv>=13) {
+            document.getElementById('HabClasse').value+=", Camuflagem, 3º terreno predileto"
+        }
+        if (lv>=15) {
+            document.getElementById('HabClasse').value+=", 4º inimigo predileto"
+        }
+        if (lv>=17) {
+            document.getElementById('HabClasse').value+=", Mimetismo"
+        }
+        if (lv>=18) {
+            document.getElementById('HabClasse').value+=", 4º terreno predileto"
+        }
+        if (lv>=20) {
+            document.getElementById('HabClasse').value+=", 5º inimigo predileto"
+        }
     }
     if (classe=="Samurai"){
         //=======Vida=======
@@ -874,6 +1122,66 @@ function f2(){
         document.getElementById('Percepcao').style.color = "#00FF00";
         //=====Talentos=====
         document.getElementById('Talentos').value="Usar Armaduras (leves, médias e pesadas), Usar Armas (simples e marciais), Fortitude Maior, Vontade de Ferro"
+        if (lv>=1) {
+            document.getElementById('HabClasse').value=" Espadas ancestrais +1"
+        }
+        if (lv>=2) {
+            document.getElementById('HabClasse').value+=", Estilo de combate, grito de kiai"
+        }
+        if (lv>=3) {
+            document.getElementById('HabClasse').value+=", Espadas ancestrais +2"
+        }
+        if (lv>=4) {
+            document.getElementById('HabClasse').value+=", Técnica de luta"
+        }
+        if (lv>=5) {
+            document.getElementById('HabClasse').value+=", Espadas ancestrais +3"
+        }
+        if (lv>=6) {
+            document.getElementById('HabClasse').value+=", Estilo de combate Aprimorado"
+        }
+        if (lv>=7) {
+            document.getElementById('HabClasse').value+=", Espadas ancestrais +4"
+        }
+        if (lv>=8) {
+            document.getElementById('HabClasse').value+=", Técnica de luta"
+        }
+        if (lv>=9) {
+            document.getElementById('HabClasse').value+=", Espadas ancestrais +5"
+        }
+        if (lv>=10) {
+            document.getElementById('HabClasse').value+=", Grito de kiai aprimorado"
+        }
+        if (lv>=11) {
+            document.getElementById('HabClasse').value=" Espadas ancestrais +6"
+        }
+        if (lv>=12) {
+            document.getElementById('HabClasse').value+=", Técnica de luta"
+        }
+        if (lv>=13) {
+            document.getElementById('HabClasse').value+=", Espadas ancestrais +7"
+        }
+        if (lv>=14) {
+            document.getElementById('HabClasse').value+=", Olhar assustador em massa"
+        }
+        if (lv>=15) {
+            document.getElementById('HabClasse').value+=", Espadas ancestrais +8"
+        }
+        if (lv>=16) {
+            document.getElementById('HabClasse').value+=", Técnica de luta"
+        }
+        if (lv>=17) {
+            document.getElementById('HabClasse').value+=", Espadas ancestrais +9"
+        }
+        if (lv>=18) {
+            document.getElementById('HabClasse').value+=", Grito de kiai maior"
+        }
+        if (lv>=19) {
+            document.getElementById('HabClasse').value+=", Espadas ancestrais +10"
+        }
+        if (lv>=20) {
+            document.getElementById('HabClasse').value+=", Técnica de luta"
+        }
     }
     if (classe=="Swashbuckler"){
         //=======Vida=======
@@ -901,25 +1209,70 @@ function f2(){
         document.getElementById('Percepcao').style.color = "#00FF00";       
         //=====Talentos=====
         document.getElementById('Talentos').value="Usar Armaduras (leves), Usar Armas (simples e marciais), Reflexos Rápidos"
+        if (lv>=1) {
+            document.getElementById('HabClasse').value=" Autoconfiança, técnica de luta"
+        }
+        if (lv>=2) {
+            document.getElementById('HabClasse').value+=", Estilo de combate, evasão, técnica de luta"
+        }
+        if (lv>=3) {
+            document.getElementById('HabClasse').value+=", Presença paralisante"
+        }   
+        if (lv>=5) {
+            document.getElementById('HabClasse').value+=", Bônus na CA +1"
+        }
+        if (lv>=6) {
+            document.getElementById('HabClasse').value+=", Estilo de combate aprimorado, técnicade luta"
+        }
+        if (lv>=8) {
+            document.getElementById('HabClasse').value+=", Herói ávido"
+        }
+        if (lv>=9) {
+            document.getElementById('HabClasse').value+=", Evasão aprimorada"
+        }
+        if (lv>=10) {
+            document.getElementById('HabClasse').value+=", Bônus na CA +2, técnica de luta"
+        }
+        if (lv>=11) {
+            document.getElementById('HabClasse').value+=", Domínio do estilo de combate"
+        }
+        if (lv>=13) {
+            document.getElementById('HabClasse').value+=", Sortudo"
+        }
+        if (lv>=14) {
+            document.getElementById('HabClasse').value=", Técnica de luta"
+        }
+        if (lv>=15) {
+            document.getElementById('HabClasse').value+=", Bônus na CA +3"
+        }
+        if (lv>=16) {
+            document.getElementById('HabClasse').value+=", Mente escorregadia"
+        }
+        if (lv>=18) {
+            document.getElementById('HabClasse').value+=", Técnica de luta"
+        }
+        if (lv>=20) {
+            document.getElementById('HabClasse').value+=", Bônus na CA +4"
+        }
     }
     //===============================================
     if (acrobacia.checked ==true) {
         document.getElementById('AcrobaciaTotal').value=gradt+DES
         document.getElementById('AcrobaciaGrad').value=gradt
         document.getElementById('AcrobaciaMod').value=DES
-    } else{}{
+    } else{
         document.getElementById('AcrobaciaTotal').value=grado+DES
         document.getElementById('AcrobaciaGrad').value=grado
         document.getElementById('AcrobaciaMod').value=DES
     }
     if (adsanimal.checked ==true) {
-        document.getElementById('AdestrarAnimaisTotal').value=(gradt+CAR)
-        document.getElementById('AdestrarAnimaisGrad').value=grado
-        document.getElementById('AdestrarAnimaisMod').value=CAR
+        document.getElementById('AdestrarTotal').value=(gradt+CAR)
+        document.getElementById('AdestrarGrad').value=grado
+        document.getElementById('AdestrarMod').value=CAR
     } else {
-        document.getElementById('AdestrarAnimaisTotal').value=(grado+CAR)
-        document.getElementById('AdestrarAnimaisGrad').value=grado
-        document.getElementById('AdestrarAnimaisMod').value=CAR
+        document.getElementById('AdestrarTotal').value=(grado+CAR)
+        document.getElementById('AdestrarGrad').value=grado
+        document.getElementById('AdestrarMod').value=CAR
     }
     if (atletismo.checked ==true) {
         document.getElementById('AtletismoTotal').value=(gradt+FOR)
@@ -976,13 +1329,13 @@ function f2(){
         document.getElementById('ConhecimentoMod').value=INT
     }
     if (cura.checked ==true) {
-        document.getElementById('CuraTotal').value=(gradt+SAB)
-        document.getElementById('CuraGrad').value=grado
-        document.getElementById('CuraMod').value=SAB
+        document.getElementById('curaTotal').value=(gradt+SAB)
+        document.getElementById('curaGrad').value=grado
+        document.getElementById('curaMod').value=SAB
     } else {
-        document.getElementById('CuraTotal').value=(grado+SAB)
-        document.getElementById('CuraGrad').value=grado
-        document.getElementById('CuraMod').value=SAB
+        document.getElementById('curaTotal').value=(grado+SAB)
+        document.getElementById('curaGrad').value=grado
+        document.getElementById('curaMod').value=SAB
     }
     if (diplomacia.checked ==true) {
         document.getElementById('DiplomaciaTotal').value=(gradt+CAR)
@@ -1013,12 +1366,12 @@ function f2(){
     }
     if (idmagia.checked ==true) {
         document.getElementById('IdMagicTotal').value=(gradt+INT)
-        document.getElementById('IdMagiaGrad').value=grado
-        document.getElementById('IdMagiaMod').value=INT
+        document.getElementById('IdMagicGrad').value=grado
+        document.getElementById('IdMagicMod').value=INT
     } else {
         document.getElementById('IdMagicTotal').value=(grado+INT)
-        document.getElementById('IdMagiaGrad').value=grado
-        document.getElementById('IdMagiaMod').value=INT
+        document.getElementById('IdMagicGrad').value=grado
+        document.getElementById('IdMagicMod').value=INT
     }
     if (iniciativa.checked ==true) {
         document.getElementById('IniciativaTotal').value=(gradt+DES)
@@ -1102,7 +1455,16 @@ function f2(){
         document.getElementById('SobrevivenciaMod').value=SAB
     }
     //=================================================
-    document.getElementById('contTalentos').value+=((lv/2)+1)   
+    var lv=document.getElementById('nivel')
+    //var val=document.getElementById('contTalentos').value;
+    var resto=parseInt lv%2;
+    var cont=parseInt 0; 
+    for (var i = 1; i < lv i++) {
+        if (resto!=0) {
+            cont+=1;
+        }
+    }
+    document.getElementById('contTalentos').value=cont  
 }
 function f3(){
    	var forca =document.getElementById('FOR').value;
@@ -1122,6 +1484,25 @@ function f3(){
 
 };
 function f4(){
-    //var x =document.getElementById('').value;
-   //document.getElementById('').value=
+    var lv =document.getElementById('nivel').value;
+    var for =document.getElementById('MCON').value;
+    var des =document.getElementById('MDES').value;
+    var sab =document.getElementById('MSAB').value;
+    var fou =document.getElementById('RFOROU').value;
+    var rou =document.getElementById('RREFOU').value;
+    var vou =document.getElementById('RVONOU').value;
+    var mlv =parseInt (lv/2);
+    document.getElementById('RFORT').value=mlv+for+fou
+    document.getElementById('RFORT').value=mlv+des+rou
+    document.getElementById('RFORT').value=mlv+sab+vou
+};
+function f5(){
+    var lv =document.getElementById('nivel').value;
+    var mlv =parseInt (lv/2);
+    var des =document.getElementById('MDES').value;
+    var bca1 =document.getElementById('BonusCA1').value;
+    var bca2 =document.getElementById('BonusCA2').value;
+    var bca3 =document.getElementById('BonusCA3').value;
+    //ca-10+todo
+    document.getElementById('CAtotal').value=-10+mlv+des+bca1+bca2+bca3    
 };
