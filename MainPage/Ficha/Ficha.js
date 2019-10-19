@@ -97,6 +97,7 @@ function f1(){
                     return;
                 }
             }
+            f3()
 function f2(){
     var classe=document.getElementById('classe').value;
     
@@ -131,9 +132,6 @@ function f2(){
     var sobrevivencia=document.getElementById('Sobrevivencia');
 
     var lv=document.getElementById('nivel').value;
-    
-    var gradt=parseInt (lv+3);
-    var grado=parseInt (lv/2);
     
     if (classe=="Bárbaro"){
         //=======vida=======
@@ -1254,8 +1252,54 @@ function f2(){
         if (lv>=20) {
             document.getElementById('HabClasse').value+=", Bônus na CA +4"
         }
+    }   
+    //=================================================
+    var lv=document.getElementById('nivel')
+    var resto=parseInt (lv%2);
+    var cont=parseInt (0); 
+    for (var i = 1; i < lv; i++) {
+        if (resto!=0) {
+            cont+=1;
+        }
     }
-    //===============================================
+    document.getElementById('contTalentos').value=cont  
+}
+function fp() {
+    var FOR=document.getElementById('MFOR').value;
+    var DES=document.getElementById('MDES').value;
+    var CON=document.getElementById('MCON').value;
+    var INT=document.getElementById('MINT').value;
+    var SAB=document.getElementById('MSAB').value;
+    var CAR=document.getElementById('MCAR').value;
+    
+    var acrobacia=document.getElementById('Acrobacia');
+    var adsanimal=document.getElementById('AdestrarAnimais');
+    var atletismo=document.getElementById('Atletismo');
+    var atuacao=document.getElementById('Atuacao');
+    var atuacao2=document.getElementById('Atuacao');
+    var cavalgar=document.getElementById('Cavalgar');
+    var conhecimento=document.getElementById('Conhecimento');
+    var conhecimento2=document.getElementById('Conhecimento');
+    var cura=document.getElementById('Cura');
+    var diplomacia=document.getElementById('Diplomacia');
+    var enganacao=document.getElementById('Enganacao');
+    var furtividade=document.getElementById('Furtividade');
+    var idmagia=document.getElementById('IdMagic');
+    var iniciativa=document.getElementById('Iniciativa');
+    var intimidacao=document.getElementById('Intimidacao');
+    var intuicao=document.getElementById('Intuicao');
+    var ladinagem=document.getElementById('Ladinagem');
+    var obtinfo=document.getElementById('ObtInfo');
+    var oficio=document.getElementById('Oficio');
+    var oficio2=document.getElementById('Oficio');
+    var percepcao=document.getElementById('Percepcao');
+    var sobrevivencia=document.getElementById('Sobrevivencia');
+
+    var lv=document.getElementById('nivel').value;
+    
+    var gradt=parseInt (lv+3);
+    var grado=parseInt (lv/2);
+
     if (acrobacia.checked ==true) {
         document.getElementById('AcrobaciaTotal').value=gradt+DES
         document.getElementById('AcrobaciaGrad').value=gradt
@@ -1453,17 +1497,7 @@ function f2(){
         document.getElementById('SobrevivenciaTotal').value=(grado+SAB)
         document.getElementById('SobrevivenciaGrad').value=grado
         document.getElementById('SobrevivenciaMod').value=SAB
-    }
-    //=================================================
-    var lv=document.getElementById('nivel')
-    var resto=parseInt (lv%2);
-    var cont=parseInt (0); 
-    for (var i = 1; i < lv; i++) {
-        if (resto!=0) {
-            cont+=1;
-        }
-    }
-    document.getElementById('contTalentos').value=cont  
+    }    
 }
 function f3(){
    	var forca =document.getElementById('FOR').value;
@@ -1499,9 +1533,9 @@ function f5(){
     var lv =document.getElementById('nivel').value;
     var mlv =parseInt (lv/2);
     var des =document.getElementById('MDES').value;
-    var bca1 =document.getElementById('BonusCA1').value;
-    var bca2 =document.getElementById('BonusCA2').value;
-    var bca3 =document.getElementById('BonusCA3').value;
+    var bca1 =document.getElementById('BonusnaCA1').value;
+    var bca2 =document.getElementById('BonusnaCA2').value;
+    var bca3 =document.getElementById('BonusnaCA3').value;
     //ca-10+todo
     document.getElementById('CAtotal').value=-10+mlv+des+bca1+bca2+bca3    
 };

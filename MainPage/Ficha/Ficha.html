@@ -78,7 +78,7 @@
                                 </select>
                             </div>
                         </td>
-                        <td><input type="checkbox" id="Acrobacia">Acrobacia</td>
+                        <td><input type="checkbox" id="Acrobacia" onchange="fp()">Acrobacia</td>
                         <td align="center"><input type="number" class="pericias" id="AcrobaciaTotal"></td>
                         <td align="center"><b>=</b></td>
                        	<td align="center"><input type="number" class="pericias" id="AcrobaciaGrad"></td> 
@@ -93,7 +93,7 @@
                         <td><label>Divindade</label></td>
                         <td><label>Tamanho</label></td>
                         <td><label>Deslocamento</label></td>
-                    	<td><input type="checkbox" id="AdestrarAnimais">Adestrar Animais</td>
+                    	<td><input type="checkbox" id="AdestrarAnimais" onchange="fp()">Adestrar Animais</td>
                     	  <td align="center"><input type="number" class="pericias" id="AdestrarTotal"></td>
                         <td align="center"><b>=</b></td>
                        	<td align="center"><input type="number" class="pericias" id="AdestrarGrad"></td> 
@@ -148,7 +148,7 @@
                             </div>
                         </td>
                         <td><input type="text" name="deslocamento" id="deslocamento"></td>
-                        <td><input type="checkbox" id="Atletismo">Atletismo</td>
+                        <td><input type="checkbox" id="Atletismo" onchange="fp()">Atletismo</td>
                         <td align="center"><input type="number" name="AcrobaciaTotal" id="AtletismoTotal"></td>
                         <td align="center"><b>=</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="AtletismoGrad"></td> 
@@ -162,7 +162,7 @@
                         <td align="center" rowspan="3">Pontos totais: <p><input type="number"  id="pvt"></td>
                         <td align="center" rowspan="3">Pontos atuais: <p><input type="number" id="pva"></td>
                         <td colspan="2" align="center" rowspan="2" bgcolor="black"><h3><font color="white">HABILIDADES DE CLASSE</h3></td>
-                        <td><input type="checkbox" id="Atuação">Atuação<input type="text" name="tipoAtuação1" id="tipoAtuação1"></td>
+                        <td><input type="checkbox" id="Atuação" onchange="fp()">Atuação<input type="text" name="tipoAtuação1" id="tipoAtuação1"></td>
                         <td align="center"><input type="number" name="AcrobaciaTotal" id="AtuacaoTotal"></td>
                         <td align="center"><b>=</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="AtuacaoGrad"></td> 
@@ -174,7 +174,7 @@
                     </tr>
                     <tr>
 
-                        <td><input type="checkbox" id="Atuacao">Atuação<input type="text" name="tipoAtuação2" id="tipoAtuação2"></td>
+                        <td><input type="checkbox" id="Atuacao" onchange="fp()">Atuação<input type="text" name="tipoAtuação2" id="tipoAtuação2"></td>
                         <td align="center"><input type="number" name="AcrobaciaTotal" id="Atuacao2Total"></td>
                         <td align="center"><b>=</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="Atuacao2Grad"></td> 
@@ -185,7 +185,7 @@
                     </tr>
                     <tr>  
                         <td colspan="2" rowspan="9	"><textarea rows="16" cols="37" id="HabClasse"></textarea></td>                     
-                        <td><input type="checkbox" id="Cavalgar">Cavalgar</td>
+                        <td><input type="checkbox" id="Cavalgar" onchange="fp()">Cavalgar</td>
                         <td align="center"><input type="number" name="AcrobaciaTotal" id="CavalgarTotal"></td>
                         <td align="center"><b>=</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="CavalgarGrad"></td> 
@@ -203,7 +203,7 @@
                           <p>Escudo <input type="number" name="AcrobaciaTotal" id="CAescudo"></p>
                           <p>Outros <input type="number" name="CAoutros" id="CAoutros"></p>
                         </td>
-                        <td><input type="checkbox" id="Conhecimento">Conhecimento<input type="text" name="tipoConhecimento1" id="tipoConhecimento1"></td>	
+                        <td><input type="checkbox" id="Conhecimento" onchange="fp()">Conhecimento<input type="text" name="tipoConhecimento1" id="tipoConhecimento1"></td>	
                         <td align="center"><input type="number" name="AcrobaciaTotal" id="ConhecimentoTotal"></td>
                         <td align="center"><b>=</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="ConhecimentoGrad"></td> 
@@ -213,7 +213,7 @@
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="ConhecimentoOu"></td>				
                     </tr>	
                     <tr>
-                        <td><input type="checkbox" id="Conhecimento">Conhecimento<input type="text" name="tipoConhecimento2" id="tipoConhecimento2"></td>
+                        <td><input type="checkbox" id="Conhecimento" onchange="fp()">Conhecimento<input type="text" name="tipoConhecimento2" id="tipoConhecimento2"></td>
                         <td align="center"><input type="number" name="AcrobaciaTotal" id="Conhecimento2Total"></td>
                         <td align="center"><b>=</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="Conhecimento2Grad"></td> 
@@ -223,7 +223,7 @@
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="Conhecimento2Ou"></td>	
                     </tr>
                     <tr>
-                        <td><input type="checkbox" id="Cura">Cura</td>
+                        <td><input type="checkbox" id="Cura" onchange="fp()">Cura</td>
                         <td align="center"><input type="number" name="AcrobaciaTotal" id="curaTotal"></td>
                         <td align="center"><b>=</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="curaGrad"></td> 
@@ -233,8 +233,8 @@
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="curaOu"></td>
                     </tr>
                     <tr>
-                        <td colspan="3" align="center" rowspan="4" bgcolor="black"><h1><font color="white">ATRIBUTOS</h2> <input type="button" value="Aplicar" onclick="f3()"></td>
-                       	<td><input type="checkbox" id="Diplomacia">Diplomacia</td>
+                        <td colspan="3" align="center" rowspan="4" bgcolor="black"><h1><font color="white">ATRIBUTOS</h2></td>
+                       	<td><input type="checkbox" id="Diplomacia" onchange="fp()">Diplomacia</td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="DiplomaciaTotal"></td>
                         <td align="center"><b>=</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="DiplomaciaGrad"></td> 
@@ -243,7 +243,7 @@
                        	<td align="center"><b>+</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="DiplomaciaOu"></td>
                     <tr>
-                    	<td><input type="checkbox" id="Enganacao">Enganação</td>
+                    	<td><input type="checkbox" id="Enganacao" onchange="fp()">Enganação</td>
                     	<td align="center"><input type="number" name="AcrobaciaTotal" id="EnganacaoTotal"></td>
                         <td align="center"><b>=</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="EnganacaoGrad"></td> 
@@ -253,7 +253,7 @@
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="EnganacaoOu"></td>
                     </tr>
                     <tr>
-                    	<td><input type="checkbox" id="Furtividade">Furtividade</td>
+                    	<td><input type="checkbox" id="Furtividade" onchange="fp()">Furtividade</td>
                     	<td align="center"><input type="number" name="AcrobaciaTotal" id="FurtividadeTotal"></td>
                         <td align="center"><b>=</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="FurtividadeGrad"></td> 
@@ -263,7 +263,7 @@
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="FurtividadeOu"></td>
                     </tr>
                     <tr>
-                    	<td><input type="checkbox" id="IdMagic">Identificar Magia</td>
+                    	<td><input type="checkbox" id="IdMagic" onchange="fp()">Identificar Magia</td>
                     	<td align="center"><input type="number" name="AcrobaciaTotal" id="IdMagicTotal"></td>
                         <td align="center"><b>=</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="IdMagicGrad"></td> 
@@ -277,7 +277,7 @@
                         <td align="center" rowspan="4"><h3>Valor</h3></td>
                         <td align="center" rowspan="4"><h3>Modificador</h3></td>
                         <td colspan="2" align="center" rowspan="4" bgcolor="black" ><h3><font color="white"> TALENTOS</h3></td>
-                        <td><input type="checkbox" id="Iniciativa">Iniciativa</td>
+                        <td><input type="checkbox" id="Iniciativa" onchange="fp()">Iniciativa</td>
                         <td align="center"><input type="number" name="AcrobaciaTotal" id="IniciativaTotal"></td>
                         <td align="center"><b>=</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="IniciativaGrad"></td> 
@@ -287,7 +287,7 @@
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="IniciativaOu"></td>
                     </tr>
                     <tr>
-                    	<td><input type="checkbox" id="Intimidacao">Intimidação</td>
+                    	<td><input type="checkbox" id="Intimidacao" onchange="fp()">Intimidação</td>
                     	<td align="center"><input type="number" name="AcrobaciaTotal" id="IntimidacaoTotal"></td>
                         <td align="center"><b>=</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="IntimidacaoGrad"></td> 
@@ -297,7 +297,7 @@
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="IntimidacaoOu"></td>
                     </tr>
                     <tr>
-                    	<td><input type="checkbox" id="Intuicao">Intuição</td>
+                    	<td><input type="checkbox" id="Intuicao" onchange="fp()">Intuição</td>
                     	<td align="center"><input type="number" name="AcrobaciaTotal" id="IntuicaoTotal"></td>
                         <td align="center"><b>=</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="IntuicaoGrad"></td> 
@@ -307,7 +307,7 @@
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="IntuicaoOu"></td>
                     </tr>
                     <tr>
-                    	<td><input type="checkbox" id="Ladinagem">Ladinagem</td>
+                    	<td><input type="checkbox" id="Ladinagem" onchange="fp()">Ladinagem</td>
                     	<td align="center"><input type="number" name="AcrobaciaTotal" id="LadinagemTotal"></td>
                         <td align="center"><b>=</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="LadinagemGrad"></td> 
@@ -321,7 +321,7 @@
                     	<td></td>
                     	<td></td>
                     	<td colspan="2" align="center">Contador de Talentos: <input type="number" name="contTalentos" id="contTalentos"></td>
-                    	<td><input type="checkbox" id="ObtInfo">Obter informação</td>
+                    	<td><input type="checkbox" id="ObtInfo" onchange="fp()">Obter informação</td>
                     	<td align="center"><input type="number" name="AcrobaciaTotal" id="ObtInfoTotal"></td>
                         <td align="center"><b>=</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="ObtInfoGrad"></td> 
@@ -333,10 +333,10 @@
 
                     <tr>
                         <td align="center" rowspan="5" bgcolor="black"><h3><font color="white">FOR</h3><p>Força</p></td>
-                        <td align="center" rowspan="5"><input type="number" name="valorforça" id="FOR"></td>
+                        <td align="center" rowspan="5"><input type="number" name="valorforça" id="FOR" onchange="f3()"></td>
                         <td align="center" rowspan="5"><input type="number" name="modforça" id="MFOR"></td>
                         <td colspan="2" rowspan="17"><textarea rows="21" cols="37" id="Talentos"></textarea></td>
-                        <td><input type="checkbox" id="Oficio">Ofício<input type="text" name="tipoOfício1" id="tipoOfício1"></td>
+                        <td><input type="checkbox" id="Oficio" onchange="fp()">Ofício<input type="text" name="tipoOfício1" id="tipoOfício1"></td>
                         <td align="center"><input type="number" name="AcrobaciaTotal" id="OficioTotal"></td>
                         <td align="center"><b>=</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="OficioGrad"></td> 
@@ -346,7 +346,7 @@
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="OficioOu"></td>
                     </tr>
                     <tr>
-                    	<td><input type="checkbox" id="Oficio">Ofício<input type="text" name="tipoOfício2" id="tipoOfício2"></td>
+                    	<td><input type="checkbox" id="Oficio" onchange="fp()">Ofício<input type="text" name="tipoOfício2" id="tipoOfício2"></td>
                     	<td align="center"><input type="number" name="AcrobaciaTotal" id="Oficio2Total"></td>
                         <td align="center"><b>=</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="Oficio2Grad"></td> 
@@ -356,7 +356,7 @@
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="Oficio2Ou"></td>
                     </tr>
                     <tr>
-                    	<td><input type="checkbox" id="Percepcao">Percepção</td>
+                    	<td><input type="checkbox" id="Percepcao" onchange="fp()">Percepção</td>
                     	<td align="center"><input type="number" name="AcrobaciaTotal" id="PercepcaoTotal"></td>
                         <td align="center"><b>=</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="PercepcaoGrad"></td> 
@@ -366,7 +366,7 @@
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="PercepcaoOu"></td>
                     </tr>
                     <tr>
-                    	<td><input type="checkbox" id="Sobrevivencia">Sobrevivência</td>
+                    	<td><input type="checkbox" id="Sobrevivencia" onchange="fp()">Sobrevivência</td>
                     	<td align="center"><input type="number" name="AcrobaciaTotal" id="SobrevivenciaTotal"></td>
                         <td align="center"><b>=</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="SobrevivenciaGrad"></td> 
@@ -376,7 +376,7 @@
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="SobrevivenciaOu"></td>
                     </tr>
                     <tr>
-                    	<td><input type="text" name="periciaextra" id="periciaextra"></td>
+                    	<td><input type="text" name="periciaextra" id="periciaextra" onchange="fp()"></td>
                     	<td align="center"><input type="number" name="AcrobaciaTotal" id="periciaextraTotal"></td>
                         <td align="center"><b>=</b></td>
                        	<td align="center"><input type="number" name="AcrobaciaTotal" id="periciaextraGrad"></td> 
@@ -388,7 +388,7 @@
                     <tr></tr>
                     <tr>
                         <td align="center" rowspan="5" bgcolor="black"><h3><font color="white">DES</h3><p>Destreza</p></td>
-                        <td align="center" rowspan="5"><input type="number" name="valordestreza" id="DES"></td>
+                        <td align="center" rowspan="5"><input type="number" name="valordestreza" id="DES" onchange="f3()"></td>
                         <td align="center" rowspan="5"><input type="number" name="moddestreza" id="MDES"></td>
                     </tr>
                     <tr colspan="10" rowspan="30">
@@ -446,7 +446,7 @@
                     <tr></tr>
                     <tr>
                         <td align="center" rowspan="5" bgcolor="black"><h3><font color="white">CON</h3><p>Constituição</p></td>
-                        <td align="center" rowspan="5"><input type="number" name="valorconstituição" id="CON"></td>
+                        <td align="center" rowspan="5"><input type="number" name="valorconstituição" id="CON" onchange="f3()"></td>
                         <td align="center" rowspan="5"><input type="number" name="modconstituição" id="MCON"></td>
                     </tr>
                     <tr>
@@ -484,7 +484,7 @@
                     <tr></tr>
                     <tr>
                         <td align="center" rowspan="5" bgcolor="black"><h3><font color="white">INT</h3><p>Inteligência</p></td>
-                        <td align="center" rowspan="5"><input type="number" name="valorinteligência" id="INT"></td>
+                        <td align="center" rowspan="5"><input type="number" name="valorinteligência" id="INT" onchange="f3()"></td>
                         <td align="center" rowspan="5"><input type="number" name="modinteligência" id="MINT"></td>
                         <td colspan="2" align="center" bgcolor="black"><b><h3><font color="white">HABILIDADES DE RAÇA</h3></b></td>
                         <td align="center" colspan="4"><b>ARMADURA/ESCUDO</b></td>
@@ -515,7 +515,7 @@
                     <tr></tr>
                     <tr>
                         <td align="center" rowspan="5" bgcolor="black"><h3><font color="white">SAB</h3><p>Sabedoria</p></td>
-                        <td align="center" rowspan="5"><input type="number" id="SAB"></td>
+                        <td align="center" rowspan="5"><input type="number" id="SAB" onchange="f3()"></td>
                         <td align="center"rowspan="5"><input type="number" id="MSAB"></td>
                     </tr>
                     <tr>
@@ -561,7 +561,7 @@
                     <tr></tr>
                     <tr>
                         <td align="center" rowspan="5" bgcolor="black"><h3><font color="white">CAR</h3><p>Carisma</p></td>
-                        <td align="center"rowspan="5"><input type="number" id="CAR"></td>
+                        <td align="center"rowspan="5"><input type="number" id="CAR" onchange="f3()"></td>
                         <td align="center" rowspan="5"><input type="number" id="MCAR"></td>
                     </tr>
                     <tr></tr>
