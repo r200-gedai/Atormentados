@@ -1456,10 +1456,9 @@ function f2(){
     }
     //=================================================
     var lv=document.getElementById('nivel')
-    //var val=document.getElementById('contTalentos').value;
-    var resto=parseInt lv%2;
-    var cont=parseInt 0; 
-    for (var i = 1; i < lv i++) {
+    var resto=parseInt (lv%2);
+    var cont=parseInt (0); 
+    for (var i = 1; i < lv; i++) {
         if (resto!=0) {
             cont+=1;
         }
@@ -1485,14 +1484,14 @@ function f3(){
 };
 function f4(){
     var lv =document.getElementById('nivel').value;
-    var for =document.getElementById('MCON').value;
+    var forca =document.getElementById('MCON').value;
     var des =document.getElementById('MDES').value;
     var sab =document.getElementById('MSAB').value;
     var fou =document.getElementById('RFOROU').value;
     var rou =document.getElementById('RREFOU').value;
     var vou =document.getElementById('RVONOU').value;
     var mlv =parseInt (lv/2);
-    document.getElementById('RFORT').value=mlv+for+fou
+    document.getElementById('RFORT').value=mlv+forca+fou
     document.getElementById('RFORT').value=mlv+des+rou
     document.getElementById('RFORT').value=mlv+sab+vou
 };
