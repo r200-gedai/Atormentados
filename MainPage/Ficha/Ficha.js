@@ -1,102 +1,65 @@
+function atualizar_status(forca,destreza,constituicao,inteligencia,sabedoria,carisma,deslocamento,altura,HabRaca){
+	 document.getElementById('DES').value=destreza;
+	 document.getElementById('CON').value=constituicao;
+	 document.getElementById('INT').value=inteligencia;
+	 document.getElementById('SAB').value=sabedoria;
+	 document.getElementById('CAR').value=carisma;
+	 document.getElementById('deslocamento').value=deslocamento;
+	 document.getElementById('altura').value=altura;
+	 document.getElementById('HabRaca').value=HabRaca;
+	 return;
+}
+
 function f1(){
 				var racas =document.getElementById('raca').value;
-                var forca =document.getElementById('FOR').value;
-                var destreza =document.getElementById('DES').value;
-                var constituicao =document.getElementById('CON').value;
-                var inteligencia =document.getElementById('INT').value;
-                var sabedoria =document.getElementById('SAB').value;
-                var carisma =document.getElementById('CAR').value;
-                if(racas=="Anão"){
-                    document.getElementById('CON').value=constituicao+4
-                    document.getElementById('SAB').value=sabedoria+2
-                    document.getElementById('DES').value=destreza-2
-                    document.getElementById('deslocamento').value=" 6 Metros"
-                    document.getElementById('altura').value="Médio"
-                    document.getElementById('HabRaca').value="Deslocamento 6m Visão no Escuro +4 em testes de resistência a venenos e magias Classe de armadura +4 contra adversários de tamanho Grande ou maior Para anões, todos os tipos de machados e martelos são armas simples +2 em testes de perícias para assuntos relacionados a pedra e metal"                   
-                    return; 
-                }
-                if(racas=="Elfo"){
-                    document.getElementById('DES').value=destreza+4
-                    document.getElementById('INT').value=inteligencia+2
-                    document.getElementById('CON').value=constituicao-2
-                    document.getElementById('deslocamento').value=" 9 Metros"
-                    document.getElementById('altura').value="Médio"
-                    document.getElementById('HabRaca').value=" Visão na Penumbra. Um elfo ignora camuflagem (mas não camuflagem total) por escuridão.Elfos podem ver duas vezes mais longe que os humanos em condições de pouca iluminação, como luz das estrelas e tochas. +4 em testes de Vontade contra encantamentos. Elfos também são imunes à magia sono. +4 em testes de Identificar Magia e Percepção. Elfos têm familiaridade com magia e sentidos apurados. A difi culdade do teste de resistência contra magias arcanas lançadas por um elfo aumenta em CD +2. Elfos sabem usar espadas curtas, espadas longas, floretes e arcos (curtos, longos e compostos). Elfos também recebem Foco em Arma para uma destas armas (à escolha do jogador) como um talento adicional."
-                    return;
-                }
-                if(racas=="Goblin"){
-                    document.getElementById('DES').value=destreza+4
-                    document.getElementById('CAR').value=carisma-2
-                    document.getElementById('CON').value=constituicao+2
-                    document.getElementById('deslocamento').value=" 6 Metros"
-                    document.getElementById('altura').value="Pequeno"
-                    document.getElementById('HabRaca').value="Deslocamento 9m Visão no Escuro +4 em testes de Fortitude contra doenças e venenos Goblins não precisam fazer testes de Fortitude por ingerir comida estragada. +4 em testes de Ladinagem e Oficio (um à escolha do jogador)"
-                    return;
-                }
-                if(racas=="Halfling"){
-                    document.getElementById('DES').value=destreza+4
-                    document.getElementById('CAR').value=carisma+2
-                    document.getElementById('FOR').value=forca-2
-                    document.getElementById('deslocamento').value=" 6 Metros"
-                    document.getElementById('altura').value="Pequeno"
-                    document.getElementById('HabRaca').value="+2 em todos os testes de resistência, por sua sorte incrível +1 em jogadas de ataque com armas de arremesso e fundas Para halflings a perícia Atletismo é baseada em Destreza, não em Força +4 em testes de Enganação"
-                    return;
-                }
-                if(racas=="Humano"){
-                    document.getElementById('deslocamento').value=" 9 Metros"
-                    document.getElementById('altura').value="Médio"
-                    document.getElementById('HabRaca').value="+2 em duas habilidades à escolha do jogador 2 perícias treinadas extras, que não precisam ser escolhidas entre suas perícias de classe 2 talentos adicionais à escolha do jogador"
-                    document.getElementById('contTalentos').value+=2
-                    return;
-                }
-                if(racas=="Lefou"){
-                    document.getElementById('deslocamento').value=" 9 Metros"
-                    document.getElementById('altura').value="Médio"
-                    document.getElementById('HabRaca').value="•Monstro. Um lefou não é considerado humano ou humanoide. •Visão no escuro. •2 talentos da Tormenta adicionais. • Deformidade.O jogador deve escolher uma entre as seguintes. -Articulações flexíveis: +4 em testes de Acrobacia. -Dedos rígidos: deslocamento de escalada 4,5m. -Dentes afiados: +4 em testes de Intimidação. -Mãos membranosas: deslocamento de natação 4,5m. -Olhos vermelhos: +4 em testes de Percepção. -Pele rígida: classe de armadura +1. • Afinidade com a Tormenta."
-                    return;
-                }
-                if(racas=="Minotauro"){
-                    document.getElementById('FOR').value=forca+4
-                    document.getElementById('CON').value=constituicao+2
-                    document.getElementById('CAR').value=carisma-2
-                    document.getElementById('deslocamento').value=" 9 Metros"
-                    document.getElementById('altura').value="Médio"
-                    document.getElementById('HabRaca').value="• Classe de armadura +1. • Minotauros possuem um ataque natural de chifres (1d6, crítico x2, perfuração). Um minotauro pode realizar um ataque adicional por rodada com os chifres, mas provoca uma penalidade de –4 em todos os ataques (incluindo este). • Faro. Minotauros recebem +4 em testes de Sobrevivência para rastrear, e também detectam automaticamente a presença de criaturas a até 9m. • Lógica labiríntica. Minotauros têm excelente senso de direção, e recebem +8 em testes de Sobrevivência para não se perder. • Medo de altura. Caso tenha que subir qualquer altura superior a 3m (ou se estiver a até 3m de uma queda desta altura), um minotauro sofre penalidade de –4 em suas jogadas e testes. Ele também não pode realizar nenhuma ação que dependa de concentração, como conjurar magias."
-                    return;
-                }
-                if(racas=="Qareen"){
-                    document.getElementById('CAR').value=carisma+4
-                    document.getElementById('INT').value=inteligencia+2
-                    document.getElementById('SAB').value=sabedoria-2
-                    document.getElementById('deslocamento').value=" 9 Metros"
-                    document.getElementById('altura').value="Médio"
-                    document.getElementById('HabRaca').value="• +4 em testes de Identificar Magia. • Desejos. Uma vez por dia, o qareen pode lançar uma magia sem pagar PM (ou sem esquecê-la), mas apenas se fizer isso na mesma rodada em que alguém tiver lhe pedido. • Pequenos desejos. Mesmo que não pertença a uma classe conjuradora, um qareen pode lançar todos os truques. No entanto, ele só pode lançar estes truques quando outra pessoa pede. • Um qareen pode lançar a magia voo uma vez por dia. • Conforme sua descendência, um qareen tem resistência especial contra as seguintes formas de ataque: -Água: resistência a ácido e frio 5. -Ar: resistência a eletricidade e sônico 5. -Fogo: resistência a fogo 5. -Terra: redução de dano 3/cortante ou per furante. -Luz: resistência a eletricidade 10. -Trevas: resistência a ácido e energia negativa 5. “Energia negativa” é provocada por efeitos e magias necromânticos (como infligir ferimentos)."
-                    return;
-                }
-                if(racas=="Gnomo"){
-                    document.getElementById('INT').value=inteligencia+4
-                    document.getElementById('CON').value=constituicao+2
-                    document.getElementById('FOR').value=forca-2
-                    document.getElementById('deslocamento').value=" 6 Metros"
-                    document.getElementById('altura').value="Pequeno"
-                    document.getElementById('HabRaca').value="• Visão na Penumbra. Um gnomo ignora camuflagem (mas não camufl agem total) por escuridão. Gnomos podem ver duas vezes mais longe que os humanos em condições de pouca iluminação, como luz das estrelas e tochas. • +4 em testes de Intuição e Ofícios (alquimia). Gnomos são perspicazes e familiarizados com ilusões e poções. • Classe de armadura +4 contra adversários de tamanho Grande ou maior. • Gnomos podem se comunicar com animais livremente. Veja a descrição da magia falar com animais. • Um gnomo com Carisma 10 ou mais pode lançar as seguintes magias livremente: globos de luz, som fantasma, prestidigitação."
-                    return;
-                }
-                if(racas=="Meio-Elfo"){
-                    document.getElementById('DES').value=destreza+2
-                    document.getElementById('deslocamento').value=" 9 Metros"
-                    document.getElementById('altura').value="Médio"
-                    document.getElementById('HabRaca').value="• Visão na Penumbra. Um meio-elfo ignora camufl agem (mas não camufl agem total) por escuridão. Meio-elfos podem ver duas vezes mais longe que os humanos em condições de pouca iluminação, como luz das estrelas e tochas. • 1 talento bônus à escolha do jogador. • 1 perícia treinada extra, que não precisa ser escolhida entre suas perícias de classe. • +2 em testes de Vontade contra encantamentos. • +2 em testes de Identifi car Magia e Percepção"
-                    return;
-                }
-                if(racas=="Meio-Orc"){
-                    document.getElementById('FOR').value=forca+2
-                    document.getElementById('deslocamento').value=" 9 Metros"
-                    document.getElementById('altura').value="Médio"
-                    document.getElementById('HabRaca').value="• Visão no Escuro. Meio-orcs podem enxergar no escuro a até 18 metros, apenas em preto e branco. Um meio-orc ignora camufl agem (incluindo camufl agem total) por escuridão. • Meio-orcs recebem Duro de Matar como um talento adicional. • +4 em testes de Intimidação. Meio-orcs são ameaçadores."
-                    return;
-                }
+                var forca =parseInt(document.getElementById('FOR').value);
+                var destreza =parseInt(document.getElementById('DES').value);
+                var constituicao =parseInt(document.getElementById('CON').value);
+                var inteligencia =parseInt(document.getElementById('INT').value);
+                var sabedoria =parseInt(document.getElementById('SAB').value);
+                var carisma =parseInt(document.getElementById('CAR').value);
+                
+				switch(racas){
+					case "Anão":
+						atualizar_status(forca+0, destreza-2, constituicao+4, inteligencia+0, sabedoria+2, carisma+0, " 6 Metros", "Médio", "Deslocamento 6m Visão no Escuro +4 em testes de resistência a venenos e magias Classe de armadura +4 contra adversários de tamanho Grande ou maior Para anões, todos os tipos de machados e martelos são armas simples +2 em testes de perícias para assuntos relacionados a pedra e metal");
+						break;
+					case "Elfo":
+						atualizar_status(forca+0, destreza+4, constituicao-2, inteligencia+2, sabedoria+0, carisma+0, " 9 Metros", "Médio", " Visão na Penumbra. Um elfo ignora camuflagem (mas não camuflagem total) por escuridão.Elfos podem ver duas vezes mais longe que os humanos em condições de pouca iluminação, como luz das estrelas e tochas. +4 em testes de Vontade contra encantamentos. Elfos também são imunes à magia sono. +4 em testes de Identificar Magia e Percepção. Elfos têm familiaridade com magia e sentidos apurados. A difi culdade do teste de resistência contra magias arcanas lançadas por um elfo aumenta em CD +2. Elfos sabem usar espadas curtas, espadas longas, floretes e arcos (curtos, longos e compostos). Elfos também recebem Foco em Arma para uma destas armas (à escolha do jogador) como um talento adicional.");
+						break;
+					case "Goblin":
+						atualizar_status(forca+0, destreza+4, constituicao+2, inteligencia+0, sabedoria+0, carisma-2, " 6 Metros", "Pequeno", "Deslocamento 9m  Visão no Escuro +4 em testes de Fortitude contra doenças e venenos Goblins não precisam fazer testes de Fortitude por ingerir comida estragada. +4 em testes de Ladinagem e Oficio (um à escolha do jogador");
+						break;
+					case "Halfling":
+						atualizar_status(forca-2, destreza+4, constituicao+0, inteligencia+0, sabedoria+0,carisma+2, " 6 Metros", "Pequeno", "+2 em todos os testes de resistência, por sua sorte incrível +1 em jogadas de ataque com armas de arremesso e fundas Para halflings a perícia Atletismo é baseada em Destreza, não em Força +4 em testes de Enganação");
+						break;
+					case "Humano":
+						atualizar_status(forca+0, destreza+0, constituicao+0, inteligencia+0, sabedoria+0, 0, " 9 Metros", "Médio", "+2 em duas habilidades à escolha do jogador 2 perícias treinadas extras, que não precisam ser escolhidas entre suas perícias de classe 2 talentos adicionais à escolha do jogador");
+						document.getElementById('contTalentos').value = parseInt(document.getElementById('contTalentos').value) + 2
+						break;
+					case "Lefou":
+						atualizar_status(forca+0, destreza+0, constituicao+0, inteligencia+0, sabedoria+0, carisma+0, " 9 Metros", "Médio", "•Monstro. Um lefou não é considerado humano ou humanoide. •Visão no escuro. •2 talentos da Tormenta adicionais. • Deformidade.O jogador deve escolher uma entre as seguintes. -Articulações flexíveis: +4 em testes de Acrobacia. -Dedos rígidos: deslocamento de escalada 4,5m. -Dentes afiados: +4 em testes de Intimidação. -Mãos membranosas: deslocamento de natação 4,5m. -Olhos vermelhos: +4 em testes de Percepção. -Pele rígida: classe de armadura +1. • Afinidade com a Tormenta.");
+						break;
+					case "Minotauro":
+						atualizar_status(forca+4, destreza+0, constituicao+2, inteligencia+0, sabedoria+0, carisma-2, " 9 Metros", "Médio", "• Classe de armadura +1. • Minotauros possuem um ataque natural de chifres (1d6, crítico x2, perfuração). Um minotauro pode realizar um ataque adicional por rodada com os chifres, mas provoca uma penalidade de –4 em todos os ataques (incluindo este). • Faro. Minotauros recebem +4 em testes de Sobrevivência para rastrear, e também detectam automaticamente a presença de criaturas a até 9m. • Lógica labiríntica. Minotauros têm excelente senso de direção, e recebem +8 em testes de Sobrevivência para não se perder. • Medo de altura. Caso tenha que subir qualquer altura superior a 3m (ou se estiver a até 3m de uma queda desta altura), um minotauro sofre penalidade de –4 em suas jogadas e testes. Ele também não pode realizar nenhuma ação que dependa de concentração, como conjurar magias.");
+						break;
+					case "Qareen":
+						atualizar_status(forca+0, destreza+0, constituicao+0, inteligencia+2, sabedoria-2, carisma+4, " 9 Metros", "Médio", "• +4 em testes de Identificar Magia. • Desejos. Uma vez por dia, o qareen pode lançar uma magia sem pagar PM (ou sem esquecê-la), mas apenas se fizer isso na mesma rodada em que alguém tiver lhe pedido. • Pequenos desejos. Mesmo que não pertença a uma classe conjuradora, um qareen pode lançar todos os truques. No entanto, ele só pode lançar estes truques quando outra pessoa pede. • Um qareen pode lançar a magia voo uma vez por dia. • Conforme sua descendência, um qareen tem resistência especial contra as seguintes formas de ataque: -Água: resistência a ácido e frio 5. -Ar: resistência a eletricidade e sônico 5. -Fogo: resistência a fogo 5. -Terra: redução de dano 3/cortante ou per furante. -Luz: resistência a eletricidade 10. -Trevas: resistência a ácido e energia negativa 5. “Energia negativa” é provocada por efeitos e magias necromânticos (como infligir ferimentos).");
+						break;
+					case "Gnomo":
+						atualizar_status(forca-2, destreza+0, constituicao+2, inteligencia+4, sabedoria+0, carisma+0, " 6 Metros", "Pequeno", "• Visão na Penumbra. Um gnomo ignora camuflagem (mas não camufl agem total) por escuridão. Gnomos podem ver duas vezes mais longe que os humanos em condições de pouca iluminação, como luz das estrelas e tochas. • +4 em testes de Intuição e Ofícios (alquimia). Gnomos são perspicazes e familiarizados com ilusões e poções. • Classe de armadura +4 contra adversários de tamanho Grande ou maior. • Gnomos podem se comunicar com animais livremente. Veja a descrição da magia falar com animais. • Um gnomo com Carisma 10 ou mais pode lançar as seguintes magias livremente: globos de luz, som fantasma, prestidigitação.");
+						break;
+					case "Meio-Elfo":
+						atualizar_status(forca+0, destreza+2, constituicao+0, inteligencia+0, sabedoria+0, carisma+0, " 9 Metros", "Médio", "• Visão na Penumbra. Um meio-elfo ignora camufl agem (mas não camufl agem total) por escuridão. Meio-elfos podem ver duas vezes mais longe que os humanos em condições de pouca iluminação, como luz das estrelas e tochas. • 1 talento bônus à escolha do jogador. • 1 perícia treinada extra, que não precisa ser escolhida entre suas perícias de classe. • +2 em testes de Vontade contra encantamentos. • +2 em testes de Identifi car Magia e Percepção");
+						break;
+					case "Meio-Orc":
+						atualizar_status(forca+2, destreza+0, constituicao+0, inteligencia+0, sabedoria+0, carisma+0, " 9 Metros", "Médio", "• Visão no Escuro. Meio-orcs podem enxergar no escuro a até 18 metros, apenas em preto e branco. Um meio-orc ignora camufl agem (incluindo camufl agem total) por escuridão. • Meio-orcs recebem Duro de Matar como um talento adicional. • +4 em testes de Intimidação. Meio-orcs são ameaçadores.");
+						break;
+					default:
+						alert("Erro ao escolher a raça!")
+				}
             }
+			
+			
 function f2(){
     var classe=document.getElementById('classe').value;
     
