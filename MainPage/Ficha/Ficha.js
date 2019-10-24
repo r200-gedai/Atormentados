@@ -189,20 +189,20 @@ function salvar(){
         document.getElementById('modTamanhocc').value=arr[90];
         console.log(arr);
     };
-    function atualizar_status(forca,destreza,constituicao,inteligencia,sabedoria,carisma,deslocamento,altura,HabRaca){
-     document.getElementById('DES').value=destreza;
-     document.getElementById('CON').value=constituicao;
-     document.getElementById('INT').value=inteligencia;
-     document.getElementById('SAB').value=sabedoria;
-     document.getElementById('CAR').value=carisma;
-     document.getElementById('deslocamento').value=deslocamento;
-     document.getElementById('altura').value=altura;
-     document.getElementById('HabRaca').value=HabRaca;
-     return;
+function atualizar_status(forca,destreza,constituicao,inteligencia,sabedoria,carisma,deslocamento,altura,HabRaca){
+	 document.getElementById('DES').value=destreza;
+	 document.getElementById('CON').value=constituicao;
+	 document.getElementById('INT').value=inteligencia;
+	 document.getElementById('SAB').value=sabedoria;
+	 document.getElementById('CAR').value=carisma;
+	 document.getElementById('deslocamento').value=deslocamento;
+	 document.getElementById('altura').value=altura;
+	 document.getElementById('HabRaca').value=HabRaca;
+	 return;
 }
 
 function fraca(){
-                var racas =document.getElementById('raca').value;
+				var racas =document.getElementById('raca').value;
                 var forca =parseInt(document.getElementById('FOR').value);
                 var destreza =parseInt(document.getElementById('DES').value);
                 var constituicao =parseInt(document.getElementById('CON').value);
@@ -210,47 +210,47 @@ function fraca(){
                 var sabedoria =parseInt(document.getElementById('SAB').value);
                 var carisma =parseInt(document.getElementById('CAR').value);
                 
-                switch(racas){
-                    case "Anão":
-                        atualizar_status(forca+0, destreza-2, constituicao+4, inteligencia+0, sabedoria+2, carisma+0, " 6 Metros", "Médio", "Deslocamento 6m Visão no Escuro +4 em testes de resistência a venenos e magias Classe de armadura +4 contra adversários de tamanho Grande ou maior Para anões, todos os tipos de machados e martelos são armas simples +2 em testes de perícias para assuntos relacionados a pedra e metal");
-                        break;
-                    case "Elfo":
-                        atualizar_status(forca+0, destreza+4, constituicao-2, inteligencia+2, sabedoria+0, carisma+0, " 9 Metros", "Médio", " Visão na Penumbra. Um elfo ignora camuflagem (mas não camuflagem total) por escuridão.Elfos podem ver duas vezes mais longe que os humanos em condições de pouca iluminação, como luz das estrelas e tochas. +4 em testes de Vontade contra encantamentos. Elfos também são imunes à magia sono. +4 em testes de Identificar Magia e Percepção. Elfos têm familiaridade com magia e sentidos apurados. A difi culdade do teste de resistência contra magias arcanas lançadas por um elfo aumenta em CD +2. Elfos sabem usar espadas curtas, espadas longas, floretes e arcos (curtos, longos e compostos). Elfos também recebem Foco em Arma para uma destas armas (à escolha do jogador) como um talento adicional.");
-                        break;
-                    case "Goblin":
-                        atualizar_status(forca+0, destreza+4, constituicao+2, inteligencia+0, sabedoria+0, carisma-2, " 6 Metros", "Pequeno", "Deslocamento 9m  Visão no Escuro +4 em testes de Fortitude contra doenças e venenos Goblins não precisam fazer testes de Fortitude por ingerir comida estragada. +4 em testes de Ladinagem e Oficio (um à escolha do jogador");
-                        break;
-                    case "Halfling":
-                        atualizar_status(forca-2, destreza+4, constituicao+0, inteligencia+0, sabedoria+0,carisma+2, " 6 Metros", "Pequeno", "+2 em todos os testes de resistência, por sua sorte incrível +1 em jogadas de ataque com armas de arremesso e fundas Para halflings a perícia Atletismo é baseada em Destreza, não em Força +4 em testes de Enganação");
-                        break;
-                    case "Humano":
-                        atualizar_status(forca+0, destreza+0, constituicao+0, inteligencia+0, sabedoria+0, 0, " 9 Metros", "Médio", "+2 em duas habilidades à escolha do jogador 2 perícias treinadas extras, que não precisam ser escolhidas entre suas perícias de classe 2 talentos adicionais à escolha do jogador");
-                        document.getElementById('contTalentos').value = parseInt(document.getElementById('contTalentos').value) + 2
-                        break;
-                    case "Lefou":
-                        atualizar_status(forca+0, destreza+0, constituicao+0, inteligencia+0, sabedoria+0, carisma+0, " 9 Metros", "Médio", "•Monstro. Um lefou não é considerado humano ou humanoide. •Visão no escuro. •2 talentos da Tormenta adicionais. • Deformidade.O jogador deve escolher uma entre as seguintes. -Articulações flexíveis: +4 em testes de Acrobacia. -Dedos rígidos: deslocamento de escalada 4,5m. -Dentes afiados: +4 em testes de Intimidação. -Mãos membranosas: deslocamento de natação 4,5m. -Olhos vermelhos: +4 em testes de Percepção. -Pele rígida: classe de armadura +1. • Afinidade com a Tormenta.");
-                        break;
-                    case "Minotauro":
-                        atualizar_status(forca+4, destreza+0, constituicao+2, inteligencia+0, sabedoria+0, carisma-2, " 9 Metros", "Médio", "• Classe de armadura +1. • Minotauros possuem um ataque natural de chifres (1d6, crítico x2, perfuração). Um minotauro pode realizar um ataque adicional por rodada com os chifres, mas provoca uma penalidade de –4 em todos os ataques (incluindo este). • Faro. Minotauros recebem +4 em testes de Sobrevivência para rastrear, e também detectam automaticamente a presença de criaturas a até 9m. • Lógica labiríntica. Minotauros têm excelente senso de direção, e recebem +8 em testes de Sobrevivência para não se perder. • Medo de altura. Caso tenha que subir qualquer altura superior a 3m (ou se estiver a até 3m de uma queda desta altura), um minotauro sofre penalidade de –4 em suas jogadas e testes. Ele também não pode realizar nenhuma ação que dependa de concentração, como conjurar magias.");
-                        break;
-                    case "Qareen":
-                        atualizar_status(forca+0, destreza+0, constituicao+0, inteligencia+2, sabedoria-2, carisma+4, " 9 Metros", "Médio", "• +4 em testes de Identificar Magia. • Desejos. Uma vez por dia, o qareen pode lançar uma magia sem pagar PM (ou sem esquecê-la), mas apenas se fizer isso na mesma rodada em que alguém tiver lhe pedido. • Pequenos desejos. Mesmo que não pertença a uma classe conjuradora, um qareen pode lançar todos os truques. No entanto, ele só pode lançar estes truques quando outra pessoa pede. • Um qareen pode lançar a magia voo uma vez por dia. • Conforme sua descendência, um qareen tem resistência especial contra as seguintes formas de ataque: -Água: resistência a ácido e frio 5. -Ar: resistência a eletricidade e sônico 5. -Fogo: resistência a fogo 5. -Terra: redução de dano 3/cortante ou per furante. -Luz: resistência a eletricidade 10. -Trevas: resistência a ácido e energia negativa 5. “Energia negativa” é provocada por efeitos e magias necromânticos (como infligir ferimentos).");
-                        break;
-                    case "Gnomo":
-                        atualizar_status(forca-2, destreza+0, constituicao+2, inteligencia+4, sabedoria+0, carisma+0, " 6 Metros", "Pequeno", "• Visão na Penumbra. Um gnomo ignora camuflagem (mas não camufl agem total) por escuridão. Gnomos podem ver duas vezes mais longe que os humanos em condições de pouca iluminação, como luz das estrelas e tochas. • +4 em testes de Intuição e Ofícios (alquimia). Gnomos são perspicazes e familiarizados com ilusões e poções. • Classe de armadura +4 contra adversários de tamanho Grande ou maior. • Gnomos podem se comunicar com animais livremente. Veja a descrição da magia falar com animais. • Um gnomo com Carisma 10 ou mais pode lançar as seguintes magias livremente: globos de luz, som fantasma, prestidigitação.");
-                        break;
-                    case "Meio-Elfo":
-                        atualizar_status(forca+0, destreza+2, constituicao+0, inteligencia+0, sabedoria+0, carisma+0, " 9 Metros", "Médio", "• Visão na Penumbra. Um meio-elfo ignora camufl agem (mas não camufl agem total) por escuridão. Meio-elfos podem ver duas vezes mais longe que os humanos em condições de pouca iluminação, como luz das estrelas e tochas. • 1 talento bônus à escolha do jogador. • 1 perícia treinada extra, que não precisa ser escolhida entre suas perícias de classe. • +2 em testes de Vontade contra encantamentos. • +2 em testes de Identifi car Magia e Percepção");
-                        break;
-                    case "Meio-Orc":
-                        atualizar_status(forca+2, destreza+0, constituicao+0, inteligencia+0, sabedoria+0, carisma+0, " 9 Metros", "Médio", "• Visão no Escuro. Meio-orcs podem enxergar no escuro a até 18 metros, apenas em preto e branco. Um meio-orc ignora camufl agem (incluindo camufl agem total) por escuridão. • Meio-orcs recebem Duro de Matar como um talento adicional. • +4 em testes de Intimidação. Meio-orcs são ameaçadores.");
-                        break;
-                    default:
-                        alert("Erro ao escolher a raça!")
-                }
+				switch(racas){
+					case "Anão":
+						atualizar_status(forca+0, destreza-2, constituicao+4, inteligencia+0, sabedoria+2, carisma+0, " 6 Metros", "Médio", "Deslocamento 6m Visão no Escuro +4 em testes de resistência a venenos e magias Classe de armadura +4 contra adversários de tamanho Grande ou maior Para anões, todos os tipos de machados e martelos são armas simples +2 em testes de perícias para assuntos relacionados a pedra e metal");
+						break;
+					case "Elfo":
+						atualizar_status(forca+0, destreza+4, constituicao-2, inteligencia+2, sabedoria+0, carisma+0, " 9 Metros", "Médio", " Visão na Penumbra. Um elfo ignora camuflagem (mas não camuflagem total) por escuridão.Elfos podem ver duas vezes mais longe que os humanos em condições de pouca iluminação, como luz das estrelas e tochas. +4 em testes de Vontade contra encantamentos. Elfos também são imunes à magia sono. +4 em testes de Identificar Magia e Percepção. Elfos têm familiaridade com magia e sentidos apurados. A difi culdade do teste de resistência contra magias arcanas lançadas por um elfo aumenta em CD +2. Elfos sabem usar espadas curtas, espadas longas, floretes e arcos (curtos, longos e compostos). Elfos também recebem Foco em Arma para uma destas armas (à escolha do jogador) como um talento adicional.");
+						break;
+					case "Goblin":
+						atualizar_status(forca+0, destreza+4, constituicao+2, inteligencia+0, sabedoria+0, carisma-2, " 6 Metros", "Pequeno", "Deslocamento 9m  Visão no Escuro +4 em testes de Fortitude contra doenças e venenos Goblins não precisam fazer testes de Fortitude por ingerir comida estragada. +4 em testes de Ladinagem e Oficio (um à escolha do jogador");
+						break;
+					case "Halfling":
+						atualizar_status(forca-2, destreza+4, constituicao+0, inteligencia+0, sabedoria+0,carisma+2, " 6 Metros", "Pequeno", "+2 em todos os testes de resistência, por sua sorte incrível +1 em jogadas de ataque com armas de arremesso e fundas Para halflings a perícia Atletismo é baseada em Destreza, não em Força +4 em testes de Enganação");
+						break;
+					case "Humano":
+						atualizar_status(forca+0, destreza+0, constituicao+0, inteligencia+0, sabedoria+0, 0, " 9 Metros", "Médio", "+2 em duas habilidades à escolha do jogador 2 perícias treinadas extras, que não precisam ser escolhidas entre suas perícias de classe 2 talentos adicionais à escolha do jogador");
+						document.getElementById('contTalentos').value = parseInt(document.getElementById('contTalentos').value) + 2
+						break;
+					case "Lefou":
+						atualizar_status(forca+0, destreza+0, constituicao+0, inteligencia+0, sabedoria+0, carisma+0, " 9 Metros", "Médio", "•Monstro. Um lefou não é considerado humano ou humanoide. •Visão no escuro. •2 talentos da Tormenta adicionais. • Deformidade.O jogador deve escolher uma entre as seguintes. -Articulações flexíveis: +4 em testes de Acrobacia. -Dedos rígidos: deslocamento de escalada 4,5m. -Dentes afiados: +4 em testes de Intimidação. -Mãos membranosas: deslocamento de natação 4,5m. -Olhos vermelhos: +4 em testes de Percepção. -Pele rígida: classe de armadura +1. • Afinidade com a Tormenta.");
+						break;
+					case "Minotauro":
+						atualizar_status(forca+4, destreza+0, constituicao+2, inteligencia+0, sabedoria+0, carisma-2, " 9 Metros", "Médio", "• Classe de armadura +1. • Minotauros possuem um ataque natural de chifres (1d6, crítico x2, perfuração). Um minotauro pode realizar um ataque adicional por rodada com os chifres, mas provoca uma penalidade de –4 em todos os ataques (incluindo este). • Faro. Minotauros recebem +4 em testes de Sobrevivência para rastrear, e também detectam automaticamente a presença de criaturas a até 9m. • Lógica labiríntica. Minotauros têm excelente senso de direção, e recebem +8 em testes de Sobrevivência para não se perder. • Medo de altura. Caso tenha que subir qualquer altura superior a 3m (ou se estiver a até 3m de uma queda desta altura), um minotauro sofre penalidade de –4 em suas jogadas e testes. Ele também não pode realizar nenhuma ação que dependa de concentração, como conjurar magias.");
+						break;
+					case "Qareen":
+						atualizar_status(forca+0, destreza+0, constituicao+0, inteligencia+2, sabedoria-2, carisma+4, " 9 Metros", "Médio", "• +4 em testes de Identificar Magia. • Desejos. Uma vez por dia, o qareen pode lançar uma magia sem pagar PM (ou sem esquecê-la), mas apenas se fizer isso na mesma rodada em que alguém tiver lhe pedido. • Pequenos desejos. Mesmo que não pertença a uma classe conjuradora, um qareen pode lançar todos os truques. No entanto, ele só pode lançar estes truques quando outra pessoa pede. • Um qareen pode lançar a magia voo uma vez por dia. • Conforme sua descendência, um qareen tem resistência especial contra as seguintes formas de ataque: -Água: resistência a ácido e frio 5. -Ar: resistência a eletricidade e sônico 5. -Fogo: resistência a fogo 5. -Terra: redução de dano 3/cortante ou per furante. -Luz: resistência a eletricidade 10. -Trevas: resistência a ácido e energia negativa 5. “Energia negativa” é provocada por efeitos e magias necromânticos (como infligir ferimentos).");
+						break;
+					case "Gnomo":
+						atualizar_status(forca-2, destreza+0, constituicao+2, inteligencia+4, sabedoria+0, carisma+0, " 6 Metros", "Pequeno", "• Visão na Penumbra. Um gnomo ignora camuflagem (mas não camufl agem total) por escuridão. Gnomos podem ver duas vezes mais longe que os humanos em condições de pouca iluminação, como luz das estrelas e tochas. • +4 em testes de Intuição e Ofícios (alquimia). Gnomos são perspicazes e familiarizados com ilusões e poções. • Classe de armadura +4 contra adversários de tamanho Grande ou maior. • Gnomos podem se comunicar com animais livremente. Veja a descrição da magia falar com animais. • Um gnomo com Carisma 10 ou mais pode lançar as seguintes magias livremente: globos de luz, som fantasma, prestidigitação.");
+						break;
+					case "Meio-Elfo":
+						atualizar_status(forca+0, destreza+2, constituicao+0, inteligencia+0, sabedoria+0, carisma+0, " 9 Metros", "Médio", "• Visão na Penumbra. Um meio-elfo ignora camufl agem (mas não camufl agem total) por escuridão. Meio-elfos podem ver duas vezes mais longe que os humanos em condições de pouca iluminação, como luz das estrelas e tochas. • 1 talento bônus à escolha do jogador. • 1 perícia treinada extra, que não precisa ser escolhida entre suas perícias de classe. • +2 em testes de Vontade contra encantamentos. • +2 em testes de Identifi car Magia e Percepção");
+						break;
+					case "Meio-Orc":
+						atualizar_status(forca+2, destreza+0, constituicao+0, inteligencia+0, sabedoria+0, carisma+0, " 9 Metros", "Médio", "• Visão no Escuro. Meio-orcs podem enxergar no escuro a até 18 metros, apenas em preto e branco. Um meio-orc ignora camufl agem (incluindo camufl agem total) por escuridão. • Meio-orcs recebem Duro de Matar como um talento adicional. • +4 em testes de Intimidação. Meio-orcs são ameaçadores.");
+						break;
+					default:
+						alert("Erro ao escolher a raça!")
+				}
             }
-            
-            
+			
+			
 function fclasse(){
     var classe=document.getElementById('classe').value;
     
@@ -288,7 +288,7 @@ function fclasse(){
     if (classe=="Bárbaro"){
         //=======vida=======
         var cv=parseInt(24+CON)+((CON+6)*(lv-1));
-        document.getElementById('pvt').value=cv
+       	document.getElementById('pvt').value=cv
         //========BBA=======
         document.getElementById('BBA').value=lv
         document.getElementById('BBA2').value=lv
@@ -372,7 +372,7 @@ function fclasse(){
     }
     if (classe=="Bardo"){
         //=======vida=======
-        var cv=parseInt(12+CON)+((CON+3)*(lv-1));
+    	var cv=parseInt(12+CON)+((CON+3)*(lv-1));
         document.getElementById('pvt').value=cv
         //========BBA=======
         var bba=0;
@@ -433,7 +433,7 @@ function fclasse(){
         document.getElementById('Atuacao').style.color = "#00FF00";
         document.getElementById('Cavalgar').style.color = "#00FF00";
         document.getElementById('Furtividade').style.color = "#00FF00";
-        document.getElementById('Magia').style.color = "#00FF00";
+        document.getElementById('IdMagic').style.color = "#00FF00";
         document.getElementById('Iniciativa').style.color = "#00FF00";
         document.getElementById('Intuicao').style.color = "#00FF00";
         document.getElementById('Ladinagem').style.color = "#00FF00";
@@ -478,7 +478,7 @@ function fclasse(){
     }
     if (classe=="Clérigo"){
         //=======vida=======
-        var cv=parseInt(16+CON)+((CON+4)*(lv-1));
+    	var cv=parseInt(16+CON)+((CON+4)*(lv-1));
         document.getElementById('pvt').value=cv
         //=======BBA========
         var bba=0;
@@ -535,9 +535,9 @@ function fclasse(){
         //=====Pericias=====
         var contpr=parseInt (2+INT);
         document.getElementById('Conhecimento').style.color = "#00FF00";
-        document.getElementById('cura').style.color = "#00FF00";
+        document.getElementById('Cura').style.color = "#00FF00";
         document.getElementById('Diplomacia').style.color = "#00FF00";
-        document.getElementById('Magia').style.color = "#00FF00";
+        document.getElementById('IdMagic').style.color = "#00FF00";
         document.getElementById('Intuicao').style.color = "#00FF00";
         document.getElementById('Oficio').style.color = "#00FF00";
         //=====Talentos=====
@@ -582,7 +582,7 @@ function fclasse(){
     }
     if (classe=="Druida"){
         //=======vida=======
-        var cv=parseInt(16+CON)+((CON+4)*(lv-1));
+    	var cv=parseInt(16+CON)+((CON+4)*(lv-1));
         document.getElementById('pvt').value=cv
         //=======BBA========
         var bba=0;
@@ -642,9 +642,9 @@ function fclasse(){
         document.getElementById('Atletismo').style.color = "#00FF00";
         document.getElementById('Cavalgar').style.color = "#00FF00";
         document.getElementById('Conhecimento').style.color = "#00FF00";
-        document.getElementById('cura').style.color = "#00FF00";
+        document.getElementById('Cura').style.color = "#00FF00";
         document.getElementById('Diplomacia').style.color = "#00FF00";
-        document.getElementById('Magia').style.color = "#00FF00";
+        document.getElementById('IdMagic').style.color = "#00FF00";
         document.getElementById('Oficio').style.color = "#00FF00";
         document.getElementById('Percepcao').style.color = "#00FF00";
         document.getElementById('Sobrevivencia').style.color = "#00FF00";
@@ -690,7 +690,7 @@ function fclasse(){
     }
     if (classe=="Feiticeiro"){
         //=======vida=======
-        var cv=parseInt(8+CON)+((CON+2)*(lv-1));
+    	var cv=parseInt(8+CON)+((CON+2)*(lv-1));
         document.getElementById('pvt').value=cv
         //=======BBA=======
         var bba=0;
@@ -733,7 +733,7 @@ function fclasse(){
         var contpr=parseInt(2+INT);
         document.getElementById('Conhecimento').style.color = "#00FF00";
         document.getElementById('Enganacao').style.color = "#00FF00";
-        document.getElementById('Magia').style.color = "#00FF00";
+        document.getElementById('IdMagic').style.color = "#00FF00";
         document.getElementById('Intimidacao').style.color = "#00FF00";
         document.getElementById('Oficio').style.color = "#00FF00";
         //=====Talentos=====
@@ -756,7 +756,7 @@ function fclasse(){
     }
     if (classe=="Guerreiro"){
         //=======vida=======
-        var cv=parseInt(20+CON)+((CON+5)*(lv-1));
+    	var cv=parseInt(20+CON)+((CON+5)*(lv-1));
         document.getElementById('pvt').value=cv
         //=======BBA=======
         document.getElementById('BBA').value=lv
@@ -811,7 +811,7 @@ function fclasse(){
     }
     if (classe=="Ladino"){
         //=======vida=======
-        var cv=parseInt(12+CON)+((CON+3)*(lv-1));
+    	var cv=parseInt(12+CON)+((CON+3)*(lv-1));
         document.getElementById('pvt').value=cv
         //=======BBA=======
         var bba=0;
@@ -944,7 +944,7 @@ function fclasse(){
     }
     if (classe=="Mago"){
         //=======vida=======
-        var cv=parseInt(8+CON)+((CON+2)*(lv-1));
+    	var cv=parseInt(8+CON)+((CON+2)*(lv-1));
         document.getElementById('pvt').value=cv
         //=======BBA========
         var bba=0;
@@ -986,7 +986,7 @@ function fclasse(){
         //=====Pericias=====
         var contpr=parseInt (2+INT);
         document.getElementById('Conhecimento').style.color = "#00FF00";
-        document.getElementById('Magia').style.color = "#00FF00";
+        document.getElementById('IdMagic').style.color = "#00FF00";
         document.getElementById('Oficio').style.color = "#00FF00";
         document.getElementById('Percepcao').style.color = "#00FF00";
         //=====Talentos=====
@@ -1009,7 +1009,7 @@ function fclasse(){
     }
     if (classe=="Monge"){
         //=======Vida=======
-        var cv=parseInt(16+CON)+((CON+4)*(lv-1));
+    	var cv=parseInt(16+CON)+((CON+4)*(lv-1));
         document.getElementById('pvt').value=cv
         //=======BBA========       
         document.getElementById('BBA').value=lv
@@ -1022,7 +1022,7 @@ function fclasse(){
         document.getElementById('Acrobacia').style.color = "#00FF00";
         document.getElementById('Atletismo').style.color = "#00FF00";
         document.getElementById('Conhecimento').style.color = "#00FF00";
-        document.getElementById('cura').style.color = "#00FF00";
+        document.getElementById('Cura').style.color = "#00FF00";
         document.getElementById('Diplomacia').style.color = "#00FF00";
         document.getElementById('Furtividade').style.color = "#00FF00";
         document.getElementById('Iniciativa').style.color = "#00FF00";
@@ -1094,8 +1094,8 @@ function fclasse(){
     }
     if (classe=="Paladino"){
         //=======Vida=======
-        var cv=parseInt(20+CON)+((CON+5)*(lv-1));
-        document.getElementById('pvt').value=cv
+    	var cv=parseInt(20+CON)+((CON+5)*(lv-1));
+   		document.getElementById('pvt').value=cv
         //=======BBA========
         document.getElementById('BBA').value=lv
         document.getElementById('BBA2').value=lv
@@ -1108,7 +1108,7 @@ function fclasse(){
         document.getElementById('Atletismo').style.color = "#00FF00";
         document.getElementById('Cavalgar').style.color = "#00FF00";
         document.getElementById('Conhecimento').style.color = "#00FF00";
-        document.getElementById('cura').style.color = "#00FF00";
+        document.getElementById('Cura').style.color = "#00FF00";
         document.getElementById('Diplomacia').style.color = "#00FF00";
         document.getElementById('Iniciativa').style.color = "#00FF00";
         document.getElementById('Intuicao').style.color = "#00FF00";
@@ -1172,7 +1172,7 @@ function fclasse(){
     }
     if (classe=="Ranger"){
         //=======Vida=======
-        var cv=parseInt(16+CON)+((CON+4)*(lv-1));
+    	var cv=parseInt(16+CON)+((CON+4)*(lv-1));
         document.getElementById('pvt').value=cv 
         //=======BBA========
         document.getElementById('BBA').value=lv
@@ -1186,7 +1186,7 @@ function fclasse(){
         document.getElementById('Atletismo').style.color = "#00FF00";
         document.getElementById('Cavalgar').style.color = "#00FF00";
         document.getElementById('Conhecimento').style.color = "#00FF00";
-        document.getElementById('cura').style.color = "#00FF00";
+        document.getElementById('Cura').style.color = "#00FF00";
         document.getElementById('Furtividade').style.color = "#00FF00";
         document.getElementById('Iniciativa').style.color = "#00FF00";
         document.getElementById('Oficio').style.color = "#00FF00";
@@ -1248,7 +1248,7 @@ function fclasse(){
     }
     if (classe=="Samurai"){
         //=======Vida=======
-        var cv=parseInt(20+CON)+((CON+5)*(lv-1));
+    	var cv=parseInt(20+CON)+((CON+5)*(lv-1));
         document.getElementById('pvt').value=cv
         //=======BBA========       
         document.getElementById('BBA').value=lv
@@ -1335,7 +1335,7 @@ function fclasse(){
     }
     if (classe=="Swashbuckler"){
         //=======Vida=======
-        var cv=parseInt(16+CON)+((CON+4)*(lv-1));
+    	var cv=parseInt(16+CON)+((CON+4)*(lv-1));
         document.getElementById('pvt').value=cv
         //=======BBA========       
         document.getElementById('BBA').value=lv
@@ -1449,7 +1449,15 @@ function fclasse(){
             break;
         default:        
     }
+    fataque();
+}
+function fataque(){
     //=========Ataque==========
+    var FOR=document.getElementById('MFOR').value;
+    var DES=document.getElementById('MDES').value;
+
+    var altura=document.getElementById('altura').value;
+
     var modtamanho = parseInt(0);
     if (altura=="Mínimo") {
         modtamanho = parseInt(2);
@@ -1469,6 +1477,7 @@ function fclasse(){
     else if (altura=="Descomunal") {
         modtamanho = parseInt(-4);
     }
+    
     var bbaa =parseInt(document.getElementById('BBA'))
 
     var oucc =parseInt(document.getElementById('outroscc').value);
@@ -1480,15 +1489,14 @@ function fclasse(){
 
     document.getElementById('ataqueDis').value=parseInt(bbaa+DES+modtamanho+oudis)
     document.getElementById('modHabilidaded').value=DES
-    document.getElementById('modTamanhocc').value=modtamanho
-
+    document.getElementById('modTamanhod').value=modtamanho
 }
 function f3(){ //Calcula Modificadores de habilidade. Ativada o modificar qualquer valor de habilidade
-    var forca =document.getElementById('FOR').value;
+   	var forca =document.getElementById('FOR').value;
     var destreza =document.getElementById('DES').value;
     var constituicao =document.getElementById('CON').value;
     var inteligencia =document.getElementById('INT').value;
-    var sabedoria =document.getElementById('SAB').value;
+   	var sabedoria =document.getElementById('SAB').value;
     var carisma =document.getElementById('CAR').value;
 
 
@@ -1526,13 +1534,25 @@ function f5(){//Função para calcular CA. Ativada ao mudar a destreza ou adicio
     var lv =parseInt(document.getElementById('nivel').value);
     var mlv =parseInt (lv/2);
     var des =parseInt(document.getElementById('MDES').value);
+    var bmd1 =parseInt(document.getElementById('BMD1').value);
+    var bmd2 =parseInt(document.getElementById('BMD2').value);
+    var bmd3 =parseInt(document.getElementById('BMD3').value);
+    var bmdt =parseInt(bmd1+bmd2+bmd3);
+    var mdca =parseInt(0);
+    if (des<=bmdt) {
+        mdca = des
+    }
+    else {
+        mdca = bmdt
+    }
+
     var bca1 =parseInt(document.getElementById('BonusnaCA1').value);
     var bca2 =parseInt(document.getElementById('BonusnaCA2').value);
     var bca3 =parseInt(document.getElementById('BonusnaCA3').value);
     var caou =parseInt(document.getElementById('CAoutros').value);
     //ca-10+todo
-    document.getElementById('CA').value=parseInt(-10+mlv+des+bca1+bca2+bca3+caou)
-    document.getElementById('CAdestreza').value=parseInt(des)
+    document.getElementById('CA').value=parseInt(-10+mlv+mdca+bca1+bca2+bca3+caou)
+    document.getElementById('CAdestreza').value=parseInt(mdca)
 };
 function fp() {//Função para calcular perícias. Ativada o marcar qualquer perícia 
     var FOR=parseInt(document.getElementById('MFOR').value);
