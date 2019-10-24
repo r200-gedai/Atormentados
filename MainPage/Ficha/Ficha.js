@@ -10,7 +10,7 @@ function atualizar_status(forca,destreza,constituicao,inteligencia,sabedoria,car
 	 return;
 }
 
-function f1(){
+function fraca(){
 				var racas =document.getElementById('raca').value;
                 var forca =parseInt(document.getElementById('FOR').value);
                 var destreza =parseInt(document.getElementById('DES').value);
@@ -60,7 +60,7 @@ function f1(){
             }
 			
 			
-function f2(){
+function fclasse(){
     var classe=document.getElementById('classe').value;
     
     var FOR=document.getElementById('MFOR').value;
@@ -93,7 +93,7 @@ function f2(){
     var percepcao=document.getElementById('Percepcao');
     var sobrevivencia=document.getElementById('Sobrevivencia');
 
-    var lv=document.getElementById('nivel').value;
+    var lv=parseInt(document.getElementById('nivel').value);
     if (classe=="Bárbaro"){
         //=======vida=======
         var cv=parseInt(24+CON)+((CON+6)*(lv-1));
@@ -1214,18 +1214,85 @@ function f2(){
             document.getElementById('HabClasse').value+=", Bônus na CA +4"
         }
     }
-    //=================================================
-    var lv=document.getElementById('nivel')
-    var resto=parseInt (lv%2);
-    var cont=parseInt (0); 
-    for (var i = 1; i < lv; i++) {
-        if (resto!=0) {
-            cont+=1;
-        }
+    //=========Contador de Talentos=============
+    switch(lv){
+        case 1:
+        case 2:
+            document.getElementById('contTalentos').value=1 
+            break;
+        case 3:
+        case 4:
+            document.getElementById('contTalentos').value=2        
+            break;
+        case 5:
+        case 6:
+            document.getElementById('contTalentos').value=3
+            break;
+        case 7:
+        case 8:
+            document.getElementById('contTalentos').value=4
+            break; 
+        case 9:
+        case 10:
+            document.getElementById('contTalentos').value=5
+            break;
+        case 11:
+        case 12:
+            document.getElementById('contTalentos').value=6
+            break; 
+        case 13:
+        case 14:
+            document.getElementById('contTalentos').value=7
+            break;
+        case 15:
+        case 16:
+            document.getElementById('contTalentos').value=8
+            break;
+        case 17:
+        case 18:
+            document.getElementById('contTalentos').value=9
+            break;
+        case 19:
+        case 20:
+            document.getElementById('contTalentos').value=10       
+            break;
+        default:        
     }
-    document.getElementById('contTalentos').value=cont 
+    //=========Ataque==========
+    var modtamanho = parseInt(0);
+    if (altura=="Mínimo") {
+        modtamanho = parseInt(2);
+    }
+    else if (altura=="Pequeno") {
+        modtamanho = parseInt(1);
+    }
+    else if (altura=="Médio") {
+        modtamanho = parseInt(0);
+    }
+    else if (altura=="Grande") {
+        modtamanho = parseInt(-1);
+    }
+    else if (altura=="Enorme") {
+        modtamanho = parseInt(-2);
+    }
+    else if (altura=="Descomunal") {
+        modtamanho = parseInt(-4);
+    }
+    var bbaa =parseInt(document.getElementById('BBA'))
+
+    var oucc =parseInt(document.getElementById('outroscc').value);
+    var oudis =parseInt(document.getElementById('outrosDis').value);
+
+    document.getElementById('ataqueCC').value=parseInt(bbaa+FOR+modtamanho+oucc)
+    document.getElementById('modHabilidadecc').value=FOR
+    document.getElementById('modTamanhocc').value=modtamanho
+
+    document.getElementById('ataqueDis').value=parseInt(bbaa+DES+modtamanho+oudis)
+    document.getElementById('modHabilidaded').value=DES
+    document.getElementById('modTamanhod').value=modtamanho
+
 }
-function f3(){
+function f3(){ //Calcula Modificadores de habilidade. Ativada o modificar qualquer valor de habilidade
    	var forca =document.getElementById('FOR').value;
     var destreza =document.getElementById('DES').value;
     var constituicao =document.getElementById('CON').value;
@@ -1242,56 +1309,56 @@ function f3(){
     document.getElementById('MCAR').value=parseInt((carisma-10)/2) 
 
 };
-function f4(){
+function f4(){//Calcula as resistencias da personagem. Ativada ao modificar DES, CON, SAB
     var lv =document.getElementById('nivel').value;
-    var forca =document.getElementById('MCON').value;
-    var des =document.getElementById('MDES').value;
-    var sab =document.getElementById('MSAB').value;
-    var fou =document.getElementById('RFOROU').value;
-    var rou =document.getElementById('RREFOU').value;
-    var vou =document.getElementById('RVONOU').value;
+    var forca =parseInt(document.getElementById('MCON').value);
+    var des =parseInt(document.getElementById('MDES').value);
+    var sab =parseInt(document.getElementById('MSAB').value);
+    var fou =parseInt(document.getElementById('RFOROU').value);
+    var rou =parseInt(document.getElementById('RREFOU').value);
+    var vou =parseInt(document.getElementById('RVONOU').value);
     var mlv =parseInt (lv/2);
     document.getElementById('RFORT').value=parseInt(mlv+forca+fou)
     document.getElementById('RFORLV').value=parseInt(mlv)
     document.getElementById('RFORMOD').value=parseInt(forca)
-    document.getElementById('RFOUOU').value=parseInt(fou)
+    
     
     document.getElementById('RREFT').value=parseInt(mlv+des+rou)
     document.getElementById('RREFLV').value=parseInt(mlv)
     document.getElementById('RREFMOD').value=parseInt(des)
-    document.getElementById('RREFOU').value=parseInt(rou)
     
     document.getElementById('RVONT').value=parseInt(mlv+sab+vou)
     document.getElementById('RVONLV').value=parseInt(mlv)
-    document.getElementById('RVONMOD').value=parseInt(sab)
-    document.getElementById('RVONOU').value=parseInt(vou)       
+    document.getElementById('RVONMOD').value=parseInt(sab)       
 };
-function f5(){
-    var lv =document.getElementById('nivel').value;
+function f5(){//Função para calcular CA. Ativada ao mudar a destreza ou adicionar um escudo ou armadura
+    var lv =parseInt(document.getElementById('nivel').value);
     var mlv =parseInt (lv/2);
-    var des =document.getElementById('MDES').value;
-    var bca1 =document.getElementById('BonusCA1').value;
-    var bca2 =document.getElementById('BonusCA2').value;
-    var bca3 =document.getElementById('BonusCA3').value;
+    var des =parseInt(document.getElementById('MDES').value);
+    var bca1 =parseInt(document.getElementById('BonusnaCA1').value);
+    var bca2 =parseInt(document.getElementById('BonusnaCA2').value);
+    var bca3 =parseInt(document.getElementById('BonusnaCA3').value);
+    var caou =parseInt(document.getElementById('CAoutros').value);
     //ca-10+todo
-    document.getElementById('CAtotal').value=(-10+mlv+des+bca1+bca2+bca3)    
+    document.getElementById('CA').value=parseInt(-10+mlv+des+bca1+bca2+bca3+caou)
+    document.getElementById('CAdestreza').value=parseInt(des)
 };
-function fp() {
-    var FOR=document.getElementById('MFOR').value;
-    var DES=document.getElementById('MDES').value;
-    var CON=document.getElementById('MCON').value;
-    var INT=document.getElementById('MINT').value;
-    var SAB=document.getElementById('MSAB').value;
-    var CAR=document.getElementById('MCAR').value;
+function fp() {//Função para calcular perícias. Ativada o marcar qualquer perícia 
+    var FOR=parseInt(document.getElementById('MFOR').value);
+    var DES=parseInt(document.getElementById('MDES').value);
+    var CON=parseInt(document.getElementById('MCON').value);
+    var INT=parseInt(document.getElementById('MINT').value);
+    var SAB=parseInt(document.getElementById('MSAB').value);
+    var CAR=parseInt(document.getElementById('MCAR').value);
     
     var acrobacia=document.getElementById('Acrobacia');
     var adsanimal=document.getElementById('AdestrarAnimais');
     var atletismo=document.getElementById('Atletismo');
     var atuacao=document.getElementById('Atuacao');
-    var atuacao2=document.getElementById('Atuacao');
+    var atuacao2=document.getElementById('Atuacao2');
     var cavalgar=document.getElementById('Cavalgar');
     var conhecimento=document.getElementById('Conhecimento');
-    var conhecimento2=document.getElementById('Conhecimento');
+    var conhecimento2=document.getElementById('Conhecimento2');
     var cura=document.getElementById('Cura');
     var diplomacia=document.getElementById('Diplomacia');
     var enganacao=document.getElementById('Enganacao');
@@ -1303,210 +1370,233 @@ function fp() {
     var ladinagem=document.getElementById('Ladinagem');
     var obtinfo=document.getElementById('ObtInfo');
     var oficio=document.getElementById('Oficio');
-    var oficio2=document.getElementById('Oficio');
+    var oficio2=document.getElementById('Oficio2');
     var percepcao=document.getElementById('Percepcao');
     var sobrevivencia=document.getElementById('Sobrevivencia');
 
-    var lv=document.getElementById('nivel').value;
+    var acrobaciaOu=document.getElementById('AcrobaciaOu');
+    var adsanimalOu=document.getElementById('AdestrarAnimaisOu');
+    var atletismoOu=document.getElementById('AtletismoOu');
+    var atuacaoOu=document.getElementById('AtuacaoOu');
+    var atuacao2Ou=document.getElementById('Atuacao2Ou');
+    var cavalgarOu=document.getElementById('CavalgarOu');
+    var conhecimentoOu=document.getElementById('ConhecimentoOu');
+    var conhecimento2Ou=document.getElementById('Conhecimento2Ou');
+    var curaOu=document.getElementById('CuraOu');
+    var diplomaciaOu=document.getElementById('DiplomaciaOu');
+    var enganacaoOu=document.getElementById('EnganacaoOu');
+    var furtividadeOu=document.getElementById('FurtividadeOu');
+    var idmagiaOu=document.getElementById('IdMagicOu');
+    var iniciativaOu=document.getElementById('IniciativaOu');
+    var intimidacaoOu=document.getElementById('IntimidacaoOu');
+    var intuicaoOu=document.getElementById('IntuicaoOu');
+    var ladinagemOu=document.getElementById('LadinagemOu');
+    var obtinfoOu=document.getElementById('ObtInfoOu');
+    var oficioOu=document.getElementById('OficioOu');
+    var oficio2Ou=document.getElementById('Oficio2Ou');
+    var percepcaoOu=document.getElementById('PercepcaoOu');
+    var sobrevivenciaOu=document.getElementById('SobrevivenciaOu');
+
+    var lv=parseInt (document.getElementById('nivel').value);
     
-    var gradt=parseInt (lv+3);
+    var gradt=lv+3;
     var grado=parseInt (lv/2);
 
     if (acrobacia.checked ==true) {
-        document.getElementById('AcrobaciaTotal').value=parseInt (gradt+DES)
+        document.getElementById('AcrobaciaTotal').value=parseInt (gradt+DES+acrobaciaOu)
         document.getElementById('AcrobaciaGrad').value=gradt
         document.getElementById('AcrobaciaMod').value=DES
     } else{
-        document.getElementById('AcrobaciaTotal').value=parseInt (grado+DES)
+        document.getElementById('AcrobaciaTotal').value=parseInt (grado+DES+acrobaciaOu)
         document.getElementById('AcrobaciaGrad').value=grado
         document.getElementById('AcrobaciaMod').value=DES
     }
     if (adsanimal.checked ==true) {
-        document.getElementById('AdestrarTotal').value=parseInt (gradt+CAR)
-        document.getElementById('AdestrarGrad').value=grado
+        document.getElementById('AdestrarTotal').value=parseInt (gradt+CAR+adsanimalOu)
+        document.getElementById('AdestrarGrad').value=gradt
         document.getElementById('AdestrarMod').value=CAR
     } else {
-        document.getElementById('AdestrarTotal').value=parseInt (grado+CAR)
+        document.getElementById('AdestrarTotal').value=parseInt (grado+CAR+adsanimalOu)
         document.getElementById('AdestrarGrad').value=grado
         document.getElementById('AdestrarMod').value=CAR
     }
     if (atletismo.checked ==true) {
-        document.getElementById('AtletismoTotal').value=parseInt (gradt+FOR)
-        document.getElementById('AtletismoGrad').value=grado
+        document.getElementById('AtletismoTotal').value=parseInt (gradt+FOR+atletismoOu)
+        document.getElementById('AtletismoGrad').value=gradt
         document.getElementById('AtletismoMod').value=FOR
     } else {
-        document.getElementById('AtletismoTotal').value=parseInt (grado+FOR)
+        document.getElementById('AtletismoTotal').value=parseInt (grado+FOR+atletismoOu)
         document.getElementById('AtletismoGrad').value=grado
         document.getElementById('AtletismoMod').value=FOR
     }
     if (atuacao.checked ==true) {
-        document.getElementById('AtuacaoTotal').value=parseInt (gradt+CAR)
-        document.getElementById('AtuacaoGrad').value=grado
+        document.getElementById('AtuacaoTotal').value=parseInt (gradt+CAR+atuacaoOu)
+        document.getElementById('AtuacaoGrad').value=gradt
         document.getElementById('AtuacaoMod').value=CAR
     } else {
-        document.getElementById('AtuacaoTotal').value=parseInt (grado+CAR)
+        document.getElementById('AtuacaoTotal').value=parseInt (grado+CAR+atuacaoOu)
         document.getElementById('AtuacaoGrad').value=grado
         document.getElementById('AtuacaoMod').value=CAR
     }
     if (atuacao2.checked ==true) {
-        document.getElementById('AtuacaoTotal').value=parseInt (gradt+CAR)
-        document.getElementById('AtuacaoGrad').value=grado
-        document.getElementById('AtuacaoMod').value=CAR
+        document.getElementById('Atuacao2Total').value=parseInt (gradt+CAR+atuacao2Ou)
+        document.getElementById('Atuacao2Grad').value=gradt
+        document.getElementById('Atuacao2Mod').value=CAR
     } else {
-        document.getElementById('AtuacaoTotal').value=parseInt (grado+CAR)
-        document.getElementById('AtuacaoGrad').value=grado
-        document.getElementById('AtuacaoMod').value=CAR
+        document.getElementById('Atuacao2Total').value=parseInt (grado+CAR+atuacao2Ou)
+        document.getElementById('Atuacao2Grad').value=grado
+        document.getElementById('Atuacao2Mod').value=CAR
     }
     if (cavalgar.checked ==true) {
-        document.getElementById('CavalgarTotal').value=parseInt (gradt+DES)
-        document.getElementById('CavalgarGrad').value=grado
+        document.getElementById('CavalgarTotal').value=parseInt (gradt+DES+cavalgarOu)
+        document.getElementById('CavalgarGrad').value=gradt
         document.getElementById('CavalgarMod').value=DES
     } else {
-        document.getElementById('CavalgarTotal').value=parseInt (grado+DES)
+        document.getElementById('CavalgarTotal').value=parseInt (grado+DES+cavalgarOu)
         document.getElementById('CavalgarGrad').value=grado
         document.getElementById('CavalgarMod').value=DES
     }
     if (conhecimento.checked ==true) {
-        document.getElementById('ConhecimentoTotal').value=parseInt (gradt+INT)
-        document.getElementById('ConhecimentoGrad').value=grado
+        document.getElementById('ConhecimentoTotal').value=parseInt (gradt+INT+conhecimento2Ou)
+        document.getElementById('ConhecimentoGrad').value=gradt
         document.getElementById('ConhecimentoMod').value=INT
     } else {
-        document.getElementById('ConhecimentoTotal').value=parseInt (grado+INT)
+        document.getElementById('ConhecimentoTotal').value=parseInt (grado+INT+conhecimento2Ou)
         document.getElementById('ConhecimentoGrad').value=grado
         document.getElementById('ConhecimentoMod').value=INT
     }
     if (conhecimento2.checked ==true) {
-        document.getElementById('ConhecimentoTotal').value=parseInt (gradt+INT)
-        document.getElementById('ConhecimentoGrad').value=grado
-        document.getElementById('ConhecimentoMod').value=INT
+        document.getElementById('Conhecimento2Total').value=parseInt (gradt+INT+conhecimento2Ou)
+        document.getElementById('Conhecimento2Grad').value=gradt
+        document.getElementById('Conhecimento2Mod').value=INT
     } else {
-        document.getElementById('ConhecimentoTotal').value=parseInt (grado+INT)
-        document.getElementById('ConhecimentoGrad').value=grado
-        document.getElementById('ConhecimentoMod').value=INT
+        document.getElementById('Conhecimento2Total').value=parseInt (grado+INT+conhecimento2Ou)
+        document.getElementById('Conhecimento2Grad').value=grado
+        document.getElementById('Conhecimento2Mod').value=INT
     }
     if (cura.checked ==true) {
-        document.getElementById('curaTotal').value=parseInt (gradt+SAB)
-        document.getElementById('curaGrad').value=grado
+        document.getElementById('curaTotal').value=parseInt (gradt+SAB+curaOu)
+        document.getElementById('curaGrad').value=gradt
         document.getElementById('curaMod').value=SAB
     } else {
-        document.getElementById('curaTotal').value=parseInt (grado+SAB)
+        document.getElementById('curaTotal').value=parseInt (grado+SAB+curaOu)
         document.getElementById('curaGrad').value=grado
         document.getElementById('curaMod').value=SAB
     }
     if (diplomacia.checked ==true) {
-        document.getElementById('DiplomaciaTotal').value=parseInt (gradt+CAR)
-        document.getElementById('DiplomaciaGrad').value=grado
+        document.getElementById('DiplomaciaTotal').value=parseInt (gradt+CAR+diplomaciaOu)
+        document.getElementById('DiplomaciaGrad').value=gradt
         document.getElementById('DiplomaciaMod').value=CAR
     } else {
-        document.getElementById('DiplomaciaTotal').value=parseInt (grado+CAR)
+        document.getElementById('DiplomaciaTotal').value=parseInt (grado+CAR+diplomaciaOu)
         document.getElementById('DiplomaciaGrad').value=grado
         document.getElementById('DiplomaciaMod').value=CAR
     }
     if (enganacao.checked ==true) {
-        document.getElementById('EnganacaoTotal').value=parseInt (gradt+CAR)
-        document.getElementById('EnganacaoGrad').value=grado
+        document.getElementById('EnganacaoTotal').value=parseInt (gradt+CAR+enganacaoOu)
+        document.getElementById('EnganacaoGrad').value=gradt
         document.getElementById('EnganacaoMod').value=CAR
     } else {
-        document.getElementById('EnganacaoTotal').value=parseInt (grado+CAR)
+        document.getElementById('EnganacaoTotal').value=parseInt (grado+CAR+enganacaoOu)
         document.getElementById('EnganacaoGrad').value=grado
         document.getElementById('EnganacaoMod').value=CAR
     }
     if (furtividade.checked ==true) {
-        document.getElementById('FurtividadeTotal').value=parseInt (gradt+DES)
-        document.getElementById('FurtividadeGrad').value=grado
+        document.getElementById('FurtividadeTotal').value=parseInt (gradt+DES+furtividadeOu)
+        document.getElementById('FurtividadeGrad').value=gradt
         document.getElementById('FurtividadeMod').value=DES
     } else {
-        document.getElementById('FurtividadeTotal').value=parseInt (grado+DES)
+        document.getElementById('FurtividadeTotal').value=parseInt (grado+DES+furtividadeOu)
         document.getElementById('FurtividadeGrad').value=grado
         document.getElementById('FurtividadeMod').value=DES
     }
     if (idmagia.checked ==true) {
-        document.getElementById('IdMagicTotal').value=parseInt (gradt+INT)
-        document.getElementById('IdMagicGrad').value=grado
+        document.getElementById('IdMagicTotal').value=parseInt (gradt+INT+idmagiaOu)
+        document.getElementById('IdMagicGrad').value=gradt
         document.getElementById('IdMagicMod').value=INT
     } else {
-        document.getElementById('IdMagicTotal').value=parseInt (grado+INT)
+        document.getElementById('IdMagicTotal').value=parseInt (grado+INT+idmagiaOu)
         document.getElementById('IdMagicGrad').value=grado
         document.getElementById('IdMagicMod').value=INT
     }
     if (iniciativa.checked ==true) {
-        document.getElementById('IniciativaTotal').value=parseInt (gradt+DES)
-        document.getElementById('IniciativaGrad').value=grado
+        document.getElementById('IniciativaTotal').value=parseInt (gradt+DES+iniciativaOu)
+        document.getElementById('IniciativaGrad').value=gradt
         document.getElementById('IniciativaMod').value=DES
     } else {
-        document.getElementById('IniciativaTotal').value=parseInt (grado+DES)
+        document.getElementById('IniciativaTotal').value=parseInt (grado+DES+iniciativaOu)
         document.getElementById('IniciativaGrad').value=grado
         document.getElementById('IniciativaMod').value=DES
     }
     if (intimidacao.checked ==true) {
-        document.getElementById('IntimidacaoTotal').value=parseInt (gradt+CAR)
-        document.getElementById('IntimidacaoGrad').value=grado
+        document.getElementById('IntimidacaoTotal').value=parseInt (gradt+CAR+intimidacaoOu)
+        document.getElementById('IntimidacaoGrad').value=gradt
         document.getElementById('IntimidacaoMod').value=CAR
     } else {
-        document.getElementById('IntimidacaoTotal').value=parseInt (grado+CAR)
+        document.getElementById('IntimidacaoTotal').value=parseInt (grado+CAR+intimidacaoOu)
         document.getElementById('IntimidacaoGrad').value=grado
         document.getElementById('IntimidacaoMod').value=CAR
     }
     if (intuicao.checked ==true) {
-        document.getElementById('IntuicaoTotal').value=parseInt (gradt+SAB)
-        document.getElementById('IntuicaoGrad').value=grado
+        document.getElementById('IntuicaoTotal').value=parseInt (gradt+SAB+intuicaoOu)
+        document.getElementById('IntuicaoGrad').value=gradt
         document.getElementById('IntuicaoMod').value=SAB
     } else {
-        document.getElementById('IntuicaoTotal').value=parseInt (grado+SAB)
+        document.getElementById('IntuicaoTotal').value=parseInt (grado+SAB+intuicaoOu)
         document.getElementById('IntuicaoGrad').value=grado
         document.getElementById('IntuicaoMod').value=SAB
     }
     if (ladinagem.checked ==true) {
-        document.getElementById('LadinagemTotal').value=parseInt (gradt+DES)
-        document.getElementById('LadinagemGrad').value=grado
+        document.getElementById('LadinagemTotal').value=parseInt (gradt+DES+ladinagemOu)
+        document.getElementById('LadinagemGrad').value=gradt
         document.getElementById('LadinagemMod').value=DES
     } else {
-        document.getElementById('LadinagemTotal').value=parseInt (grado+DES)
+        document.getElementById('LadinagemTotal').value=parseInt (grado+DES+ladinagemOu)
         document.getElementById('LadinagemGrad').value=grado
         document.getElementById('LadinagemMod').value=DES
     }
     if (obtinfo.checked ==true) {
-        document.getElementById('ObtInfoTotal').value=parseInt (gradt+CAR)
-        document.getElementById('ObtInfoGrad').value=grado
+        document.getElementById('ObtInfoTotal').value=parseInt (gradt+CAR+obtinfoOu)
+        document.getElementById('ObtInfoGrad').value=gradt
         document.getElementById('ObtInfoMod').value=CAR
     } else {
-        document.getElementById('ObtInfoTotal').value=parseInt (grado+CAR)
+        document.getElementById('ObtInfoTotal').value=parseInt (grado+CAR+obtinfoOu)
         document.getElementById('ObtInfoGrad').value=grado
         document.getElementById('ObtInfoMod').value=CAR
     }
     if (oficio.checked ==true) {
-        document.getElementById('OficioTotal').value=parseInt (gradt+INT)
-        document.getElementById('OficioGrad').value=grado
+        document.getElementById('OficioTotal').value=parseInt (gradt+INT+oficioOu)
+        document.getElementById('OficioGrad').value=gradt
         document.getElementById('OficioMod').value=INT
     } else {
-        document.getElementById('OficioTotal').value=parseInt (grado+INT)
+        document.getElementById('OficioTotal').value=parseInt (grado+INT+oficioOu)
         document.getElementById('OficioGrad').value=grado
         document.getElementById('OficioMod').value=INT
     }
     if (oficio2.checked ==true) {
-        document.getElementById('OficioTotal').value=parseInt (gradt+INT)
-        document.getElementById('OficioGrad').value=grado
-        document.getElementById('OficioMod').value=INT
+        document.getElementById('Oficio2Total').value=parseInt (gradt+INT+oficio2Ou)
+        document.getElementById('Oficio2Grad').value=gradt
+        document.getElementById('Oficio2Mod').value=INT
     } else {
-        document.getElementById('OficioTotal').value=parseInt (grado+INT)
-        document.getElementById('OficioGrad').value=grado
-        document.getElementById('OficioMod').value=INT
+        document.getElementById('Oficio2Total').value=parseInt (grado+INT+oficio2Ou)
+        document.getElementById('Oficio2Grad').value=grado
+        document.getElementById('Oficio2Mod').value=INT
     }
     if (percepcao.checked ==true) {
-        document.getElementById('PercepcaoTotal').value=parseInt (gradt+SAB)
-        document.getElementById('PercepcaoGrad').value=grado
+        document.getElementById('PercepcaoTotal').value=parseInt (gradt+SAB+percepcaoOu)
+        document.getElementById('PercepcaoGrad').value=gradt
         document.getElementById('PercepcaoMod').value=SAB
     } else {
-        document.getElementById('PercepcaoTotal').value=parseInt (grado+SAB)
+        document.getElementById('PercepcaoTotal').value=parseInt (grado+SAB+percepcaoOu)
         document.getElementById('PercepcaoGrad').value=grado
         document.getElementById('PercepcaoMod').value=SAB
     }
     if (sobrevivencia.checked ==true) {
-        document.getElementById('SobrevivenciaTotal').value=parseInt (gradt+SAB)
-        document.getElementById('SobrevivenciaGrad').value=grado
+        document.getElementById('SobrevivenciaTotal').value=parseInt (gradt+SAB+sobrevivenciaOu)
+        document.getElementById('SobrevivenciaGrad').value=gradt
         document.getElementById('SobrevivenciaMod').value=SAB
     } else {
-        document.getElementById('SobrevivenciaTotal').value=parseInt (grado+SAB)
+        document.getElementById('SobrevivenciaTotal').value=parseInt (grado+SAB+sobrevivenciaOu)
         document.getElementById('SobrevivenciaGrad').value=grado
         document.getElementById('SobrevivenciaMod').value=SAB
     }
