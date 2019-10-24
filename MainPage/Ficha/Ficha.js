@@ -212,7 +212,7 @@ function fraca(){
                 
 				switch(racas){
 					case "Anão":
-						atualizar_status(forca+0, destreza-2, constituicao+4, inteligencia+0, sabedoria+2, carisma+0, " 6 Metros", "Médio", "Deslocamento 6m Visão no Escuro +4 em testes de resistência a venenos e magias Classe de armadura +4 contra adversários de tamanho Grande ou maior Para anões, todos os tipos de machados e martelos são armas simples +2 em testes de perícias para assuntos relacionados a pedra e metal");
+						atualizar_status(forca+0, destreza-2, constituicao+4, inteligencia+0, sabedoria+2, carisma+0, " 6 Metros", "Médio", " Deslocamento 6m Visão no Escuro +4 em testes de resistência a venenos e magias Classe de armadura +4 contra adversários de tamanho Grande ou maior Para anões, todos os tipos de machados e martelos são armas simples +2 em testes de perícias para assuntos relacionados a pedra e metal");
 						break;
 					case "Elfo":
 						atualizar_status(forca+0, destreza+4, constituicao-2, inteligencia+2, sabedoria+0, carisma+0, " 9 Metros", "Médio", " Visão na Penumbra. Um elfo ignora camuflagem (mas não camuflagem total) por escuridão.Elfos podem ver duas vezes mais longe que os humanos em condições de pouca iluminação, como luz das estrelas e tochas. +4 em testes de Vontade contra encantamentos. Elfos também são imunes à magia sono. +4 em testes de Identificar Magia e Percepção. Elfos têm familiaridade com magia e sentidos apurados. A difi culdade do teste de resistência contra magias arcanas lançadas por um elfo aumenta em CD +2. Elfos sabem usar espadas curtas, espadas longas, floretes e arcos (curtos, longos e compostos). Elfos também recebem Foco em Arma para uma destas armas (à escolha do jogador) como um talento adicional.");
@@ -1405,6 +1405,9 @@ function fclasse(){
             document.getElementById('HabClasse').value+=", Bônus na CA +4"
         }
     }
+        fataque();
+}
+function fcontt(){
     //=========Contador de Talentos=============
     switch(lv){
         case 1:
@@ -1449,7 +1452,6 @@ function fclasse(){
             break;
         default:        
     }
-    fataque();
 }
 function fataque(){
     //=========Ataque==========
@@ -1593,7 +1595,7 @@ function fp() {//Função para calcular perícias. Ativada o marcar qualquer per
     var cavalgarOu=document.getElementById('CavalgarOu');
     var conhecimentoOu=document.getElementById('ConhecimentoOu');
     var conhecimento2Ou=document.getElementById('Conhecimento2Ou');
-    var curaOu=document.getElementById('CuraOu');
+    var curaOu=document.getElementById('curaOu');
     var diplomaciaOu=document.getElementById('DiplomaciaOu');
     var enganacaoOu=document.getElementById('EnganacaoOu');
     var furtividadeOu=document.getElementById('FurtividadeOu');
