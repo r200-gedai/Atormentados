@@ -1,0 +1,73 @@
+ <style>
+        .modal-fundo{
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5);
+          position: fixed;
+          top: 0px;
+          left: 0px;
+          z-index: 2000;
+          display: none;
+          justify-content: center; ;
+          align-items: center;
+        }
+        .modal-fundo.aberto{
+          display: flex;
+        }
+        .modal-mais {
+          background: white;
+          width: 60%;
+          padding: 10px;
+          border: 5px solid black;
+          position: relative;
+        }
+        .close{
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          background-color: white;
+          cursor: pointer;
+        }
+        .Anões{
+          cursor: pointer;
+        }
+        .Elfos{
+          cursor: pointer;
+        }
+        .Goblins{
+          cursor: pointer;
+        }
+        .Halflings{
+          cursor: pointer;
+        }
+        .Humanos{
+          cursor: pointer;
+        }
+        .Lefou{
+          cursor: pointer;
+        }
+        .Minotauros{
+          cursor: pointer;
+        }
+        .Qareen{
+          cursor: pointer;
+        }
+        .Gnomo{
+          cursor: pointer;
+        }
+        .Meio{
+          cursor: pointer;
+        }
+        .Orcs{
+          cursor: pointer;
+        }
+      </style>
+      body{
+  background-image: url("img.JPEG");
+  background-attachment: fixed;
+  background-size: 100%;
+  background-color: black;
+}
+.fieldset{
+  color: white;
+}

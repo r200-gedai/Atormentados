@@ -1,0 +1,46 @@
+#resultado{
+	border-radius: 8px;
+}
+input[type=text]{
+	width: 150px;
+	background: black;
+	color: white;
+	border-radius: 10px;
+}
+div, select{
+	width: 150px;
+	background: black;
+	color: white;
+	border-radius: 10px;
+}
+input[type=button], input[type=reset],legend, select, optgroup{
+	border-radius: 8px;
+	background: black;
+	color: white;
+}
+.tamanho{
+	width: 150px;
+	background: white;
+	border-radius: 8px;
+}
+input[type=number]{
+	width: 30px;
+	border-radius: 8px;
+	background: black;
+	color: white;
+}
+input[id="FOR"],input[id="MFOR"],input[id="DES"],input[id="MDES"],input[id="CON"],input[id="MCON"],input[id="INT"],input[id="MINT"],input[id="SAB"],input[id="MSAB"],input[id="CAR"],input[id="MCAR"],input[id="CA"],input[id="pva"],input[id="pvt"]{
+	width: 60px;
+	height: 35px;
+	border-radius: 8px;
+	background: black;
+	color: white;
+	font-size: 40px; 
+}
+body{ 
+	zoom: 90%;
+
+}
+textarea {
+  resize: none;
+}
